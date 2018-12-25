@@ -1,0 +1,25 @@
+{
+  "name": "rj2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "site.config.js",
+  "scripts": {
+    "start": "nanogen start",
+    "build": "nanogen build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emarchak/rj2019.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emarchak/rj2019/issues"
+  },
+  "homepage": "https://github.com/emarchak/rj2019#readme",
+  "devDependencies": {
+    "nanogen": "^0.4.2",
+    "sass": "^1.15.2"
+  }
+}
