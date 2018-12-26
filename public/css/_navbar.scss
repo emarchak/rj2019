@@ -1,0 +1,60 @@
+@import "./theme.scss";
+
+.navbar {
+
+  &-header, &-logo, a, a:hover, a:focus, button:hover, button:focus {
+    // resets
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  background: $highlight;
+  box-shadow: $box-shadow;
+}
+.navbar-links {
+
+  &.navbar-main {
+    // resets
+    align-items: center;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  a,
+  button {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.6rem;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      height: .2rem;
+      background: $black;
+      content: '';
+      width: 0;
+      position: absolute;
+      transform: translateX(-50%);
+      transition: width 0.4s;
+      transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
+      left: 50%;
+      bottom: 1rem;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: $black;
+      &:after {
+        width: calc(100% - 5rem);
+      }
+      @media (max-width: 700px) {
+        width: calc(100%);
+      }
+    }
+  }
+}

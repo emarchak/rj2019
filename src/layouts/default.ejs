@@ -5,17 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%= site.title %></title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/solid.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://progressivenationhq.nationbuilder.com/themes/7/5be73b394764e83b7953c5d1/0/attachments/15418807751545413797/default/theme-light.css" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <div class="header">
-    <h1><%= site.title %></h1>
-  </div>
-  
-  <div class="content">
-    <%- body %>
-  </div>
+  <header class="site-header">
+      <%- include('partials/header') %>
+  </header>
 
-  <%- include('partials/footer') %>
+  <main class="body">
+    <%- body %>
+  </main>
+
+  <footer>
+    <%- include('partials/footer') %>
+  </footer>
 </body>
 </html>

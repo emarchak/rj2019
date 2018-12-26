@@ -4,6 +4,6 @@ module.exports = {
     outputPath: './public'
   },
   site: {
-    title: 'Ravi Template site'
+    title: 'RJ2019 Template site'
   }
 };

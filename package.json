@@ -19,7 +19,12 @@
   },
   "homepage": "https://github.com/emarchak/rj2019#readme",
   "devDependencies": {
+    "eslint": "^5.11.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "nanogen": "^0.4.2",
-    "sass": "^1.15.2"
-  }
+    "sass": "^1.15.2",
+    "yuicompressor": "^2.4.8"
+  },
+  "dependencies": {}
 }

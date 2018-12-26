@@ -1,0 +1,28 @@
+// Colours
+$black: #393939;
+$grey: #3A3A3A;
+$grey--light: #E1E1E1;
+$grey--lightest: #EDEDED;
+$white: #fff;
+$highlight: #EB8D3D;
+
+$max-width: 720px;
+$box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.09);
+
+$break-small: 768px;
+$break-large: 1200px;
+
+@mixin media($media) {
+  @if $media == small-only {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-only {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == medium-up {
+    @media only screen and (min-width: $break-small + 1) { @content; }
+  }
+  @else if $media == wide-up {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
