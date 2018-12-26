@@ -23,7 +23,7 @@ main {
 body {
   font-size: 1.5rem;
   line-height: 2;
-  background: #fff;
+  background: #FFF;
 }
 
 a {
@@ -140,6 +140,16 @@ a {
 .navbar-links button:focus {
     width: calc(100%);
   }
+}
+
+.navbar-buttons .btn {
+  background-color: #393939;
+  transition: background-color 0.4s, box-shadow 0.4s;
+  box-shadow: none;
+}
+.navbar-buttons .btn:hover, .navbar-buttons .btn:focus {
+  background-color: #5D5D5D;
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.09);
 }
 
 .site-header {

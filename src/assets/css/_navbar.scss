@@ -12,6 +12,7 @@
   background: $highlight;
   box-shadow: $box-shadow;
 }
+
 .navbar-links {
 
   &.navbar-main {
@@ -55,6 +56,18 @@
       @media (max-width: 700px) {
         width: calc(100%);
       }
+    }
+  }
+}
+.navbar-buttons {
+  .btn {
+    background-color: $black;
+    transition: background-color 0.4s, box-shadow 0.4s;
+    box-shadow: none;
+
+    &:hover, &:focus {
+      background-color: $grey;
+      box-shadow: $box-shadow;
     }
   }
 }
