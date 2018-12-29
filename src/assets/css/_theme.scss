@@ -5,7 +5,8 @@ $grey--light: #E1E1E1;
 $grey--lightest: #EDEDED;
 $white: #FFF;
 
-$primary: #EB8D3D;
+$primary: rgba(235,141,61, 1);
+$primary--transparent: rgba(235,141,61, .7);
 $secondary: $grey;
 $warning: #fcf6e9;
 

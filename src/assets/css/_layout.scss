@@ -1,3 +1,4 @@
+@import "./theme.scss";
 
 .misc-block {
   @include input-style();
@@ -14,5 +15,38 @@
   .signup_form {
     margin: 0;
     padding: 0;
+  }
+}
+
+.rj2019--hero {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-height: 80vh;
+  overflow:hidden;
+
+  #{&}--image {
+    transform: translateY(-10%);
+  }
+
+  #{&}--content {
+    width: 30rem;
+    position: absolute;
+    top: 1rem;
+    z-index: 1;
+    padding: $spacing--vertical $spacing--horizontal;
+    background-color: $primary--transparent;
+    box-shadow: $box-shadow--light;
+
+    @include media(medium-up) {
+      left: calc(50vw - 480px);
+    }
+
+    * {
+      color: $black;
+    }
   }
 }
