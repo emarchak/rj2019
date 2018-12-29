@@ -8,8 +8,11 @@ body {
 
 a {
   color: $black;
+
   &:hover,
+  &:focus,
   &:active {
+    outline: none;
     color: $primary;
   }
 }
@@ -20,6 +23,15 @@ a {
   @for $i from 1 through 6 {
     h#{$i}, .h#{$i} {
       color: $primary;
+    }
+  }
+
+  a {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
     }
   }
 

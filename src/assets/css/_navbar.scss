@@ -55,7 +55,7 @@
       &:after {
         width: calc(100% - 5rem);
       }
-      @media (max-width: 700px) {
+      @include media (small-only) {
         width: calc(100%);
       }
     }
