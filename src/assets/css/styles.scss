@@ -23,18 +23,15 @@ body {
 
 main {
   max-width: $max-width;
-  margin: 3rem auto;
+  margin: $spacing--vertical auto;
 
 }
 
 @import "./typography";
+@import "./forms";
 @import "./navbar";
 
 .site-header {
-  padding: 1.5rem 1.5rem;
+  padding: $spacing--vertical $spacing--horizontal;
   height: 60px;
-
- @include media(wide-up) {
-   height: 85px;
- }
 }

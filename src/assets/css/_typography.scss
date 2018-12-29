@@ -8,6 +8,10 @@ body {
 
 a {
   color: $black;
+  &:hover,
+  &:active {
+    color: $primary;
+  }
 }
 
 .body {
@@ -15,7 +19,7 @@ a {
 
   @for $i from 1 through 6 {
     h#{$i}, .h#{$i} {
-      color: $highlight;
+      color: $primary;
     }
   }
 
@@ -25,7 +29,7 @@ a {
 
   ul li::before {
     content: "◼";
-    color: $highlight;
+    color: $primary;
     display: inline-block;
     font-size: 0.6em;
     width: 1.5rem;
@@ -44,15 +48,35 @@ a {
 
   ol li::before {
     content: counter(li);
-    color: $highlight;
+    color: $primary;
     display: inline-block;
     font-weight: 100;
-    font-size: 2.5rem;
+    font-size: $spacing--vertical;
     width: 1.5rem;
     vertical-align: -0.4rem;
     margin-left: -1.5rem;
     margin-right: 1rem;
     text-align: right;
     direction: rtl;
+  }
+}
+
+.btn {
+  .navbar-buttons &.btn-default,
+  &.btn-default,
+  &.submit-button {
+    border-radius: $border-radius;
+    border-width: 1px;
+    border-color: darken($secondary, 5%);
+    background-color: $secondary;
+    transition: background-color 0.4s, box-shadow 0.4s;
+    box-shadow: $box-shadow--light;
+
+    &:hover, &:focus {
+      background-color: $black;
+      border-color: $black;
+      box-shadow: $box-shadow;
+      outline-width: 0;
+    }
   }
 }

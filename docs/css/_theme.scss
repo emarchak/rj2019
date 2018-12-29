@@ -4,15 +4,25 @@ $grey: #5D5D5D;
 $grey--light: #E1E1E1;
 $grey--lightest: #EDEDED;
 $white: #FFF;
-$highlight: #EB8D3D;
+
+$primary: #EB8D3D;
+$secondary: $grey;
+$warning: #fcf6e9;
 
 $max-width: 720px;
-$box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.09);
+$box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+$box-shadow--light: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+$box-shadow--page: 0 1.2rem 2.4rem 0 rgba(0, 0, 0, 0.09);
 
-$break-small: 768px;
-$break-large: 1200px;
+$border-radius: 0.2rem;
+
+$spacing--horizontal: 3rem;
+$spacing--vertical: 2.4rem;
 
 @mixin media($media) {
+  $break-small: 767px;
+  $break-large: 1200px;
+
   @if $media == small-only {
     @media only screen and (max-width: $break-small) { @content; }
   }

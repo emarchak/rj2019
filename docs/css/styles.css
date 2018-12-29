@@ -17,7 +17,7 @@ body {
 
 main {
   max-width: 720px;
-  margin: 3rem auto;
+  margin: 2.4rem auto;
 }
 
 body {
@@ -28,6 +28,9 @@ body {
 
 a {
   color: #393939;
+}
+a:hover, a:active {
+  color: #EB8D3D;
 }
 
 .body {
@@ -75,7 +78,7 @@ a {
   color: #EB8D3D;
   display: inline-block;
   font-weight: 100;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   width: 1.5rem;
   vertical-align: -0.4rem;
   margin-left: -1.5rem;
@@ -84,9 +87,124 @@ a {
   direction: rtl;
 }
 
+.navbar-buttons .btn.btn-default, .btn.btn-default, .btn.submit-button {
+  border-radius: 0.2rem;
+  border-width: 1px;
+  border-color: #505050;
+  background-color: #5D5D5D;
+  transition: background-color 0.4s, box-shadow 0.4s;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+}
+.navbar-buttons .btn.btn-default:hover, .navbar-buttons .btn.btn-default:focus, .btn.btn-default:hover, .btn.btn-default:focus, .btn.submit-button:hover, .btn.submit-button:focus {
+  background-color: #393939;
+  border-color: #393939;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+  outline-width: 0;
+}
+
+form {
+  background: #EDEDED;
+  border-radius: 0.2rem;
+  padding: 2.4rem 3rem;
+  margin: 2.4rem auto;
+}
+form .form-group > select,
+form .form-control {
+  border-radius: 0.2rem;
+  border: 0.1rem solid #E1E1E1;
+}
+form .form-group > select:focus,
+form .form-control:focus {
+  border-color: #5D5D5D;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+}
+form .form-submit-row {
+  margin-top: 2.4rem;
+}
+form .form-errors ul {
+  margin-bottom: 2.4rem;
+  padding: 0;
+}
+form .form-errors ul li {
+  background-color: #fcf6e9;
+  border: 1px solid #f9edd3;
+  border-radius: 0.2rem;
+  padding: 1.2rem 1.5rem;
+}
+form .form-errors ul li + li {
+  margin-top: 2.4rem;
+}
+form .form-errors ul li::before {
+  content: "✖";
+  margin-left: 0;
+  font-size: 0.9em;
+  margin-right: 0.25em;
+  vertical-align: inherit;
+}
+form .form-group {
+  margin-bottom: 2.4rem;
+}
+form [type=checkbox],
+form [type=radio] {
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+}
+form [type=checkbox]::before, form [type=checkbox]::after,
+form [type=radio]::before,
+form [type=radio]::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 1px solid transparent;
+}
+form [type=checkbox]:focus,
+form [type=radio]:focus {
+  outline: 0;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+}
+form [type=checkbox]::before,
+form [type=radio]::before {
+  content: " ";
+  background-color: #FFF;
+  border-color: #E1E1E1;
+}
+form [type=checkbox]::after,
+form [type=radio]::after {
+  color: #393939;
+  border-color: #393939;
+}
+form [type=checkbox], form [type=checkbox]::before, form [type=checkbox]::after {
+  border-radius: 0.2rem;
+}
+form [type=checkbox]::after {
+  content: "";
+  background-color: #393939;
+  color: #EDEDED;
+  font-size: 0.7em;
+  line-height: 1.3em;
+  padding-left: 0.15em;
+}
+form [type=checkbox]:hover::after {
+  color: #EDEDED;
+  background-color: #535353;
+}
+form [type=radio], form [type=radio]::before, form [type=radio]::after {
+  border-radius: 1em;
+}
+form [type=radio]::after {
+  content: " ";
+  border-width: 0.35em;
+}
+form [type=radio]:hover::after {
+  border-color: #535353;
+}
+
 .navbar {
   background: #EB8D3D;
-  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 0 1.2rem 2.4rem 0 rgba(0, 0, 0, 0.09);
 }
 .navbar-header, .navbar-logo, .navbar a, .navbar a:hover, .navbar a:focus, .navbar button:hover, .navbar button:focus {
   background: none;
@@ -100,9 +218,11 @@ a {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
+.navbar-links > li {
+  margin-left: 0;
+}
 .navbar-links a,
 .navbar-links button {
-  padding: 1rem 3rem;
   text-transform: uppercase;
   font-weight: 900;
   font-size: 1.6rem;
@@ -142,24 +262,15 @@ a {
   }
 }
 
-.navbar-buttons .btn {
-  background-color: #393939;
-  transition: background-color 0.4s, box-shadow 0.4s;
-  box-shadow: none;
-}
-.navbar-buttons .btn:hover, .navbar-buttons .btn:focus {
-  background-color: #5D5D5D;
-  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.09);
+@media only screen and (min-width: 768px) {
+  .navbar-buttons {
+    padding-right: 1.5rem;
+  }
 }
 
 .site-header {
-  padding: 1.5rem 1.5rem;
+  padding: 2.4rem 3rem;
   height: 60px;
-}
-@media only screen and (min-width: 1200px) {
-  .site-header {
-    height: 85px;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

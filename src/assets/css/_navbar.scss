@@ -9,12 +9,11 @@
     box-shadow: none;
   }
 
-  background: $highlight;
-  box-shadow: $box-shadow;
+  background: $primary;
+  box-shadow: $box-shadow--page;
 }
 
 .navbar-links {
-
   &.navbar-main {
     // resets
     align-items: center;
@@ -23,9 +22,12 @@
     flex-wrap: nowrap;
   }
 
+  > li {
+    margin-left: 0;
+  }
+
   a,
   button {
-    padding: 1rem 3rem;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 1.6rem;
@@ -59,15 +61,9 @@
     }
   }
 }
-.navbar-buttons {
-  .btn {
-    background-color: $black;
-    transition: background-color 0.4s, box-shadow 0.4s;
-    box-shadow: none;
 
-    &:hover, &:focus {
-      background-color: $grey;
-      box-shadow: $box-shadow;
-    }
+.navbar-buttons {
+  @include media(medium-up) {
+    padding-right: 1.5rem;
   }
 }

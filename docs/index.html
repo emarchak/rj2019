@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>RJ2019 Template site</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/solid.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://progressivenationhq.nationbuilder.com/themes/7/5be73b394764e83b7953c5d1/0/attachments/15418807751545413797/default/theme-light.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://progressivenationhq.nationbuilder.com/themes/13/5c0ded0745de94575ab2e614/0/attachments/15444169401545603391/default/theme-light.css" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -554,49 +554,82 @@
     </tbody>
   </table>
 
-  <form action="#">
-    <fieldset>
-      <legend>Form legend</legend>
-      <div>
-        <label for="f1">Text input:</label>
-        <input type="text" id="f1" value="input text">
+  <form id="join_page_new_signup_form" class="ajaxForm signup_form" method="POST" action="/forms/signups" enctype="multipart/form-data"><input name="authenticity_token" type="hidden" value="MKWmhs6DZOyVZezNA5kE+JodlC+LX7aHiCqnmtIVLHY="><input name="page_id" type="hidden" value="926"><input name="return_to" type="hidden" value="https://ndp.progressivenation.ca/join"><div class="email_address_form" style="display:none;" aria-hidden="true"><p><label for="email_address">Optional email code</label><br><input name="email_address" type="text" class="text" id="email_address" autocomplete="off"></p></div>
+
+    <div class="form-errors">
+      <ul><li>Email1 is required</li><li>You must supply at least a first and last name, an email address, or a phone number.</li></ul>
+    </div>
+    <div class="row">
+
+      <div class="col-xs-6" id="signup_first_name_container">
+        <div class="form-group">
+          <label for="signup_first_name">First Name</label>
+          <input class="text form-control" id="signup_first_name" name="signup[first_name]" type="text">
+        </div>
       </div>
-      <div>
-        <label for="pw">Password input:</label>
-        <input type="password" id="pw" value="password">
+
+      <div class="col-xs-6" id="signup_last_name_container">
+        <div class="form-group">
+          <label for="signup_last_name">Last Name</label>
+          <input class="text form-control" id="signup_last_name" name="signup[last_name]" type="text">
+        </div>
       </div>
-      <div>
-        <label for="f2">Radio input:</label>
-        <input type="radio" id="f2">
+
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="signup_email">Email</label>
+          <input class="text form-control" id="signup_email" name="signup[email]" type="email">
+
+          <div class="checkbox">
+            <label for="signup_email_opt_in">
+              <input name="signup[email_opt_in]" type="hidden" value="0"><input class="checkbox" checked="checked" id="signup_email_opt_in" name="signup[email_opt_in]" type="checkbox" value="1">
+              Send me email updates
+            </label>
+          </div>
+
+        </div>
       </div>
-      <div>
-        <label for="f3">Checkbox input:</label>
-        <input type="checkbox" id="f3">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="signup_mobile_number">Mobile phone</label><input class="text form-control" id="signup_mobile_number" name="signup[mobile_number]" type="tel">
+
+          <div class="checkbox">
+            <label for="signup_mobile_opt_in">
+              <input name="signup[mobile_opt_in]" type="hidden" value="0"><input class="checkbox" checked="checked" id="signup_mobile_opt_in" name="signup[mobile_opt_in]" type="checkbox" value="1">
+              Send me text messages
+            </label>
+          </div>
+
+        </div>
       </div>
-      <div>
-        <label for="f4">Select field:</label>
-        <select id="f4">
-          <option>
-            Option 01
-          </option>
-          <option>
-            Option 02
-          </option>
-        </select>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label for="signup_submitted_address">Address (Street, City, Province, Postal code) </label>
+          <input class="text form-control" id="signup_submitted_address" name="signup[submitted_address]" type="text">
+        </div>
       </div>
-      <div>
-        <label for="f5">Textarea:</label>
-        <textarea id="f5" cols="30" rows="5">Textarea text</textarea>
-      </div>
-      <div>
-        <label for="f6">Input Button:</label>
-        <input type="button" id="f6" value="button text">
-      </div>
-      <div>
-        <label>Button Elements:</label>
-        <button class="btn positive"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> Save</button> <a class="btn" href="#"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/key.png" alt=""> Change Password</a> <a href="#" class="btn negative"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/cross.png" alt=""> Cancel</a>
-      </div>
-    </fieldset>
+    </div>
+    <div class="checkbox">
+      <label for="checkbox_20" class="checkbox"> <input type="checkbox" name="signup[labeled_tags][]" value="20" id="checkbox_20"> Tom can count on my vote </label>
+    </div>
+    <div class="radio">
+      <label for="checkbox_21" class="radio"> <input type="radio" name="signup[labeled_tags][]" value="21"  id="checkbox_21"> I'll take a sign </label>
+    </div>
+    <div class="checkbox">
+      <label for="signup_is_volunteer">
+        <input name="signup[is_volunteer]" type="hidden" value="0"><input class="checkbox" id="signup_is_volunteer" name="signup[is_volunteer]" type="checkbox" value="1">
+        I want to volunteer
+      </label>
+    </div>
+    <div class="form-submit-row">
+      <input class="submit-button btn btn-primary" type="submit" name="commit" value="Sign up">
+      <div class="form-submit emphasis"></div>
+    </div>
   </form>
 
   I am <a href="something.doc">a word document</a> link, so readers know that I'm not a normal link.<br>
@@ -622,8 +655,66 @@
 </div>
   </main>
 
-  <footer>
-    
-  </footer>
+  <div class="block contact-block">
+
+
+
+  <!-- _pn-contact-block_items.html -->
+  <div class="contact-block-items">
+
+    <div class="contact-block-item">
+      <span class="fas fa-envelope"></span>
+      <span class="sr-only">Email:</span>
+      <a href="mailto:contact@progressivenation.ca" target="_blank" rel="nofollow">contact@progressivenation.ca</a>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="contact-block-item">
+      <span class="fas fa-phone"></span>
+      <span class="sr-only">Phone:</span>
+      <a href="tel:(416) 123-4567">(416) 123-4567</a>
+    </div>
+
+
+
+    <div class="contact-block-item">
+      <strong>Mailing Address:</strong>
+      123 Fake St, Toronto, ON, A1B 2C3
+
+    </div>
+
+  </div>
+
+  <!-- /_pn-contact-block_items.html -->
+
+</div>
+
+<footer class="block footer">
+
+  <div class="footer-logos">
+    <a href="/login" class="footer-logo-main">
+
+      <img src="https://d3n8a8pro7vhmx.cloudfront.net/progressivenationhq/sites/7/header_images/sixty/chrismoiselogo2018-2.png?1540917592" alt="Login to Demo Site">
+
+    </a>
+
+    <a href="https://nationbuilder.com/" class="footer-logo-nb">
+      <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5be73b394764e83b7953c5d1/attachments/original/1541881289/nationbuilder-white.png?1541881289" alt="Created with NationBuilder">
+    </a>
+
+
+    <a href="https://www.progressivenation.ca/" class="footer-logo-pn">
+      <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5be73b394764e83b7953c5d1/attachments/original/1541881288/progressivenation-white.png?1541881288" alt="Built by Progressive Nation">
+    </a>
+
+  </div>
+</footer>
 </body>
 </html>
