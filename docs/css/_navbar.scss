@@ -53,9 +53,6 @@
       &::after {
         width: calc(100% - 5rem);
       }
-      @include media (small-only) {
-        width: calc(100%);
-      }
     }
   }
 
@@ -64,11 +61,11 @@
     > a {
       background-color: transparent;
       color: $black;
-      &:after {
+      &::after {
         width: calc(100% - 5rem);
-      }
-      @include media (small-only) {
-        width: calc(100%);
+        @include media (small-only) {
+          width: calc(100% - #{$spacing--horizontal});
+        }
       }
     }
   }
@@ -77,5 +74,48 @@
 .navbar-buttons {
   @include media(medium-up) {
     padding-right: 1.5rem;
+  }
+}
+
+.navbar-menu {
+  @include media(small-only) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.navbar-menu-inner {
+  @include media(small-only) {
+    border-top: 60px solid $primary
+  }
+}
+
+.navbar-overlay {
+  left: 0;
+  top: 60px;
+  width: 100vw;
+  z-index: 1;
+  transition: background-color 1s;
+  background-color: rgba(0, 0, 0, 0);
+
+  @include media(small-only) {
+    .navbar-menu-open & {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+.btn.navbar-toggle {
+  background-color: transparent;
+  color: $black;
+  outline: 0;
+  height: 4rem;
+  width: 4rem;
+  &:focus,
+  &:active {
+    color: $primary;
+    background-color: $black;
+    box-shadow: $box-shadow;
   }
 }

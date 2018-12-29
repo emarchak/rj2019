@@ -299,26 +299,19 @@ form [type=radio]:hover::after {
 .navbar-links.navbar-main button:focus::after {
   width: calc(100% - 5rem);
 }
-@media only screen and (max-width: 767px) {
-  .navbar-links.navbar-main a:hover, .navbar-links.navbar-main a:focus,
-.navbar-links.navbar-main button:hover,
-.navbar-links.navbar-main button:focus {
-    width: calc(100%);
-  }
-}
 .navbar-links.navbar-main li.active > a,
 .navbar-links.navbar-main li.open > a {
   background-color: transparent;
   color: #393939;
 }
-.navbar-links.navbar-main li.active > a:after,
-.navbar-links.navbar-main li.open > a:after {
+.navbar-links.navbar-main li.active > a::after,
+.navbar-links.navbar-main li.open > a::after {
   width: calc(100% - 5rem);
 }
 @media only screen and (max-width: 767px) {
-  .navbar-links.navbar-main li.active > a,
-.navbar-links.navbar-main li.open > a {
-    width: calc(100%);
+  .navbar-links.navbar-main li.active > a::after,
+.navbar-links.navbar-main li.open > a::after {
+    width: calc(100% - 3rem);
   }
 }
 
@@ -326,6 +319,45 @@ form [type=radio]:hover::after {
   .navbar-buttons {
     padding-right: 1.5rem;
   }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-menu::after {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-menu-inner {
+    border-top: 60px solid #EB8D3D;
+  }
+}
+
+.navbar-overlay {
+  left: 0;
+  top: 60px;
+  width: 100vw;
+  z-index: 1;
+  transition: background-color 1s;
+  background-color: rgba(0, 0, 0, 0);
+}
+@media only screen and (max-width: 767px) {
+  .navbar-menu-open .navbar-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.btn.navbar-toggle {
+  background-color: transparent;
+  color: #393939;
+  outline: 0;
+  height: 4rem;
+  width: 4rem;
+}
+.btn.navbar-toggle:focus, .btn.navbar-toggle:active {
+  color: #EB8D3D;
+  background-color: #393939;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=styles.css.map */
