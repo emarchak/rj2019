@@ -1,23 +1,12 @@
 @charset "UTF-8";
 @font-face {}
 html {
-  box-sizing: border-box;
   font-size: 10px;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
 }
 
 body {
   font-family: sans-serif;
   padding: 0;
-  margin: 0;
-}
-
-main {
-  max-width: 720px;
-  margin: 2.4rem auto;
 }
 
 body {
@@ -34,9 +23,6 @@ a:hover, a:focus, a:active {
   color: #EB8D3D;
 }
 
-.body {
-  padding: 0 1.5rem;
-}
 .body h1, .body .h1 {
   color: #EB8D3D;
 }
@@ -122,6 +108,22 @@ form .form-control:focus {
   border-color: #5D5D5D;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
 }
+form .form-group > select ::-webkit-input-placeholder,
+form .form-control ::-webkit-input-placeholder {
+  color: #5D5D5D !important;
+}
+form .form-group > select :-moz-placeholder,
+form .form-control :-moz-placeholder {
+  color: #5D5D5D !important;
+}
+form .form-group > select ::-moz-placeholder,
+form .form-control ::-moz-placeholder {
+  color: #5D5D5D !important;
+}
+form .form-group > select :-ms-input-placeholder,
+form .form-control :-ms-input-placeholder {
+  color: #5D5D5D !important;
+}
 form .form-submit-row {
   margin-top: 2.4rem;
 }
@@ -206,6 +208,41 @@ form [type=radio]:hover::after {
   border-color: #535353;
 }
 
+.misc-block .form-group > select,
+.misc-block .form-control {
+  border-radius: 0.2rem;
+  border: 0.1rem solid #E1E1E1;
+}
+.misc-block .form-group > select:focus,
+.misc-block .form-control:focus {
+  border-color: #5D5D5D;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+}
+.misc-block .form-group > select ::-webkit-input-placeholder,
+.misc-block .form-control ::-webkit-input-placeholder {
+  color: #5D5D5D !important;
+}
+.misc-block .form-group > select :-moz-placeholder,
+.misc-block .form-control :-moz-placeholder {
+  color: #5D5D5D !important;
+}
+.misc-block .form-group > select ::-moz-placeholder,
+.misc-block .form-control ::-moz-placeholder {
+  color: #5D5D5D !important;
+}
+.misc-block .form-group > select :-ms-input-placeholder,
+.misc-block .form-control :-ms-input-placeholder {
+  color: #5D5D5D !important;
+}
+
+.connect-block {
+  display: none;
+}
+
+.misc-block .misc-block-item:last-child {
+  display: none;
+}
+
 .navbar {
   background: #EB8D3D;
   box-shadow: 0 1.2rem 2.4rem 0 rgba(0, 0, 0, 0.09);
@@ -270,11 +307,6 @@ form [type=radio]:hover::after {
   .navbar-buttons {
     padding-right: 1.5rem;
   }
-}
-
-.site-header {
-  padding: 2.4rem 3rem;
-  height: 60px;
 }
 
 /*# sourceMappingURL=styles.css.map */

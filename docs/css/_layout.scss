@@ -1,0 +1,14 @@
+
+.misc-block {
+  @include input-style();
+}
+
+.connect-block {
+  display: none;
+}
+
+.misc-block {
+  .misc-block-item:last-child {
+    display:none;
+  }
+}

@@ -1,21 +1,29 @@
 @import "./theme.scss";
 
+@mixin input-style {
+  .form-group>select,
+  .form-control {
+    border-radius: $border-radius;
+    border: .1rem solid $grey--light;
+
+    &:focus {
+      border-color: $secondary;
+      box-shadow: $box-shadow--light;
+    }
+
+    @include placeholder {
+      color: $grey !important;
+    }
+  }
+}
+
 form {
   background: $grey--lightest;
   border-radius: $border-radius;
   padding: $spacing--vertical $spacing--horizontal;
   margin: $spacing--vertical auto;
 
-
-  .form-group>select,
-  .form-control {
-    border-radius: $border-radius;
-    border: .1rem solid $grey--light;
-    &:focus {
-      border-color: $secondary;
-      box-shadow: $box-shadow--light;
-    }
-  }
+  @include input-style();
 
   .form-submit-row {
     margin-top: $spacing--vertical;

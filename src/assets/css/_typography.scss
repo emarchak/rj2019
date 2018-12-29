@@ -18,7 +18,6 @@ a {
 }
 
 .body {
-  padding: 0 1.5rem;
 
   @for $i from 1 through 6 {
     h#{$i}, .h#{$i} {

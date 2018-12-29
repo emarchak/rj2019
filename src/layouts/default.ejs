@@ -6,10 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%= site.title %></title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/solid.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://progressivenationhq.nationbuilder.com/themes/13/5c0ded0745de94575ab2e614/0/attachments/15444169401545603391/default/theme-light.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/brands.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/fontawesome.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://ravijoshi.nationbuilder.com/themes/1/5c0ded0745de94575ab2e614/0/attachments/15461127851546113728/default/theme.css" type="text/css">
+
+  <!-- _theme-head-after.html -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="aware-theme v2-theme page-type-basic page-pages-show-basic-wide page-slug-home js ">
   <header class="site-header">
       <%- include('partials/header') %>
   </header>
@@ -19,10 +23,12 @@
   </header>
 
 
-  <main class="body">
+  <main class="body"><div class="body-inner">
     <%- body %>
-  </main>
 
-  <%- include('partials/footer') %>
+    <%- include('partials/footer') %>
+    </div></main>
+
+
 </body>
 </html>
