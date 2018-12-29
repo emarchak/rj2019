@@ -13,14 +13,12 @@
   box-shadow: $box-shadow--page;
 }
 
-.navbar-links {
-  &.navbar-main {
-    // resets
-    align-items: center;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-  }
+.navbar-links.navbar-main {
+  // resets
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 
   > li {
     margin-left: 0;
@@ -35,7 +33,7 @@
     cursor: pointer;
     position: relative;
 
-    &:after {
+    &::after {
       height: .2rem;
       background: $black;
       content: '';
@@ -51,6 +49,20 @@
     &:hover,
     &:focus {
       outline: none;
+      color: $black;
+      &::after {
+        width: calc(100% - 5rem);
+      }
+      @include media (small-only) {
+        width: calc(100%);
+      }
+    }
+  }
+
+  li.active,
+  li.open {
+    > a {
+      background-color: transparent;
       color: $black;
       &:after {
         width: calc(100% - 5rem);

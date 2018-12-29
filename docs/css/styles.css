@@ -242,6 +242,10 @@ form [type=radio]:hover::after {
 .misc-block .misc-block-item:last-child {
   display: none;
 }
+.misc-block .signup_form {
+  margin: 0;
+  padding: 0;
+}
 
 .navbar {
   background: #EB8D3D;
@@ -259,11 +263,11 @@ form [type=radio]:hover::after {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
-.navbar-links > li {
+.navbar-links.navbar-main > li {
   margin-left: 0;
 }
-.navbar-links a,
-.navbar-links button {
+.navbar-links.navbar-main a,
+.navbar-links.navbar-main button {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 1.6rem;
@@ -271,8 +275,8 @@ form [type=radio]:hover::after {
   cursor: pointer;
   position: relative;
 }
-.navbar-links a:after,
-.navbar-links button:after {
+.navbar-links.navbar-main a::after,
+.navbar-links.navbar-main button::after {
   height: 0.2rem;
   background: #393939;
   content: "";
@@ -284,21 +288,36 @@ form [type=radio]:hover::after {
   left: 50%;
   bottom: 1rem;
 }
-.navbar-links a:hover, .navbar-links a:focus,
-.navbar-links button:hover,
-.navbar-links button:focus {
+.navbar-links.navbar-main a:hover, .navbar-links.navbar-main a:focus,
+.navbar-links.navbar-main button:hover,
+.navbar-links.navbar-main button:focus {
   outline: none;
   color: #393939;
 }
-.navbar-links a:hover:after, .navbar-links a:focus:after,
-.navbar-links button:hover:after,
-.navbar-links button:focus:after {
+.navbar-links.navbar-main a:hover::after, .navbar-links.navbar-main a:focus::after,
+.navbar-links.navbar-main button:hover::after,
+.navbar-links.navbar-main button:focus::after {
   width: calc(100% - 5rem);
 }
 @media only screen and (max-width: 767px) {
-  .navbar-links a:hover, .navbar-links a:focus,
-.navbar-links button:hover,
-.navbar-links button:focus {
+  .navbar-links.navbar-main a:hover, .navbar-links.navbar-main a:focus,
+.navbar-links.navbar-main button:hover,
+.navbar-links.navbar-main button:focus {
+    width: calc(100%);
+  }
+}
+.navbar-links.navbar-main li.active > a,
+.navbar-links.navbar-main li.open > a {
+  background-color: transparent;
+  color: #393939;
+}
+.navbar-links.navbar-main li.active > a:after,
+.navbar-links.navbar-main li.open > a:after {
+  width: calc(100% - 5rem);
+}
+@media only screen and (max-width: 767px) {
+  .navbar-links.navbar-main li.active > a,
+.navbar-links.navbar-main li.open > a {
     width: calc(100%);
   }
 }
