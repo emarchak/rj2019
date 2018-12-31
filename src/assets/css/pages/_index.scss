@@ -17,9 +17,9 @@
 
   #{&}--content {
     padding: $spacing--vertical $spacing--horizontal;
-    background-color: $secondary--dark;
+    background-color: $secondary;
     border-bottom: 0.5rem solid $primary;
-    color: $primary;
+    color: $white;
     font-weight: $font-weight--medium;
     @include heading-size(2);
 
