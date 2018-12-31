@@ -19,6 +19,9 @@
     padding: $spacing--vertical $spacing--horizontal;
     background-color: $secondary--dark;
     border-bottom: 0.5rem solid $primary;
+    color: $primary;
+    font-weight: $font-weight--medium;
+    @include heading-size(2);
 
     *:last-child {
       margin-bottom: 0;
@@ -26,9 +29,8 @@
 
     @include media(medium-up) {
       width: 33vw;
-      font-weight: $font-weight--medium;
-      color: $primary;
-      @include heading-size(2);
+
+
       position: absolute;
       left: $spacing--horizontal / 2;
       z-index: 1;
@@ -43,3 +45,68 @@
   }
 }
 
+.rj2019--cta {
+  @include full-width;
+  background: $secondary;
+  color: $white;
+  padding-bottom: $spacing--vertical;
+  margin-top: $spacing--vertical;
+
+  &--content {
+    padding-left: $spacing--horizontal;
+    padding-right: $spacing--horizontal;
+
+    @include media(wide-up) {
+      padding-left: calc(50vw - #{500px - 15px}) ;
+      padding-right: calc(50vw - #{500px - 15px}) ;
+    }
+  }
+
+  &--logo {
+    margin-top: -1px;
+  }
+
+  &--copy {
+    @include media(medium-up) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    > * {
+      margin-bottom: 0;
+
+      &:first-child {
+        margin-top: 0;
+        @include media(medium-only) {
+          width: calc(50% - #{$spacing--horizontal / 2});
+        }
+        @include media(wide-up) {
+          width: calc(66% - #{$spacing--horizontal / 2});
+        }
+      }
+
+      &:last-child {
+        @include media(medium-only) {
+          margin-top: 0;
+          width: calc(50% - #{$spacing--horizontal / 2});
+        }
+        @include media(wide-up) {
+          margin-top: 0;
+          width: calc(33% - #{$spacing--horizontal / 2});
+        }
+      }
+    }
+
+    & h3.rj2019--cta--subheading {
+      color: $white;
+      margin-bottom: -0.45rem;
+      @include heading-size(2);
+
+      @include media(wide-up) {
+        @include heading-size(1);
+      }
+    }
+  }
+
+}

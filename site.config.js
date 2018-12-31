@@ -5,6 +5,7 @@ module.exports = {
   },
   site: {
     title: 'RJ2019 Template site',
-    domain: '﻿http://emarchak.com/rj2019/'
+    css: 'styles.min.css',
+    domain: 'http://emarchak.com/rj2019/'
   }
 };

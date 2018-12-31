@@ -4,6 +4,7 @@ module.exports = {
     outputPath: './docs'
   },
   site: {
-    title: 'RJ2019 Template site'
+    title: 'RJ2019 Template site',
+    css: 'styles.css'
   }
 };

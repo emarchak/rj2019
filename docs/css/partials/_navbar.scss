@@ -136,6 +136,12 @@
     }
   }
 
+  &-logo {
+    @include media(small-only) {
+      width: calc(100% - 112px)
+    }
+  }
+
   &-logo-img {
     @include media(small-only) {
       width: 100%;

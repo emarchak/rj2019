@@ -96,6 +96,7 @@ a {
     transition: background-color 0.4s, box-shadow 0.4s;
     box-shadow: $box-shadow--light;
     font-weight: $font-weight--medium;
+    text-decoration: none !important;
     &:hover, &:focus {
       box-shadow: $box-shadow;
       outline-width: 0;
@@ -121,6 +122,11 @@ a {
       background-color: lighten($primary, 10%);
       border-color: darken($primary, 5%);
     }
+  }
+
+  &.btn-lg {
+    @include heading-size(2);
+    font-weight: $font-weight--heading;
   }
 
   &.btn-block {

@@ -119,6 +119,7 @@ a:hover, a:focus, a:active {
   transition: background-color 0.4s, box-shadow 0.4s;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
   font-weight: 500;
+  text-decoration: none !important;
 }
 .navbar-buttons .btn.btn-default:hover, .navbar-buttons .btn.btn-default:focus, .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.submit-button:hover, .btn.submit-button:focus {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
@@ -140,6 +141,11 @@ a:hover, a:focus, a:active {
 .btn.btn-primary:hover, .btn.btn-primary:focus {
   background-color: #f9ae64;
   border-color: #f6871a;
+}
+.btn.btn-lg {
+  font-size: 2.25rem;
+  line-height: 1.3em;
+  font-weight: 900;
 }
 .btn.btn-block {
   margin-top: 2.4rem;
@@ -276,6 +282,7 @@ a:hover, a:focus, a:active {
 
 .main {
   padding-top: 60px;
+  padding-bottom: 0;
 }
 @media only screen and (min-width: 768px) {
   .main {
@@ -398,6 +405,11 @@ a:hover, a:focus, a:active {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
 }
 @media only screen and (max-width: 767px) {
+  .navbar-logo {
+    width: calc(100% - 112px);
+  }
+}
+@media only screen and (max-width: 767px) {
   .navbar-logo-img {
     width: 100%;
   }
@@ -432,6 +444,10 @@ a:hover, a:focus, a:active {
   padding: 2.4rem 3rem;
   background-color: #180919;
   border-bottom: 0.5rem solid #f79433;
+  color: #f79433;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 1.3em;
 }
 .rj2019--hero .rj2019--hero--content *:last-child {
   margin-bottom: 0;
@@ -439,10 +455,6 @@ a:hover, a:focus, a:active {
 @media only screen and (min-width: 768px) {
   .rj2019--hero .rj2019--hero--content {
     width: 33vw;
-    font-weight: 500;
-    color: #f79433;
-    font-size: 2.25rem;
-    line-height: 1.3em;
     position: absolute;
     left: 1.5rem;
     z-index: 1;
@@ -454,6 +466,85 @@ a:hover, a:focus, a:active {
   .rj2019--hero .rj2019--hero--content {
     left: calc(50vw - 480px);
     width: 30rem;
+  }
+}
+
+.rj2019--cta {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  background: #2b0f2c;
+  color: #FFF;
+  padding-bottom: 2.4rem;
+  margin-top: 2.4rem;
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--cta {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+.rj2019--cta--content {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--cta--content {
+    padding-left: calc(50vw - 485px);
+    padding-right: calc(50vw - 485px);
+  }
+}
+.rj2019--cta--logo {
+  margin-top: -1px;
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--cta--copy {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+.rj2019--cta--copy > * {
+  margin-bottom: 0;
+}
+.rj2019--cta--copy > *:first-child {
+  margin-top: 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .rj2019--cta--copy > *:first-child {
+    width: calc(50% - 1.5rem);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--cta--copy > *:first-child {
+    width: calc(66% - 1.5rem);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .rj2019--cta--copy > *:last-child {
+    margin-top: 0;
+    width: calc(50% - 1.5rem);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--cta--copy > *:last-child {
+    margin-top: 0;
+    width: calc(33% - 1.5rem);
+  }
+}
+.rj2019--cta--copy h3.rj2019--cta--subheading {
+  color: #FFF;
+  margin-bottom: -0.45rem;
+  font-size: 2.25rem;
+  line-height: 1.3em;
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--cta--copy h3.rj2019--cta--subheading {
+    font-size: 3rem;
+    line-height: 1.3em;
   }
 }
 

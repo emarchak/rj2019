@@ -12,6 +12,7 @@
 
 .main {
   padding-top: $navbar--height--small;
+  padding-bottom: 0;
   @include media(medium-up) {
     padding-top: $navbar--height--wide;
   }
