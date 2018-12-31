@@ -158,6 +158,11 @@ a:hover, a:focus, a:active {
     margin-right: auto;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .btn.btn-block {
+    max-width: 33vw;
+  }
+}
 
 .v2-theme form {
   background: #ededed;
