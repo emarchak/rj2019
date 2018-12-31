@@ -5,6 +5,9 @@
   $navbar--color--bg: $primary;
   $navbar--color--hover: $navbar--color;
 
+  background: $navbar--color--bg;
+  box-shadow: $box-shadow--page;
+
   &-header, &-logo, a, a:hover, a:focus, button:hover, button:focus {
     // resets
     background-color: transparent;
@@ -12,8 +15,19 @@
     box-shadow: none;
   }
 
-  background: $navbar--color--bg;
-  box-shadow: $box-shadow--page;
+  &-links {
+    a {
+      color: $navbar--color;
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $navbar--color--hover;
+        @include media (medium-up) {
+          color: $navbar--color;
+        }
+      }
+    }
+  }
 
   &-links.navbar-main {
     // resets
@@ -29,7 +43,6 @@
     a,
     button {
       text-transform: uppercase;
-      color: $navbar--color;
       font-weight: $font-weight--heading;
       letter-spacing: 0.05em;
       font-size: 1.6rem;
@@ -50,16 +63,9 @@
         bottom: 1rem;
       }
 
-      &:hover,
-      &:focus {
-        outline: none;
-        color: $navbar--color--hover;
-        @include media (medium-up) {
-          color: $navbar--color;
-        }
-        &::after {
-          width: calc(100% - 5rem);
-        }
+      &:hover::after,
+      &:focus::after {
+        width: calc(100% - 5rem);
       }
     }
 
@@ -87,18 +93,15 @@
 
   &-menu {
     @include media(small-only) {
+      border-top: 60px solid $navbar--color--bg;
       &::after {
         display: none;
       }
     }
   }
 
-
-
-  &-menu-inner {
-    @include media(small-only) {
-      border-top: 60px solid $navbar--color--bg;
-    }
+  &-header {
+    justify-content: left;
   }
 
   &-overlay {
@@ -116,18 +119,26 @@
     }
   }
 
+  .navbar-connect a,
   &-toggle.btn {
     background-color: transparent;
-    color: $navbar--color;;
+    color: $navbar--color;
     outline: 0;
     height: 4rem;
     width: 4rem;
 
+    &:hover,
     &:focus,
     &:active {
       color: $navbar--color--bg;
       background-color: $navbar--color;
       box-shadow: $box-shadow;
+    }
+  }
+
+  &-logo-img {
+    @include media(small-only) {
+      width: 100%;
     }
   }
 }

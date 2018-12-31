@@ -299,6 +299,18 @@ a:hover, a:focus, a:active {
   border: none;
   box-shadow: none;
 }
+.navbar-links a {
+  color: #2b0f2c;
+}
+.navbar-links a:hover, .navbar-links a:focus {
+  outline: none;
+  color: #2b0f2c;
+}
+@media only screen and (min-width: 768px) {
+  .navbar-links a:hover, .navbar-links a:focus {
+    color: #2b0f2c;
+  }
+}
 .navbar-links.navbar-main {
   align-items: center;
   -webkit-flex-wrap: nowrap;
@@ -311,7 +323,6 @@ a:hover, a:focus, a:active {
 .navbar-links.navbar-main a,
 .navbar-links.navbar-main button {
   text-transform: uppercase;
-  color: #2b0f2c;
   font-weight: 900;
   letter-spacing: 0.05em;
   font-size: 1.6rem;
@@ -331,19 +342,6 @@ a:hover, a:focus, a:active {
   transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
   left: 50%;
   bottom: 1rem;
-}
-.navbar-links.navbar-main a:hover, .navbar-links.navbar-main a:focus,
-.navbar-links.navbar-main button:hover,
-.navbar-links.navbar-main button:focus {
-  outline: none;
-  color: #2b0f2c;
-}
-@media only screen and (min-width: 768px) {
-  .navbar-links.navbar-main a:hover, .navbar-links.navbar-main a:focus,
-.navbar-links.navbar-main button:hover,
-.navbar-links.navbar-main button:focus {
-    color: #2b0f2c;
-  }
 }
 .navbar-links.navbar-main a:hover::after, .navbar-links.navbar-main a:focus::after,
 .navbar-links.navbar-main button:hover::after,
@@ -371,14 +369,15 @@ a:hover, a:focus, a:active {
   }
 }
 @media only screen and (max-width: 767px) {
+  .navbar-menu {
+    border-top: 60px solid #f79433;
+  }
   .navbar-menu::after {
     display: none;
   }
 }
-@media only screen and (max-width: 767px) {
-  .navbar-menu-inner {
-    border-top: 60px solid #f79433;
-  }
+.navbar-header {
+  justify-content: left;
 }
 .navbar-overlay {
   left: 0;
@@ -393,17 +392,22 @@ a:hover, a:focus, a:active {
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
-.navbar-toggle.btn {
+.navbar .navbar-connect a, .navbar-toggle.btn {
   background-color: transparent;
   color: #2b0f2c;
   outline: 0;
   height: 4rem;
   width: 4rem;
 }
-.navbar-toggle.btn:focus, .navbar-toggle.btn:active {
+.navbar .navbar-connect a:hover, .navbar .navbar-connect a:focus, .navbar .navbar-connect a:active, .navbar-toggle.btn:hover, .navbar-toggle.btn:focus, .navbar-toggle.btn:active {
   color: #f79433;
   background-color: #2b0f2c;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 767px) {
+  .navbar-logo-img {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
