@@ -1,0 +1,140 @@
+@import "../theme";
+
+@mixin input-style {
+  .form-group>select,
+  .form-control {
+    border-radius: $border-radius;
+    border: .1rem solid $grey--light;
+
+    &:focus {
+      border-color: $secondary;
+      box-shadow: $box-shadow--light;
+    }
+
+    @include placeholder {
+      color: $grey !important;
+    }
+  }
+}
+
+.v2-theme form {
+  background: $grey--lightest;
+  border-radius: $border-radius;
+  padding: $spacing--vertical $spacing--horizontal;
+  margin: $spacing--vertical auto;
+
+  @include input-style();
+
+  .form-submit-row {
+    margin-top: $spacing--vertical;
+  }
+
+  .form-errors {
+    ul {
+      margin-bottom: $spacing--vertical;
+      padding: 0;
+    }
+
+    ul li {
+      background-color: $warning;
+      border: 1px solid darken($warning, 5%);
+      border-radius: $border-radius;
+      padding: ($spacing--vertical / 2) ($spacing--horizontal / 2);
+
+      + li {
+        margin-top: $spacing--vertical;
+      }
+    }
+    ul li::before {
+      content: "✖";
+      margin-left: 0;
+      font-size: .9em;
+      margin-right: .25em;
+      vertical-align: inherit;
+    }
+  }
+
+  .form-group {
+    margin-bottom: $spacing--vertical;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    overflow: hidden;
+    width: 1.05em;
+    height: 1em;
+    margin-top: 0.5em;
+    margin-left: -1.5em;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top:0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      border: 1px solid transparent;
+      font-family: $icon-font;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: $box-shadow--light;
+    }
+
+    // Unchecked
+    &::before {
+      content: " ";
+      background-color: $white;
+      border-color: $grey--light;
+    }
+
+    // Checked.
+    &::after {
+      color: $black;
+      border-color: $black;
+    }
+  }
+
+
+  [type="checkbox"] {
+    &,
+    &::before,
+    &::after {
+      border-radius: $border-radius;
+    }
+
+    // Checked.
+    &::after {
+      content: "\f00c";
+      background-color: $black;
+      color: $grey--lightest;
+      font-size: .7em;
+      line-height: 1.3em;
+      padding-left: .15em;
+    }
+
+    &:hover::after {
+      color: $grey--lightest;
+      background-color: lighten($black, 10%);
+    }
+  }
+
+  [type="radio"] {
+    &,
+    &::before,
+    &::after {
+      border-radius: 1em;
+    }
+
+    // Checked.
+    &::after {
+      content: " ";
+      border-width: 0.35em;
+    }
+
+    &:hover::after {
+      border-color: lighten($black, 10%);
+    }
+  }
+}

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,900");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,500,900");
 html,
 body {
   padding: 0;
@@ -12,7 +12,6 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  line-height: 2;
   font-size: 1.5rem;
   letter-spacing: 0.025em;
   font-size: 10px;
@@ -30,7 +29,6 @@ a:hover, a:focus, a:active {
 .v2-theme .body * {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  line-height: 2;
   font-size: 1.5rem;
   letter-spacing: 0.025em;
 }
@@ -42,36 +40,42 @@ a:hover, a:focus, a:active {
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   font-size: 3rem;
+  line-height: 1.3em;
 }
 .v2-theme .body h2, .v2-theme .body .h2 {
   color: #f79433;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   font-size: 2.25rem;
+  line-height: 1.3em;
 }
 .v2-theme .body h3, .v2-theme .body .h3 {
   color: #f79433;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   font-size: 1.755rem;
+  line-height: 1.3em;
 }
 .v2-theme .body h4, .v2-theme .body .h4 {
   color: #f79433;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   font-size: 1.68rem;
+  line-height: 1.3em;
 }
 .v2-theme .body h5, .v2-theme .body .h5 {
   color: #f79433;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   font-size: 1.245rem;
+  line-height: 1.3em;
 }
 .v2-theme .body h6, .v2-theme .body .h6 {
   color: #f79433;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   font-size: 1rem;
+  line-height: 1.3em;
 }
 .v2-theme .body a, .v2-theme .body a:hover, .v2-theme .body a:focus, .v2-theme .body a:active {
   text-decoration: underline;
@@ -109,19 +113,36 @@ a:hover, a:focus, a:active {
   direction: rtl;
 }
 
-.navbar-buttons .btn.btn-default, .btn.btn-default, .btn.submit-button {
+.navbar-buttons .btn.btn-default, .btn.btn-default, .btn.btn-primary, .btn.submit-button {
   border-radius: 0.2rem;
   border-width: 1px;
-  border-color: #180919;
-  background-color: #2b0f2c;
   transition: background-color 0.4s, box-shadow 0.4s;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+.navbar-buttons .btn.btn-default:hover, .navbar-buttons .btn.btn-default:focus, .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.submit-button:hover, .btn.submit-button:focus {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+  outline-width: 0;
+}
+.navbar-buttons .btn.btn-default, .btn.btn-default, .btn.submit-button {
+  border-color: #180919;
+  background-color: #2b0f2c;
 }
 .navbar-buttons .btn.btn-default:hover, .navbar-buttons .btn.btn-default:focus, .btn.btn-default:hover, .btn.btn-default:focus, .btn.submit-button:hover, .btn.submit-button:focus {
   background-color: #3e153f;
   border-color: #180919;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
-  outline-width: 0;
+}
+.btn.btn-primary {
+  border-color: #f6871a;
+  background-color: #f79433;
+  color: #333333;
+}
+.btn.btn-primary:hover, .btn.btn-primary:focus {
+  background-color: #f9ae64;
+  border-color: #f6871a;
+}
+.btn.btn-block {
+  margin-top: 2.4rem;
 }
 
 .v2-theme form {
@@ -253,41 +274,13 @@ a:hover, a:focus, a:active {
   background-color: #e1e1e1;
 }
 
-.rj2019--hero {
-  max-height: 80vh;
-  overflow: hidden;
+.main {
+  padding-top: 60px;
 }
 @media only screen and (min-width: 768px) {
-  .rj2019--hero {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+  .main {
+    padding-top: 75px;
   }
-}
-.rj2019--hero .rj2019--hero--image {
-  transform: translateY(-10%);
-  width: 100%;
-}
-.rj2019--hero .rj2019--hero--content {
-  width: 30rem;
-  position: absolute;
-  top: 1rem;
-  z-index: 1;
-  padding: 2.4rem 3rem;
-  background-color: #180919;
-  border-bottom: 0.5rem solid #f79433;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
-}
-@media only screen and (min-width: 768px) {
-  .rj2019--hero .rj2019--hero--content {
-    left: calc(50vw - 480px);
-  }
-}
-.rj2019--hero .rj2019--hero--content * {
-  color: #333333;
 }
 
 .navbar {
@@ -407,6 +400,60 @@ a:hover, a:focus, a:active {
 @media only screen and (max-width: 767px) {
   .navbar-logo-img {
     width: 100%;
+  }
+}
+
+.rj2019--hero {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--hero {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--hero {
+    max-height: 80vh;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--hero .rj2019--hero--image {
+    width: 100%;
+  }
+}
+.rj2019--hero .rj2019--hero--content {
+  padding: 2.4rem 3rem;
+  background-color: #180919;
+  border-bottom: 0.5rem solid #f79433;
+}
+.rj2019--hero .rj2019--hero--content *:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--hero .rj2019--hero--content {
+    width: 33vw;
+    font-weight: 500;
+    color: #f79433;
+    font-size: 2.25rem;
+    line-height: 1.3em;
+    position: absolute;
+    left: 1.5rem;
+    z-index: 1;
+    top: 0;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--hero .rj2019--hero--content {
+    left: calc(50vw - 480px);
+    width: 30rem;
   }
 }
 

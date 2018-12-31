@@ -1,0 +1,144 @@
+@import "../theme";
+
+.navbar {
+  $navbar--color: $secondary;
+  $navbar--color--bg: $primary;
+  $navbar--color--hover: $navbar--color;
+
+  background: $navbar--color--bg;
+  box-shadow: $box-shadow--page;
+
+  &-header, &-logo, a, a:hover, a:focus, button:hover, button:focus {
+    // resets
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  &-links {
+    a {
+      color: $navbar--color;
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $navbar--color--hover;
+        @include media (medium-up) {
+          color: $navbar--color;
+        }
+      }
+    }
+  }
+
+  &-links.navbar-main {
+    // resets
+    align-items: center;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+
+    > li {
+      margin-left: 0;
+    }
+
+    a,
+    button {
+      text-transform: uppercase;
+      font-weight: $font-weight--heading;
+      letter-spacing: 0.05em;
+      font-size: 1.6rem;
+      border: 0;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        height: .2rem;
+        background: $navbar--color;
+        content: '';
+        width: 0;
+        position: absolute;
+        transform: translateX(-50%);
+        transition: width 0.4s;
+        transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
+        left: 50%;
+        bottom: 1rem;
+      }
+
+      &:hover::after,
+      &:focus::after {
+        width: calc(100% - 5rem);
+      }
+    }
+
+    li.active,
+    li.open {
+      > a {
+        background-color: transparent;
+        color: $navbar--color;
+        &::after {
+          width: calc(100% - #{$spacing--horizontal});
+
+          @include media (medium-up) {
+            width: calc(100% - 5rem);
+          }
+        }
+      }
+    }
+  }
+
+  &-buttons {
+    @include media(medium-up) {
+      padding-right: 1.5rem;
+    }
+  }
+
+  &-menu {
+    @include media(small-only) {
+      border-top: 60px solid $navbar--color--bg;
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &-header {
+    justify-content: left;
+  }
+
+  &-overlay {
+    left: 0;
+    top: 60px;
+    width: 100vw;
+    z-index: 1;
+    transition: background-color 1s;
+    background-color: rgba(0, 0, 0, 0);
+
+    @include media(small-only) {
+      .navbar-menu-open & {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+  .navbar-connect a,
+  &-toggle.btn {
+    background-color: transparent;
+    color: $navbar--color;
+    outline: 0;
+    height: 4rem;
+    width: 4rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $navbar--color--bg;
+      background-color: $navbar--color;
+      box-shadow: $box-shadow;
+    }
+  }
+
+  &-logo-img {
+    @include media(small-only) {
+      width: 100%;
+    }
+  }
+}

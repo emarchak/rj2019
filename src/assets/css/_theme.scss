@@ -10,7 +10,6 @@ $secondary: rgba(43, 15, 44, 1);
 $secondary--dark: darken($secondary, 5%);
 $warning: #fcf6e9;
 
-$max-width: 720px;
 $box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
 $box-shadow--light: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
 $box-shadow--page: 0 1.2rem 2.4rem 0 rgba(0, 0, 0, 0.09);
@@ -20,7 +19,11 @@ $border-radius: 0.2rem;
 $spacing--horizontal: 3rem;
 $spacing--vertical: 2.4rem;
 
+$navbar--height--wide: 75px;
+$navbar--height--small: 60px;;
+
 $font-weight: 300;
+$font-weight--medium: 500;
 $font-weight--heading: 900;
 $icon-font: "Font Awesome 5 Free";
 
@@ -32,7 +35,6 @@ $icon-font: "Font Awesome 5 Free";
   }
   @else if $style == body {
     font-weight: $font-weight;
-    line-height: 2;
     font-size: 1.5rem;
     letter-spacing: 0.025em;
   }
@@ -40,6 +42,7 @@ $icon-font: "Font Awesome 5 Free";
 
 @mixin heading-size($level: 6) {
   font-size: nth((3rem, 2.25rem, 1.755rem, 1.68rem, 1.245rem, 1rem), $level);
+  line-height: 1.3em;
 }
 
 @mixin media($media) {
@@ -71,6 +74,9 @@ $icon-font: "Font Awesome 5 Free";
 }
 
 @mixin full-width {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+
   @include media(medium-up) {
     width: 100vw;
     position: relative;

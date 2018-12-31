@@ -5,7 +5,9 @@ body {
   padding: 0;
 }
 
-@import "./typography";
-@import "./forms";
-@import "./layout";
-@import "./navbar";
+@import "partials/typography";
+@import "partials/forms";
+@import "partials/layout";
+@import "partials/navbar";
+
+@import "pages/index";

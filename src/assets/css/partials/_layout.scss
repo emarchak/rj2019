@@ -1,0 +1,18 @@
+@import "../theme";
+
+.top-hero,
+.misc-block,
+.connect-block {
+  display: none;
+}
+
+.contact-block {
+  background-color: $grey--light;
+}
+
+.main {
+  padding-top: $navbar--height--small;
+  @include media(medium-up) {
+    padding-top: $navbar--height--wide;
+  }
+}

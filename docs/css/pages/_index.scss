@@ -1,0 +1,45 @@
+// Index
+@import "../theme.scss";
+
+.rj2019--hero {
+  @include full-width;
+  overflow: hidden;
+
+  @include media(wide-up) {
+    max-height: 80vh;
+  }
+
+  #{&}--image {
+    @include media(wide-up) {
+      width: 100%;
+    }
+  }
+
+  #{&}--content {
+    padding: $spacing--vertical $spacing--horizontal;
+    background-color: $secondary--dark;
+    border-bottom: 0.5rem solid $primary;
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+
+    @include media(medium-up) {
+      width: 33vw;
+      font-weight: $font-weight--medium;
+      color: $primary;
+      @include heading-size(2);
+      position: absolute;
+      left: $spacing--horizontal / 2;
+      z-index: 1;
+      top: 0;
+      box-shadow: $box-shadow--light;
+    }
+
+    @include media(wide-up) {
+      left: calc(50vw - 480px);
+      width: 30rem;
+    }
+  }
+}
+
