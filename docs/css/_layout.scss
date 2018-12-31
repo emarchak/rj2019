@@ -12,6 +12,12 @@
   .misc-block-item:last-child {
     display:none;
   }
+
+  h3.block-headline {
+    @include heading-size(1);
+    color: $black;
+  }
+
   .signup_form {
     margin: 0;
     padding: 0;

@@ -5,9 +5,9 @@ $grey--light: #E1E1E1;
 $grey--lightest: #EDEDED;
 $white: #FFF;
 
-$primary: rgba(235,141,61, 1);
-$primary--transparent: rgba(235,141,61, .7);
-$secondary: $grey;
+$primary: rgba(247, 148, 51, 1);
+$primary--transparent: rgba(247, 148, 51, .7);
+$secondary: #2B0F2C;
 $warning: #fcf6e9;
 
 $max-width: 720px;
@@ -20,6 +20,28 @@ $border-radius: 0.2rem;
 $spacing--horizontal: 3rem;
 $spacing--vertical: 2.4rem;
 
+$font-weight: 300;
+$font-weight--heading: 900;
+$icon-font: "Font Awesome 5 Free";
+
+@mixin font($style: body) {
+  font-family: 'Raleway', sans-serif;
+
+  @if $style == heading {
+    font-weight: $font-weight--heading;
+  }
+  @else if $style == body {
+    font-weight: $font-weight;
+    line-height: 2;
+    font-size: 1.5rem;
+    letter-spacing: 0.025em;
+  }
+}
+
+@mixin heading-size($level: 6) {
+  font-size: nth((3rem, 2.25rem, 1.755rem, 1.68rem, 1.245rem, 1rem), $level);
+}
+
 @mixin media($media) {
   $break-small: 767px;
   $break-large: 1200px;
@@ -30,7 +52,6 @@ $spacing--vertical: 2.4rem;
   @else if $media == medium-down {
     @media only screen and (max-width: $break-large - 1) { @content; }
   }
-
   @else if $media == medium-only {
     @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
   }
