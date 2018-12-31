@@ -1,13 +1,13 @@
 // Colours
-$black: #393939;
-$grey: #5D5D5D;
-$grey--light: #E1E1E1;
-$grey--lightest: #EDEDED;
+$black: #333333;
+$grey: lighten($black, 16.47);
+$grey--light: lighten($black, 68.24);
+$grey--lightest: lighten($black, 72.94);
 $white: #FFF;
 
 $primary: rgba(247, 148, 51, 1);
-$primary--transparent: rgba(247, 148, 51, .7);
-$secondary: #2B0F2C;
+$secondary: rgba(43, 15, 44, 1);
+$secondary--dark: darken($secondary, 5%);
 $warning: #fcf6e9;
 
 $max-width: 720px;

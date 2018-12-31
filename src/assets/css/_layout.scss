@@ -44,7 +44,8 @@
     top: 1rem;
     z-index: 1;
     padding: $spacing--vertical $spacing--horizontal;
-    background-color: $primary--transparent;
+    background-color: $secondary--dark;
+    border-bottom: 0.5rem solid $primary;
     box-shadow: $box-shadow--light;
 
     @include media(medium-up) {
