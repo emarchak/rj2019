@@ -27,6 +27,10 @@ a {
     @include font;
   }
 
+  .fas {
+    font-family: $icon-font;
+  }
+
   @for $i from 1 through 6 {
     h#{$i}, .h#{$i} {
       color: $primary;

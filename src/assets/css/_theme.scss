@@ -69,3 +69,14 @@ $icon-font: "Font Awesome 5 Free";
   ::-moz-placeholder          {@content}
   :-ms-input-placeholder      {@content}
 }
+
+@mixin full-width {
+  @include media(medium-up) {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}

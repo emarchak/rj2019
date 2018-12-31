@@ -1,41 +1,23 @@
 @import "./theme.scss";
 
-.misc-block {
-  @include input-style();
-}
-
+.top-hero,
+.misc-block,
 .connect-block {
   display: none;
 }
 
-.misc-block {
-  .misc-block-item:last-child {
-    display:none;
-  }
-
-  h3.block-headline {
-    @include heading-size(1);
-    color: $black;
-  }
-
-  .signup_form {
-    margin: 0;
-    padding: 0;
-  }
+.contact-block {
+  background-color: $grey--light;
 }
 
 .rj2019--hero {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  @include full-width;
   max-height: 80vh;
-  overflow:hidden;
+  overflow: hidden;
 
   #{&}--image {
     transform: translateY(-10%);
+    width: 100%;
   }
 
   #{&}--content {
@@ -57,3 +39,4 @@
     }
   }
 }
+

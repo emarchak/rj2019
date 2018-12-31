@@ -4,7 +4,7 @@
   "description": "",
   "main": "site.config.js",
   "scripts": {
-    "start": "nanogen start -c dev.config.js",
+    "start": "nanogen start -c site.config.dev.js",
     "build": "nanogen build"
   },
   "repository": {

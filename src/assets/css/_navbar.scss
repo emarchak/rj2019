@@ -1,120 +1,133 @@
 @import "./theme.scss";
 
 .navbar {
+  $navbar--color: $secondary;
+  $navbar--color--bg: $primary;
+  $navbar--color--hover: $navbar--color;
 
   &-header, &-logo, a, a:hover, a:focus, button:hover, button:focus {
     // resets
-    background: none;
+    background-color: transparent;
     border: none;
     box-shadow: none;
   }
 
-  background: $primary;
+  background: $navbar--color--bg;
   box-shadow: $box-shadow--page;
-}
 
-.navbar-links.navbar-main {
-  // resets
-  align-items: center;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  &-links.navbar-main {
+    // resets
+    align-items: center;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 
-  > li {
-    margin-left: 0;
-  }
-
-  a,
-  button {
-    font-weight: $font-weight--heading;
-    font-size: 1.6rem;
-    border: 0;
-    cursor: pointer;
-    position: relative;
-
-    &::after {
-      height: .2rem;
-      background: $black;
-      content: '';
-      width: 0;
-      position: absolute;
-      transform: translateX(-50%);
-      transition: width 0.4s;
-      transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
-      left: 50%;
-      bottom: 1rem;
+    > li {
+      margin-left: 0;
     }
 
-    &:hover,
-    &:focus {
-      outline: none;
-      color: $black;
+    a,
+    button {
+      text-transform: uppercase;
+      color: $navbar--color;
+      font-weight: $font-weight--heading;
+      letter-spacing: 0.05em;
+      font-size: 1.6rem;
+      border: 0;
+      cursor: pointer;
+      position: relative;
+
       &::after {
-        width: calc(100% - 5rem);
+        height: .2rem;
+        background: $navbar--color;
+        content: '';
+        width: 0;
+        position: absolute;
+        transform: translateX(-50%);
+        transition: width 0.4s;
+        transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
+        left: 50%;
+        bottom: 1rem;
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $navbar--color--hover;
+        @include media (medium-up) {
+          color: $navbar--color;
+        }
+        &::after {
+          width: calc(100% - 5rem);
+        }
       }
     }
-  }
 
-  li.active,
-  li.open {
-    > a {
-      background-color: transparent;
-      color: $black;
-      &::after {
-        width: calc(100% - 5rem);
-        @include media (small-only) {
+    li.active,
+    li.open {
+      > a {
+        background-color: transparent;
+        color: $navbar--color;
+        &::after {
           width: calc(100% - #{$spacing--horizontal});
+
+          @include media (medium-up) {
+            width: calc(100% - 5rem);
+          }
         }
       }
     }
   }
-}
 
-.navbar-buttons {
-  @include media(medium-up) {
-    padding-right: 1.5rem;
-  }
-}
-
-.navbar-menu {
-  @include media(small-only) {
-    &::after {
-      display: none;
+  &-buttons {
+    @include media(medium-up) {
+      padding-right: 1.5rem;
     }
   }
-}
 
-.navbar-menu-inner {
-  @include media(small-only) {
-    border-top: 60px solid $primary
-  }
-}
-
-.navbar-overlay {
-  left: 0;
-  top: 60px;
-  width: 100vw;
-  z-index: 1;
-  transition: background-color 1s;
-  background-color: rgba(0, 0, 0, 0);
-
-  @include media(small-only) {
-    .navbar-menu-open & {
-      background-color: rgba(0, 0, 0, 0.4);
+  &-menu {
+    @include media(small-only) {
+      &::after {
+        display: none;
+      }
     }
   }
-}
 
-.btn.navbar-toggle {
-  background-color: transparent;
-  color: $black;
-  outline: 0;
-  height: 4rem;
-  width: 4rem;
-  &:focus,
-  &:active {
-    color: $primary;
-    background-color: $black;
-    box-shadow: $box-shadow;
+
+
+  &-menu-inner {
+    @include media(small-only) {
+      border-top: 60px solid $navbar--color--bg;
+    }
+  }
+
+  &-overlay {
+    left: 0;
+    top: 60px;
+    width: 100vw;
+    z-index: 1;
+    transition: background-color 1s;
+    background-color: rgba(0, 0, 0, 0);
+
+    @include media(small-only) {
+      .navbar-menu-open & {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+  &-toggle.btn {
+    background-color: transparent;
+    color: $navbar--color;;
+    outline: 0;
+    height: 4rem;
+    width: 4rem;
+
+    &:focus,
+    &:active {
+      color: $navbar--color--bg;
+      background-color: $navbar--color;
+      box-shadow: $box-shadow;
+    }
   }
 }
