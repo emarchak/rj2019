@@ -440,8 +440,10 @@ a:hover, a:focus, a:active {
   margin-top: 2.4rem;
   border-bottom: 1rem solid #f79433;
 }
-.rj2019--photo__left {
-  width: 100%;
+@media only screen and (max-width: 767px) {
+  .rj2019--photo {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 768px) {
   .rj2019--photo__left {
@@ -450,9 +452,6 @@ a:hover, a:focus, a:active {
     margin-top: 0.5rem;
     margin-right: 3rem;
   }
-}
-.rj2019--photo__right {
-  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .rj2019--photo__right {
