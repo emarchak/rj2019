@@ -26,6 +26,9 @@ a {
   * {
     @include font;
   }
+  strong {
+    font-weight: $font-weight--heading;
+  }
 
   .fas {
     font-family: $icon-font;
@@ -126,7 +129,7 @@ a {
   }
 
   &.btn-lg {
-    @include heading-size(2);
+    @include heading-size(3);
     font-weight: $font-weight--heading;
   }
 

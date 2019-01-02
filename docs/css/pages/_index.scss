@@ -21,7 +21,7 @@
     border-bottom: 0.5rem solid $primary;
     color: $white;
     font-weight: $font-weight--medium;
-    @include heading-size(2);
+    @include heading-size(3);
 
     *:last-child {
       margin-bottom: 0;
@@ -29,8 +29,6 @@
 
     @include media(medium-up) {
       width: 33vw;
-
-
       position: absolute;
       left: $spacing--horizontal / 2;
       z-index: 1;
@@ -51,6 +49,10 @@
   color: $white;
   padding-bottom: $spacing--vertical;
   margin-top: $spacing--vertical;
+
+ &__page-bottom {
+   margin-bottom: -46px;
+ }
 
   &--content {
     padding-left: $spacing--horizontal;
@@ -101,10 +103,10 @@
     & h3.rj2019--cta--subheading {
       color: $white;
       margin-bottom: -0.45rem;
-      @include heading-size(2);
+      @include heading-size(3);
 
       @include media(wide-up) {
-        @include heading-size(1);
+        @include heading-size(2);
       }
     }
   }

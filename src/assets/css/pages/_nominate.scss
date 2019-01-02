@@ -1,0 +1,41 @@
+@import "../theme.scss";
+
+.rj2019--letter {
+  position: relative;
+
+  &--content {
+    background-color: $grey--lightest;
+    padding: $spacing--vertical $spacing--horizontal;
+    font-weight: $font-weight--medium;
+    text-align: left;
+    @include media(medium-up) {
+      transform: rotate(-0.5deg);
+      max-width: 66%;
+    }
+  }
+
+  &--signature {
+    padding-left: $spacing--horizontal;
+    font-style: italic;
+    @include heading-size(2);
+  }
+
+  &--photo {
+    background-color: $white;
+    border: 1rem solid $grey--light;
+    width: 80%;
+    margin: 0 auto;
+    transform: rotate(1.5deg);
+    position: relative;
+    display: block;
+
+    @include media(medium-up) {
+      width: 30%;
+      position: absolute;
+      z-index: 1;
+      left: 66%;
+      top: 7rem;
+      transform: rotate(3deg);
+    }
+  }
+}

@@ -40,7 +40,7 @@ $icon-font: "Font Awesome 5 Free";
 }
 
 @mixin heading-size($level: 6) {
-  font-size: nth((3rem, 2.25rem, 1.755rem, 1.68rem, 1.245rem, 1rem), $level);
+  font-size: nth((5rem, 3rem, 2.25rem, 1.755rem, 1.68rem, 1.245rem), $level);
   line-height: 1.3em;
 }
 
@@ -73,8 +73,8 @@ $icon-font: "Font Awesome 5 Free";
 }
 
 @mixin full-width {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  margin-left: -$spacing--horizontal;
+  margin-right: -$spacing--horizontal;
 
   @include media(medium-up) {
     width: 100vw;

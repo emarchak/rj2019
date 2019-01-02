@@ -13,7 +13,12 @@
 .main {
   padding-top: $navbar--height--small;
   padding-bottom: 0;
+  padding-left: $spacing--horizontal;
+  padding-right: $spacing--horizontal;
+
   @include media(medium-up) {
     padding-top: $navbar--height--wide;
+    padding-left: calc(50vw - #{50rem + $spacing--horizontal});
+    padding-right: calc(50vw - #{50rem + $spacing--horizontal});
   }
 }
