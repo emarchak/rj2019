@@ -489,7 +489,7 @@ a:hover, a:focus, a:active {
 @media only screen and (min-width: 768px) {
   .rj2019--blockquote__right {
     margin-left: 0;
-    margin-right: calc(-50vw + 53rem);
+    margin-right: calc(53rem - 50vw);
   }
 }
 @media only screen and (min-width: 768px) {
@@ -501,7 +501,7 @@ a:hover, a:focus, a:active {
 @media only screen and (min-width: 768px) {
   .rj2019--blockquote__left {
     margin-right: 0;
-    margin-left: calc(-50vw + 53rem);
+    margin-left: calc(53rem - 50vw);
   }
 }
 @media only screen and (min-width: 768px) {
