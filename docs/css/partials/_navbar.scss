@@ -119,20 +119,26 @@
     }
   }
 
-  .navbar-connect a,
+
   &-toggle.btn {
     background-color: transparent;
     color: $navbar--color;
     outline: 0;
     height: 4rem;
     width: 4rem;
+    border-radius: $border-radius;
 
     &:hover,
     &:focus,
     &:active {
       color: $navbar--color--bg;
-      background-color: $navbar--color;
+      background-color: $tertiary;
       box-shadow: $box-shadow;
+    }
+    .connect-icon {
+      margin-left: -0.4rem;
+      font-size: 1.5rem;
+      margin-top: .2rem;
     }
   }
 

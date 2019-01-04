@@ -412,17 +412,23 @@ a:hover, a:focus, a:active {
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
-.navbar .navbar-connect a, .navbar-toggle.btn {
+.navbar-toggle.btn {
   background-color: transparent;
   color: #2b0f2c;
   outline: 0;
   height: 4rem;
   width: 4rem;
+  border-radius: 0.2rem;
 }
-.navbar .navbar-connect a:hover, .navbar .navbar-connect a:focus, .navbar .navbar-connect a:active, .navbar-toggle.btn:hover, .navbar-toggle.btn:focus, .navbar-toggle.btn:active {
+.navbar-toggle.btn:hover, .navbar-toggle.btn:focus, .navbar-toggle.btn:active {
   color: #f79433;
-  background-color: #2b0f2c;
+  background-color: #54565a;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+}
+.navbar-toggle.btn .connect-icon {
+  margin-left: -0.4rem;
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
 }
 @media only screen and (max-width: 767px) {
   .navbar-logo {
@@ -439,11 +445,7 @@ a:hover, a:focus, a:active {
   margin-bottom: 2.4rem;
   margin-top: 2.4rem;
   border-bottom: 1rem solid #f79433;
-}
-@media only screen and (max-width: 767px) {
-  .rj2019--photo {
-    width: 100%;
-  }
+  height: auto;
 }
 @media only screen and (min-width: 768px) {
   .rj2019--photo__left {
@@ -473,7 +475,7 @@ a:hover, a:focus, a:active {
 }
 
 .rj2019--blockquote {
-  background-color: #2b0f2c;
+  background-color: #54565a;
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
   border-left: 0;
@@ -554,7 +556,7 @@ a:hover, a:focus, a:active {
 }
 .rj2019--hero .rj2019--hero--content {
   padding: 2.4rem 3rem;
-  background-color: #2b0f2c;
+  background-color: #54565a;
   border-bottom: 0.5rem solid #f79433;
   color: #FFF;
   font-weight: 500;
@@ -584,7 +586,7 @@ a:hover, a:focus, a:active {
 .rj2019--cta {
   margin-left: -3rem;
   margin-right: -3rem;
-  background: #2b0f2c;
+  background: #54565a;
   color: #FFF;
   padding-bottom: 2.4rem;
   margin-top: 2.4rem;
@@ -655,6 +657,7 @@ a:hover, a:focus, a:active {
   margin-bottom: -0.45rem;
   font-size: 2.25rem;
   line-height: 1.3em;
+  font-weight: 500;
 }
 @media only screen and (min-width: 1200px) {
   .rj2019--cta--copy h3.rj2019--cta--subheading {

@@ -4,10 +4,7 @@
   margin-bottom: $spacing--vertical;
   margin-top: $spacing--vertical;
   border-bottom: 1rem solid $primary;
-
-  @include media(small-only) {
-    width: 100%;
-  }
+  height: auto;
 
   &__left {
     @include media(medium-up) {
@@ -39,7 +36,7 @@
 }
 
 .rj2019--blockquote {
-  background-color: $secondary;
+  background-color: $tertiary;
   padding-top: $spacing--vertical;
   padding-bottom: $spacing--vertical;
   border-left: 0;

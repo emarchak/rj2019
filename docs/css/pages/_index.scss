@@ -17,7 +17,7 @@
 
   #{&}--content {
     padding: $spacing--vertical $spacing--horizontal;
-    background-color: $secondary;
+    background-color: $tertiary;
     border-bottom: 0.5rem solid $primary;
     color: $white;
     font-weight: $font-weight--medium;
@@ -45,7 +45,7 @@
 
 .rj2019--cta {
   @include full-width;
-  background: $secondary;
+  background: $tertiary;
   color: $white;
   padding-bottom: $spacing--vertical;
   margin-top: $spacing--vertical;
@@ -104,6 +104,7 @@
       color: $white;
       margin-bottom: -0.45rem;
       @include heading-size(3);
+      font-weight: $font-weight--medium;
 
       @include media(wide-up) {
         @include heading-size(2);
