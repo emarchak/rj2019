@@ -766,6 +766,9 @@ a:hover, a:focus, a:active {
   }
 }
 
+.page-slug-join .misc-block {
+  display: none;
+}
 .page-slug-join .theme-panel.form-grid-form {
   background: #ededed;
   border-radius: 0.2rem;

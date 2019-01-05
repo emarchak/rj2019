@@ -2,6 +2,10 @@
 
 .page-slug-join {
 
+  .misc-block {
+    display: none;
+  }
+
   .theme-panel.form-grid-form {
     @include form-style();
     box-shadow: none;
