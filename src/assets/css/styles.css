@@ -123,6 +123,7 @@ a:hover, a:focus, a:active {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
   font-weight: 500;
   text-decoration: none !important;
+  text-transform: none !important;
 }
 .navbar-buttons .btn.btn-default:hover, .navbar-buttons .btn.btn-default:focus, .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.submit-button:hover, .btn.submit-button:focus {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
@@ -317,9 +318,32 @@ a:hover, a:focus, a:active {
 }
 
 .top-hero,
-.misc-block,
+.misc-block .misc-block-item:last-child,
 .connect-block {
   display: none;
+}
+
+.misc-block {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.misc-block-item {
+  display: block;
+  margin: 0;
+  padding: 4.8rem 3rem;
+}
+@media only screen and (min-width: 768px) {
+  .misc-block-item {
+    max-width: 50vw;
+  }
+}
+.misc-block-item h3.block-headline {
+  color: #333333;
+}
+.misc-block-item form.signup_form {
+  padding: 0;
+  margin: 0;
 }
 
 .contact-block {
@@ -492,9 +516,6 @@ a:hover, a:focus, a:active {
     margin-left: -50vw;
     margin-right: -50vw;
   }
-}
-.rj2019--cta__page-bottom {
-  margin-bottom: -46px;
 }
 .rj2019--cta--content {
   padding-left: 3rem;

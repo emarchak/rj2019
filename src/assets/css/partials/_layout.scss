@@ -1,9 +1,30 @@
 @import "../theme";
 
 .top-hero,
-.misc-block,
+.misc-block .misc-block-item:last-child,
 .connect-block {
   display: none;
+}
+
+.misc-block {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  &-item {
+    display: block;
+    margin: 0;
+    padding: ($spacing--vertical * 2) $spacing--horizontal;
+    @include media(medium-up) {
+      max-width: 50vw;
+    }
+    h3.block-headline {
+      color: $black;
+    }
+    form.signup_form {
+      padding: 0;
+      margin: 0;
+    }
+  }
 }
 
 .contact-block {

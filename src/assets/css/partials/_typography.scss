@@ -100,6 +100,7 @@ a {
     box-shadow: $box-shadow--light;
     font-weight: $font-weight--medium;
     text-decoration: none !important;
+    text-transform: none !important;
     &:hover, &:focus {
       box-shadow: $box-shadow;
       outline-width: 0;
