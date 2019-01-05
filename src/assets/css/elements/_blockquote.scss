@@ -19,12 +19,14 @@
   &__right {
     @include media(medium-up) {
       margin-left: 0;
+    }
+    @include media(wide-up) {
       margin-right: calc(#{50rem + $spacing--horizontal} - 50vw);
     }
 
     .rj2019--blockquote--content,
     .rj2019--blockquote--citation {
-      @include media(medium-up) {
+      @include media(wide-up) {
         margin-right: calc(50vw - #{50rem + $spacing--horizontal});
       }
     }
@@ -33,11 +35,14 @@
   &__left {
     @include media(medium-up) {
       margin-right: 0;
+    }
+
+    @include media(wide-up) {
       margin-left: calc(#{50rem + $spacing--horizontal} - 50vw);
     }
     .rj2019--blockquote--content,
     .rj2019--blockquote--citation {
-      @include media(medium-up) {
+      @include media(wide-up) {
         margin-left: calc(50vw - #{50rem + $spacing--horizontal});
       }
     }

@@ -581,10 +581,14 @@ a:hover, a:focus, a:active {
 @media only screen and (min-width: 768px) {
   .rj2019--blockquote__right {
     margin-left: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--blockquote__right {
     margin-right: calc(53rem - 50vw);
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1200px) {
   .rj2019--blockquote__right .rj2019--blockquote--content,
 .rj2019--blockquote__right .rj2019--blockquote--citation {
     margin-right: calc(50vw - 53rem);
@@ -593,10 +597,14 @@ a:hover, a:focus, a:active {
 @media only screen and (min-width: 768px) {
   .rj2019--blockquote__left {
     margin-right: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--blockquote__left {
     margin-left: calc(53rem - 50vw);
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1200px) {
   .rj2019--blockquote__left .rj2019--blockquote--content,
 .rj2019--blockquote__left .rj2019--blockquote--citation {
     margin-left: calc(50vw - 53rem);
