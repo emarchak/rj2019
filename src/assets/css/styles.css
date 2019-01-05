@@ -743,41 +743,9 @@ a:hover, a:focus, a:active {
   margin-bottom: 0;
 }
 @media only screen and (min-width: 768px) {
-  .page-slug-join .flash-share.panel,
-.page-slug-join .form-grid {
+  .page-slug-join .form-grid {
     margin-left: 3rem;
     margin-right: 3rem;
-  }
-}
-.page-slug-join .flash-share.panel {
-  margin-top: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
-}
-@media only screen and (max-width: 767px) {
-  .page-slug-join .flash-share.panel .submit-button {
-    margin-top: 2.4rem;
-  }
-  .page-slug-join .flash-share.panel .flash-close,
-.page-slug-join .flash-share.panel .submit-button {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .page-slug-join .flash-share.panel form > .row:last-child .col-md-6:nth-child(2) {
-    grid-column-start: 10;
-    grid-column-end: 11;
-  }
-  .page-slug-join .flash-share.panel form > .row:last-child .col-md-6:nth-child(3) {
-    grid-column-start: 11;
-    grid-column-end: 13;
-  }
-  .page-slug-join .flash-share.panel .submit-button {
-    margin-right: -5rem;
-    min-width: 10rem;
   }
 }
 .page-slug-join .intro {
@@ -785,6 +753,44 @@ a:hover, a:focus, a:active {
   line-height: 1.3em;
   font-weight: 500;
   padding: 2.4rem 3rem;
+}
+
+.flash-share.panel {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+}
+@media only screen and (min-width: 768px) {
+  .flash-share.panel {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .flash-share.panel .submit-button {
+    margin-top: 2.4rem;
+  }
+  .flash-share.panel .flash-close,
+.flash-share.panel .submit-button {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .flash-share.panel form > .row:last-child .col-md-6:nth-child(2) {
+    grid-column-start: 10;
+    grid-column-end: 11;
+  }
+  .flash-share.panel form > .row:last-child .col-md-6:nth-child(3) {
+    grid-column-start: 11;
+    grid-column-end: 13;
+  }
+}
+.flash-share.panel form > .row:last-child .submit-button {
+  margin-right: -5rem;
+  min-width: 10rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
