@@ -146,6 +146,17 @@ a {
   }
 }
 
+.rj2019--textblock {
+  margin-top: $spacing--vertical * 2;
+  margin-bottom: $spacing--vertical * 2;
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
 .panel.panel-default {
   @include form-style;
   .panel-body,

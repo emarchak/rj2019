@@ -9,7 +9,10 @@ body {
 @import "partials/forms";
 @import "partials/layout";
 @import "partials/navbar";
-@import "partials/elements";
+
+@import "elements/cta";
+@import "elements/blockquote";
+@import "elements/photo";
 
 @import "pages/index";
 @import "pages/nominate";

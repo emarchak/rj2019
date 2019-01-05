@@ -167,6 +167,16 @@ a:hover, a:focus, a:active {
   }
 }
 
+.rj2019--textblock {
+  margin-top: 4.8rem;
+  margin-bottom: 4.8rem;
+}
+.rj2019--textblock::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .panel.panel-default {
   background: #ededed;
   border-radius: 0.2rem;
@@ -325,6 +335,10 @@ a:hover, a:focus, a:active {
 @media only screen and (min-width: 768px) {
   .main {
     padding-top: 75px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main {
     padding-left: calc(50vw - 53rem);
     padding-right: calc(50vw - 53rem);
   }
@@ -461,148 +475,6 @@ a:hover, a:focus, a:active {
   }
 }
 
-.rj2019--photo {
-  margin-bottom: 2.4rem;
-  margin-top: 2.4rem;
-  border-bottom: 1rem solid #f79433;
-  height: auto;
-}
-@media only screen and (min-width: 768px) {
-  .rj2019--photo__left {
-    width: auto;
-    float: left;
-    margin-top: 0.5rem;
-    margin-right: 3rem;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .rj2019--photo__right {
-    width: auto;
-    float: right;
-    margin-top: 0.5rem;
-    margin-left: 3rem;
-  }
-}
-
-.rj2019--textblock {
-  margin-top: 4.8rem;
-  margin-bottom: 4.8rem;
-}
-.rj2019--textblock::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.rj2019--blockquote {
-  background-color: #54565a;
-  padding-top: 2.4rem;
-  padding-bottom: 2.4rem;
-  border-left: 0;
-  border-bottom: 1rem solid #f79433;
-  margin: 2.4rem -3rem;
-}
-.rj2019--blockquote .rj2019--blockquote--content {
-  color: #FFF;
-  font-weight: 500;
-  font-size: 1.755rem;
-  line-height: 1.3em;
-}
-@media only screen and (min-width: 768px) {
-  .rj2019--blockquote__right {
-    margin-left: 0;
-    margin-right: calc(53rem - 50vw);
-  }
-}
-@media only screen and (min-width: 768px) {
-  .rj2019--blockquote__right .rj2019--blockquote--content,
-.rj2019--blockquote__right .rj2019--blockquote--citation {
-    margin-right: calc(50vw - 53rem);
-  }
-}
-@media only screen and (min-width: 768px) {
-  .rj2019--blockquote__left {
-    margin-right: 0;
-    margin-left: calc(53rem - 50vw);
-  }
-}
-@media only screen and (min-width: 768px) {
-  .rj2019--blockquote__left .rj2019--blockquote--content,
-.rj2019--blockquote__left .rj2019--blockquote--citation {
-    margin-left: calc(50vw - 53rem);
-  }
-}
-.rj2019--blockquote .rj2019--blockquote--citation {
-  font-style: italic;
-  color: #FFF;
-  padding-left: 5rem;
-  position: relative;
-}
-.rj2019--blockquote .rj2019--blockquote--citation::after {
-  height: 0.1rem;
-  background: #FFF;
-  content: "";
-  width: 2rem;
-  position: absolute;
-  transform: translateX(-50%);
-  left: 3rem;
-  bottom: 50%;
-}
-
-.rj2019--hero {
-  margin-left: -3rem;
-  margin-right: -3rem;
-  overflow: hidden;
-}
-@media only screen and (min-width: 768px) {
-  .rj2019--hero {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .rj2019--hero {
-    max-height: 80vh;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .rj2019--hero .rj2019--hero--image {
-    width: 100%;
-  }
-}
-.rj2019--hero .rj2019--hero--content {
-  padding: 2.4rem 3rem;
-  background-color: #54565a;
-  border-bottom: 0.5rem solid #f79433;
-  color: #FFF;
-  font-weight: 500;
-  font-size: 2.25rem;
-  line-height: 1.3em;
-}
-.rj2019--hero .rj2019--hero--content *:last-child {
-  margin-bottom: 0;
-}
-@media only screen and (min-width: 768px) {
-  .rj2019--hero .rj2019--hero--content {
-    width: 33vw;
-    position: absolute;
-    left: 1.5rem;
-    z-index: 1;
-    top: 0;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .rj2019--hero .rj2019--hero--content {
-    left: calc(50vw - 480px);
-    width: 30rem;
-  }
-}
-
 .rj2019--cta {
   margin-left: -3rem;
   margin-right: -3rem;
@@ -679,10 +551,148 @@ a:hover, a:focus, a:active {
   line-height: 1.3em;
   font-weight: 500;
 }
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .rj2019--cta--copy h3.rj2019--cta--subheading {
+    font-size: 3.5rem;
+    line-height: 1.2em;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .rj2019--cta--copy h3.rj2019--cta--subheading {
     font-size: 3rem;
     line-height: 1.3em;
+  }
+}
+
+.rj2019--blockquote {
+  background-color: #54565a;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  border-left: 0;
+  border-bottom: 1rem solid #f79433;
+  margin: 2.4rem -3rem;
+}
+.rj2019--blockquote .rj2019--blockquote--content {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 1.755rem;
+  line-height: 1.3em;
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--blockquote__right {
+    margin-left: 0;
+    margin-right: calc(53rem - 50vw);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--blockquote__right .rj2019--blockquote--content,
+.rj2019--blockquote__right .rj2019--blockquote--citation {
+    margin-right: calc(50vw - 53rem);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--blockquote__left {
+    margin-right: 0;
+    margin-left: calc(53rem - 50vw);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--blockquote__left .rj2019--blockquote--content,
+.rj2019--blockquote__left .rj2019--blockquote--citation {
+    margin-left: calc(50vw - 53rem);
+  }
+}
+.rj2019--blockquote .rj2019--blockquote--citation {
+  font-style: italic;
+  color: #FFF;
+  padding-left: 5rem;
+  position: relative;
+}
+.rj2019--blockquote .rj2019--blockquote--citation::after {
+  height: 0.1rem;
+  background: #FFF;
+  content: "";
+  width: 2rem;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 3rem;
+  bottom: 50%;
+}
+
+.rj2019--photo {
+  margin-bottom: 2.4rem;
+  margin-top: 2.4rem;
+  border-bottom: 1rem solid #f79433;
+  height: auto;
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--photo__left {
+    width: auto;
+    float: left;
+    margin-top: 0.5rem;
+    margin-right: 3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--photo__right {
+    width: auto;
+    float: right;
+    margin-top: 0.5rem;
+    margin-left: 3rem;
+  }
+}
+
+.rj2019--hero {
+  margin-left: -3rem;
+  margin-right: -3rem;
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--hero {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--hero {
+    max-height: 80vh;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--hero .rj2019--hero--image {
+    width: 100%;
+  }
+}
+.rj2019--hero .rj2019--hero--content {
+  padding: 2.4rem 3rem;
+  background-color: #54565a;
+  border-bottom: 0.5rem solid #f79433;
+  color: #FFF;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 1.3em;
+}
+.rj2019--hero .rj2019--hero--content *:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--hero .rj2019--hero--content {
+    width: 33vw;
+    position: absolute;
+    left: 1.5rem;
+    z-index: 1;
+    top: 0;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--hero .rj2019--hero--content {
+    left: calc(50vw - 480px);
+    width: 30rem;
   }
 }
 

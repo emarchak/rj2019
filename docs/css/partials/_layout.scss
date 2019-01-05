@@ -18,6 +18,9 @@
 
   @include media(medium-up) {
     padding-top: $navbar--height--wide;
+  }
+
+  @include media(wide-up) {
     padding-left: calc(50vw - #{50rem + $spacing--horizontal});
     padding-right: calc(50vw - #{50rem + $spacing--horizontal});
   }

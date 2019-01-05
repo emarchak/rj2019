@@ -1,0 +1,26 @@
+@import "../theme";
+
+.rj2019--photo {
+  margin-bottom: $spacing--vertical;
+  margin-top: $spacing--vertical;
+  border-bottom: 1rem solid $primary;
+  height: auto;
+
+  &__left {
+    @include media(medium-up) {
+      width: auto;
+      float: left;
+      margin-top: 0.5rem;
+      margin-right: $spacing--horizontal
+    }
+  }
+
+  &__right {
+    @include media(medium-up) {
+      width: auto;
+      float: right;
+      margin-top: 0.5rem;
+      margin-left: $spacing--horizontal
+    }
+  }
+}
