@@ -145,3 +145,15 @@ a {
     }
   }
 }
+
+.panel.panel-default {
+  @include form-style;
+  .panel-body,
+  .panel-heading,
+  .panel-body form {
+    background-color: transparent;
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+  }
+}

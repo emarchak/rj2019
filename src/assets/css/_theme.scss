@@ -86,3 +86,14 @@ $icon-font: "Font Awesome 5 Free";
     margin-right: -50vw;
   }
 }
+
+@mixin form-style {
+  background: $grey--lightest;
+  border-radius: $border-radius;
+  padding: $spacing--vertical $spacing--horizontal;
+  margin: $spacing--vertical auto;
+  color: $black;
+  > .form {
+    padding: 0;
+  }
+}

@@ -1,0 +1,68 @@
+@import "../theme.scss";
+
+.page-slug-join {
+
+  .theme-panel.form-grid-form {
+    @include form-style();
+    box-shadow: none;
+
+    > * {
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+  }
+
+  .flash-share.panel,
+  .form-grid {
+    @include media(medium-up) {
+      margin-left: $spacing--horizontal;
+      margin-right: $spacing--horizontal;
+    }
+  }
+
+  .flash-share.panel {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: $box-shadow--light;
+
+
+    @include media(small-only) {
+      .submit-button {
+        margin-top: $spacing--vertical;
+      }
+
+      .flash-close,
+      .submit-button {
+        display:inline-block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @include media(medium-up) {
+      form > .row:last-child {
+        .col-md-6:nth-child(2) {
+          grid-column-start: 10;
+          grid-column-end: 11;
+        }
+        .col-md-6:nth-child(3) {
+          grid-column-start: 11;
+          grid-column-end: 13;
+        }
+      }
+      .submit-button {
+        margin-right: -5rem;
+        min-width: 10rem;
+      }
+    }
+
+  }
+
+  .intro {
+    @include heading-size(2);
+    font-weight: $font-weight--medium;
+    padding: $spacing--vertical $spacing--horizontal;
+  }
+}

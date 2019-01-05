@@ -18,16 +18,8 @@
 }
 
 .v2-theme form {
-  background: $grey--lightest;
-  border-radius: $border-radius;
-  padding: $spacing--vertical $spacing--horizontal;
-  margin: $spacing--vertical auto;
-
+  @include form-style();
   @include input-style();
-
-  .form-submit-row {
-    margin-top: $spacing--vertical;
-  }
 
   .form-errors {
     ul {
@@ -63,7 +55,7 @@
     overflow: hidden;
     width: 1.05em;
     height: 1em;
-    margin-top: 0.5em;
+    margin-top: 0.2em;
     margin-left: -1.5em;
 
     &::before,
