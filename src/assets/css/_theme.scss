@@ -1,14 +1,14 @@
 // Colours
-$black: #333333;
-$grey: lighten($black, 16.47);
-$grey--light: lighten($black, 68.24);
-$grey--lightest: lighten($black, 72.94);
+$black: #333;
 $white: #FFF;
 
 $primary: rgba(247, 148, 51, 1);
-$secondary: rgba(43, 15, 44, 1);
-$tertiary: rgba(84, 86, 90, 1);
+$secondary: rgba(84, 86, 90, 1);
+$tertiary:  rgba(43, 15, 44, 1);
 $warning: #fcf6e9;
+$grey: lighten($secondary, 15);
+$grey--light: lighten($secondary, 30);
+$grey--lightest: lighten($secondary, 60);
 
 $box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
 $box-shadow--light: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
@@ -96,4 +96,8 @@ $icon-font: "Font Awesome 5 Free";
   > .form {
     padding: 0;
   }
+}
+
+@mixin rj2019-border {
+  border-bottom: 0.5rem solid $primary;
 }

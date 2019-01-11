@@ -1,9 +1,12 @@
 @import "../theme";
 
 .navbar {
-  $navbar--color: $secondary;
-  $navbar--color--bg: $primary;
+  $navbar--color: $white;
+  $navbar--color--bg: $secondary;
   $navbar--color--hover: $navbar--color;
+  $navbar--color--links: $white;
+  $navbar--color--mobile-links: $secondary;
+  $navbar--color--mobile-hover: $grey;
 
   background: $navbar--color--bg;
   box-shadow: $box-shadow--page;
@@ -17,13 +20,16 @@
 
   &-links {
     a {
-      color: $navbar--color;
+      color:$navbar--color--mobile-links;
+      @include media (medium-up) {
+        color: $navbar--color--links;
+      }
       &:hover,
       &:focus {
         outline: none;
-        color: $navbar--color--hover;
+        color: $navbar--color--mobile-hover;
         @include media (medium-up) {
-          color: $navbar--color;
+          color:  $navbar--color--hover;
         }
       }
     }
@@ -52,7 +58,7 @@
 
       &::after {
         height: .2rem;
-        background: $navbar--color;
+        background: $navbar--color--mobile-links;
         content: '';
         width: 0;
         position: absolute;
@@ -61,6 +67,9 @@
         transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
         left: 50%;
         bottom: 1rem;
+        @include media (medium-up) {
+          background: $navbar--color--links;
+        }
       }
 
       &:hover::after,
@@ -73,12 +82,17 @@
     li.open {
       > a {
         background-color: transparent;
-        color: $navbar--color;
+        color: $navbar--color--mobile-links;
+        @include media (medium-up) {
+          color: $navbar--color--links;
+        }
+
         &::after {
           width: calc(100% - #{$spacing--horizontal});
-
+          background: $navbar--color--mobile-links;
           @include media (medium-up) {
             width: calc(100% - 5rem);
+            background: $navbar--color--links;
           }
         }
       }
@@ -132,7 +146,7 @@
     &:focus,
     &:active {
       color: $navbar--color--bg;
-      background-color: $tertiary;
+      background-color: $white;
       box-shadow: $box-shadow;
     }
     .connect-icon {

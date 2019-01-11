@@ -3,7 +3,7 @@
 .rj2019--photo {
   margin-bottom: $spacing--vertical;
   margin-top: $spacing--vertical;
-  border-bottom: 1rem solid $primary;
+  @include rj2019-border;
   height: auto;
 
   &__left {

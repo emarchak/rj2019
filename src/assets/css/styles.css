@@ -19,7 +19,7 @@ body {
 }
 
 a {
-  color: #333333;
+  color: #333;
 }
 a:hover, a:focus, a:active {
   outline: none;
@@ -131,17 +131,17 @@ a:hover, a:focus, a:active {
   text-decoration: underline;
 }
 .navbar-buttons .btn.btn-default, .btn.btn-default, .btn.submit-button {
-  border-color: #180919;
-  background-color: #2b0f2c;
+  border-color: #48494d;
+  background-color: #54565a;
 }
 .navbar-buttons .btn.btn-default:hover, .navbar-buttons .btn.btn-default:focus, .btn.btn-default:hover, .btn.btn-default:focus, .btn.submit-button:hover, .btn.submit-button:focus {
-  background-color: #3e153f;
-  border-color: #180919;
+  background-color: #606367;
+  border-color: #48494d;
 }
 .btn.btn-primary {
   border-color: #f6871a;
   background-color: #f79433;
-  color: #333333;
+  color: #333;
 }
 .btn.btn-primary:hover, .btn.btn-primary:focus {
   background-color: #f9ae64;
@@ -179,11 +179,11 @@ a:hover, a:focus, a:active {
 }
 
 .panel.panel-default {
-  background: #ededed;
+  background: #eff0f1;
   border-radius: 0.2rem;
   padding: 2.4rem 3rem;
   margin: 2.4rem auto;
-  color: #333333;
+  color: #333;
 }
 .panel.panel-default > .form {
   padding: 0;
@@ -198,11 +198,11 @@ a:hover, a:focus, a:active {
 }
 
 .v2-theme form {
-  background: #ededed;
+  background: #eff0f1;
   border-radius: 0.2rem;
   padding: 2.4rem 3rem;
   margin: 2.4rem auto;
-  color: #333333;
+  color: #333;
 }
 .v2-theme form > .form {
   padding: 0;
@@ -210,28 +210,28 @@ a:hover, a:focus, a:active {
 .v2-theme form .form-group > select,
 .v2-theme form .form-control {
   border-radius: 0.2rem;
-  border: 0.1rem solid #e1e1e1;
+  border: 0.1rem solid #a0a2a7;
 }
 .v2-theme form .form-group > select:focus,
 .v2-theme form .form-control:focus {
-  border-color: #2b0f2c;
+  border-color: #54565a;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
 }
 .v2-theme form .form-group > select ::-webkit-input-placeholder,
 .v2-theme form .form-control ::-webkit-input-placeholder {
-  color: #5d5d5d !important;
+  color: #797c82 !important;
 }
 .v2-theme form .form-group > select :-moz-placeholder,
 .v2-theme form .form-control :-moz-placeholder {
-  color: #5d5d5d !important;
+  color: #797c82 !important;
 }
 .v2-theme form .form-group > select ::-moz-placeholder,
 .v2-theme form .form-control ::-moz-placeholder {
-  color: #5d5d5d !important;
+  color: #797c82 !important;
 }
 .v2-theme form .form-group > select :-ms-input-placeholder,
 .v2-theme form .form-control :-ms-input-placeholder {
-  color: #5d5d5d !important;
+  color: #797c82 !important;
 }
 .v2-theme form .form-errors ul {
   margin-bottom: 2.4rem;
@@ -284,26 +284,26 @@ a:hover, a:focus, a:active {
 .v2-theme form [type=radio]::before {
   content: " ";
   background-color: #FFF;
-  border-color: #e1e1e1;
+  border-color: #a0a2a7;
 }
 .v2-theme form [type=checkbox]::after,
 .v2-theme form [type=radio]::after {
-  color: #333333;
-  border-color: #333333;
+  color: #333;
+  border-color: #333;
 }
 .v2-theme form [type=checkbox], .v2-theme form [type=checkbox]::before, .v2-theme form [type=checkbox]::after {
   border-radius: 0.2rem;
 }
 .v2-theme form [type=checkbox]::after {
   content: "";
-  background-color: #333333;
-  color: #ededed;
+  background-color: #333;
+  color: #eff0f1;
   font-size: 0.7em;
   line-height: 1.3em;
   padding-left: 0.15em;
 }
 .v2-theme form [type=checkbox]:hover::after {
-  color: #ededed;
+  color: #eff0f1;
   background-color: #4d4d4d;
 }
 .v2-theme form [type=radio], .v2-theme form [type=radio]::before, .v2-theme form [type=radio]::after {
@@ -327,6 +327,7 @@ a:hover, a:focus, a:active {
   padding-top: 0;
   padding-left: 0;
   padding-right: 0;
+  background-color: #eff0f1;
 }
 .misc-block-item {
   display: block;
@@ -339,7 +340,7 @@ a:hover, a:focus, a:active {
   }
 }
 .misc-block-item h3.block-headline {
-  color: #333333;
+  color: #333;
 }
 .misc-block-item form.signup_form {
   padding: 0;
@@ -347,7 +348,7 @@ a:hover, a:focus, a:active {
 }
 
 .contact-block {
-  background-color: #e1e1e1;
+  background-color: #a0a2a7;
 }
 
 .main {
@@ -369,7 +370,7 @@ a:hover, a:focus, a:active {
 }
 
 .navbar {
-  background: #f79433;
+  background: #54565a;
   box-shadow: 0 1.2rem 2.4rem 0 rgba(0, 0, 0, 0.09);
 }
 .navbar-header, .navbar-logo, .navbar a, .navbar a:hover, .navbar a:focus, .navbar button:hover, .navbar button:focus {
@@ -378,15 +379,20 @@ a:hover, a:focus, a:active {
   box-shadow: none;
 }
 .navbar-links a {
-  color: #2b0f2c;
+  color: #54565a;
+}
+@media only screen and (min-width: 768px) {
+  .navbar-links a {
+    color: #FFF;
+  }
 }
 .navbar-links a:hover, .navbar-links a:focus {
   outline: none;
-  color: #2b0f2c;
+  color: #797c82;
 }
 @media only screen and (min-width: 768px) {
   .navbar-links a:hover, .navbar-links a:focus {
-    color: #2b0f2c;
+    color: #FFF;
   }
 }
 .navbar-links.navbar-main {
@@ -411,7 +417,7 @@ a:hover, a:focus, a:active {
 .navbar-links.navbar-main a::after,
 .navbar-links.navbar-main button::after {
   height: 0.2rem;
-  background: #2b0f2c;
+  background: #54565a;
   content: "";
   width: 0;
   position: absolute;
@@ -421,6 +427,12 @@ a:hover, a:focus, a:active {
   left: 50%;
   bottom: 1rem;
 }
+@media only screen and (min-width: 768px) {
+  .navbar-links.navbar-main a::after,
+.navbar-links.navbar-main button::after {
+    background: #FFF;
+  }
+}
 .navbar-links.navbar-main a:hover::after, .navbar-links.navbar-main a:focus::after,
 .navbar-links.navbar-main button:hover::after,
 .navbar-links.navbar-main button:focus::after {
@@ -429,16 +441,24 @@ a:hover, a:focus, a:active {
 .navbar-links.navbar-main li.active > a,
 .navbar-links.navbar-main li.open > a {
   background-color: transparent;
-  color: #2b0f2c;
+  color: #54565a;
+}
+@media only screen and (min-width: 768px) {
+  .navbar-links.navbar-main li.active > a,
+.navbar-links.navbar-main li.open > a {
+    color: #FFF;
+  }
 }
 .navbar-links.navbar-main li.active > a::after,
 .navbar-links.navbar-main li.open > a::after {
   width: calc(100% - 3rem);
+  background: #54565a;
 }
 @media only screen and (min-width: 768px) {
   .navbar-links.navbar-main li.active > a::after,
 .navbar-links.navbar-main li.open > a::after {
     width: calc(100% - 5rem);
+    background: #FFF;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -448,7 +468,7 @@ a:hover, a:focus, a:active {
 }
 @media only screen and (max-width: 767px) {
   .navbar-menu {
-    border-top: 60px solid #f79433;
+    border-top: 60px solid #54565a;
   }
   .navbar-menu::after {
     display: none;
@@ -472,15 +492,15 @@ a:hover, a:focus, a:active {
 }
 .navbar-toggle.btn {
   background-color: transparent;
-  color: #2b0f2c;
+  color: #FFF;
   outline: 0;
   height: 4rem;
   width: 4rem;
   border-radius: 0.2rem;
 }
 .navbar-toggle.btn:hover, .navbar-toggle.btn:focus, .navbar-toggle.btn:active {
-  color: #f79433;
-  background-color: #54565a;
+  color: #54565a;
+  background-color: #FFF;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
 }
 .navbar-toggle.btn .connect-icon {
@@ -590,7 +610,6 @@ a:hover, a:focus, a:active {
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
   border-left: 0;
-  border-bottom: 1rem solid #f79433;
   margin: 2.4rem -3rem;
 }
 .rj2019--blockquote .rj2019--blockquote--content {
@@ -651,7 +670,7 @@ a:hover, a:focus, a:active {
 .rj2019--photo {
   margin-bottom: 2.4rem;
   margin-top: 2.4rem;
-  border-bottom: 1rem solid #f79433;
+  border-bottom: 0.5rem solid #f79433;
   height: auto;
 }
 @media only screen and (min-width: 768px) {
@@ -698,9 +717,9 @@ a:hover, a:focus, a:active {
 }
 .rj2019--hero .rj2019--hero--content {
   padding: 2.4rem 3rem;
-  background-color: #54565a;
+  background-color: #FFF;
   border-bottom: 0.5rem solid #f79433;
-  color: #FFF;
+  color: #54565a;
   font-weight: 500;
   font-size: 2.25rem;
   line-height: 1.3em;
@@ -729,7 +748,7 @@ a:hover, a:focus, a:active {
   position: relative;
 }
 .rj2019--letter--content {
-  background-color: #ededed;
+  background-color: #eff0f1;
   padding: 2.4rem 3rem;
   font-weight: 500;
   text-align: left;
@@ -748,7 +767,7 @@ a:hover, a:focus, a:active {
 }
 .rj2019--letter--photo {
   background-color: #FFF;
-  border: 1rem solid #e1e1e1;
+  border: 1rem solid #a0a2a7;
   width: 80%;
   margin: 0 auto;
   transform: rotate(1.5deg);
@@ -770,11 +789,11 @@ a:hover, a:focus, a:active {
   display: none;
 }
 .page-slug-join .theme-panel.form-grid-form {
-  background: #ededed;
+  background: #eff0f1;
   border-radius: 0.2rem;
   padding: 2.4rem 3rem;
   margin: 2.4rem auto;
-  color: #333333;
+  color: #333;
   box-shadow: none;
 }
 .page-slug-join .theme-panel.form-grid-form > .form {
