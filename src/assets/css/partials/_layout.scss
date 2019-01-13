@@ -30,6 +30,9 @@
 
 .contact-block {
   background-color: $grey--light;
+  a:not(.btn) {
+    color: $black;
+  }
 }
 
 .main {

@@ -359,6 +359,9 @@ a:hover, a:focus, a:active {
 .contact-block {
   background-color: #a0a2a7;
 }
+.contact-block a:not(.btn) {
+  color: #333;
+}
 
 .main {
   padding-top: 60px;
