@@ -664,26 +664,42 @@ a:hover, a:focus, a:active {
   bottom: 50%;
 }
 
-.rj2019--photo {
+.rj2019--photo__left, .rj2019--photo__right, .rj2019--photo {
   margin-bottom: 2.4rem;
   margin-top: 2.4rem;
   border-bottom: 0.5rem solid #f79433;
   height: auto;
 }
 @media only screen and (min-width: 768px) {
+  .rj2019--textblock--title + .rj2019--photo__left, .rj2019--textblock--title + .rj2019--photo__right, .rj2019--textblock--title + .rj2019--photo {
+    margin-top: -6rem;
+  }
+}
+@media only screen and (min-width: 768px) {
   .rj2019--photo__left {
-    width: auto;
     float: left;
     margin-top: 0.5rem;
-    margin-right: 3rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--photo__left {
+    max-width: 40%;
   }
 }
 @media only screen and (min-width: 768px) {
   .rj2019--photo__right {
-    width: auto;
+    max-width: 50%;
     float: right;
     margin-top: 0.5rem;
-    margin-left: 3rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rj2019--photo__right {
+    max-width: 40%;
   }
 }
 
@@ -758,7 +774,7 @@ a:hover, a:focus, a:active {
   width: 8rem;
   height: auto;
   margin-top: 2.4rem;
-  margin-left: calc(25% - 11rem);
+  margin-left: 3rem;
 }
 .rj2019--letter--photo {
   background-color: #FFF;
