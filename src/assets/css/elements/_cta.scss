@@ -32,7 +32,7 @@
   &--logo {
     overflow: hidden;
     margin-top:0;
-    height: calc(121px + #{$spacing--vertical});
+    height: $spacing--vertical + 12.2rem;
 
     @include media(medium-up) {
       width: 50%;
