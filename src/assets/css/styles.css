@@ -572,7 +572,7 @@ a:hover, a:focus, a:active {
 .rj2019--cta--logo {
   overflow: hidden;
   margin-top: 0;
-  height: 14.6rem;
+  height: 14.7rem;
 }
 @media only screen and (min-width: 768px) {
   .rj2019--cta--logo {
@@ -717,13 +717,24 @@ a:hover, a:focus, a:active {
     margin-right: -50vw;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .rj2019--hero {
+    max-height: 36rem;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .rj2019--hero {
-    max-height: 80vh;
+    max-height: 48rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .rj2019--hero .rj2019--hero--image {
+    margin-top: -6rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .rj2019--hero .rj2019--hero--image {
+    margin-top: -13rem;
     width: 100%;
   }
 }

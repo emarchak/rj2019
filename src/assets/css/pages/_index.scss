@@ -5,12 +5,20 @@
   @include full-width;
   overflow: hidden;
 
+  @include media(medium-only) {
+    max-height: 36rem;
+  }
+
   @include media(wide-up) {
-    max-height: 80vh;
+    max-height: 48rem;
   }
 
   #{&}--image {
+    @include media(medium-only) {
+      margin-top: -6rem;
+    }
     @include media(wide-up) {
+      margin-top: -13rem;
       width: 100%;
     }
   }
