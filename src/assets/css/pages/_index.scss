@@ -17,10 +17,9 @@
 
   #{&}--content {
     padding: $spacing--vertical $spacing--horizontal;
-    background-color: $white;
+    background-color: $secondary;
     @include rj2019-border;
-    color: $secondary;
-    font-weight: $font-weight--medium;
+    color: $white;
     @include heading-size(3);
 
     *:last-child {

@@ -11,9 +11,9 @@ html {
 
 body {
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.5rem;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.0125em;
   font-size: 10px;
   background: #FFF;
 }
@@ -28,9 +28,9 @@ a:hover, a:focus, a:active {
 
 .v2-theme .body * {
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.5rem;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.0125em;
 }
 .v2-theme .body strong {
   font-weight: 900;
@@ -42,6 +42,7 @@ a:hover, a:focus, a:active {
   color: #f79433;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
+  letter-spacing: 0;
   font-size: 5rem;
   line-height: 1.3em;
 }
@@ -49,6 +50,7 @@ a:hover, a:focus, a:active {
   color: #f79433;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
+  letter-spacing: 0;
   font-size: 3rem;
   line-height: 1.3em;
 }
@@ -56,6 +58,7 @@ a:hover, a:focus, a:active {
   color: #f79433;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
+  letter-spacing: 0;
   font-size: 2.25rem;
   line-height: 1.3em;
 }
@@ -63,6 +66,7 @@ a:hover, a:focus, a:active {
   color: #f79433;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
+  letter-spacing: 0;
   font-size: 1.755rem;
   line-height: 1.3em;
 }
@@ -70,6 +74,7 @@ a:hover, a:focus, a:active {
   color: #f79433;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
+  letter-spacing: 0;
   font-size: 1.68rem;
   line-height: 1.3em;
 }
@@ -77,6 +82,7 @@ a:hover, a:focus, a:active {
   color: #f79433;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
+  letter-spacing: 0;
   font-size: 1.245rem;
   line-height: 1.3em;
 }
@@ -121,7 +127,6 @@ a:hover, a:focus, a:active {
   border-width: 1px;
   transition: background-color 0.4s, box-shadow 0.4s;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
-  font-weight: 500;
   text-decoration: none !important;
   text-transform: none !important;
 }
@@ -370,7 +375,7 @@ a:hover, a:focus, a:active {
 }
 
 .navbar {
-  background: #54565a;
+  background: #f79433;
   box-shadow: 0 1.2rem 2.4rem 0 rgba(0, 0, 0, 0.09);
 }
 .navbar-header, .navbar-logo, .navbar a, .navbar a:hover, .navbar a:focus, .navbar button:hover, .navbar button:focus {
@@ -379,20 +384,20 @@ a:hover, a:focus, a:active {
   box-shadow: none;
 }
 .navbar-links a {
-  color: #54565a;
+  color: #3b3d40;
 }
 @media only screen and (min-width: 768px) {
   .navbar-links a {
-    color: #FFF;
+    color: #3b3d40;
   }
 }
 .navbar-links a:hover, .navbar-links a:focus {
   outline: none;
-  color: #797c82;
+  color: #3b3d40;
 }
 @media only screen and (min-width: 768px) {
   .navbar-links a:hover, .navbar-links a:focus {
-    color: #FFF;
+    color: #3b3d40;
   }
 }
 .navbar-links.navbar-main {
@@ -417,7 +422,7 @@ a:hover, a:focus, a:active {
 .navbar-links.navbar-main a::after,
 .navbar-links.navbar-main button::after {
   height: 0.2rem;
-  background: #54565a;
+  background: #3b3d40;
   content: "";
   width: 0;
   position: absolute;
@@ -430,7 +435,7 @@ a:hover, a:focus, a:active {
 @media only screen and (min-width: 768px) {
   .navbar-links.navbar-main a::after,
 .navbar-links.navbar-main button::after {
-    background: #FFF;
+    background: #3b3d40;
   }
 }
 .navbar-links.navbar-main a:hover::after, .navbar-links.navbar-main a:focus::after,
@@ -441,24 +446,24 @@ a:hover, a:focus, a:active {
 .navbar-links.navbar-main li.active > a,
 .navbar-links.navbar-main li.open > a {
   background-color: transparent;
-  color: #54565a;
+  color: #3b3d40;
 }
 @media only screen and (min-width: 768px) {
   .navbar-links.navbar-main li.active > a,
 .navbar-links.navbar-main li.open > a {
-    color: #FFF;
+    color: #3b3d40;
   }
 }
 .navbar-links.navbar-main li.active > a::after,
 .navbar-links.navbar-main li.open > a::after {
   width: calc(100% - 3rem);
-  background: #54565a;
+  background: #3b3d40;
 }
 @media only screen and (min-width: 768px) {
   .navbar-links.navbar-main li.active > a::after,
 .navbar-links.navbar-main li.open > a::after {
     width: calc(100% - 5rem);
-    background: #FFF;
+    background: #3b3d40;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -468,7 +473,7 @@ a:hover, a:focus, a:active {
 }
 @media only screen and (max-width: 767px) {
   .navbar-menu {
-    border-top: 60px solid #54565a;
+    border-top: 60px solid #f79433;
   }
   .navbar-menu::after {
     display: none;
@@ -492,14 +497,14 @@ a:hover, a:focus, a:active {
 }
 .navbar-toggle.btn {
   background-color: transparent;
-  color: #FFF;
+  color: #3b3d40;
   outline: 0;
   height: 4rem;
   width: 4rem;
   border-radius: 0.2rem;
 }
 .navbar-toggle.btn:hover, .navbar-toggle.btn:focus, .navbar-toggle.btn:active {
-  color: #54565a;
+  color: #f79433;
   background-color: #FFF;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
 }
@@ -543,12 +548,9 @@ a:hover, a:focus, a:active {
 }
 @media only screen and (min-width: 1200px) {
   .rj2019--cta--content {
-    padding-left: calc(50vw - 485px);
-    padding-right: calc(50vw - 485px);
+    padding-left: calc(55vw - 485px);
+    padding-right: calc(55vw - 485px);
   }
-}
-.rj2019--cta--logo {
-  margin-top: -1px;
 }
 @media only screen and (min-width: 768px) {
   .rj2019--cta--copy {
@@ -560,48 +562,40 @@ a:hover, a:focus, a:active {
 .rj2019--cta--copy > * {
   margin-bottom: 0;
 }
-.rj2019--cta--copy > *:first-child {
+.rj2019--cta--logo {
+  overflow: hidden;
   margin-top: 0;
+  height: calc(121px + 2.4rem);
 }
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .rj2019--cta--copy > *:first-child {
+@media only screen and (min-width: 768px) {
+  .rj2019--cta--logo {
+    width: 50%;
+  }
+}
+.rj2019--cta--logo-svg {
+  transform: translateY(calc(2.4rem - 44%));
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--cta--subheading {
     width: calc(50% - 1.5rem);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .rj2019--cta--copy > *:first-child {
-    width: calc(66% - 1.5rem);
+  .rj2019--cta--subheading {
+    width: calc(50% - 3rem);
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .rj2019--cta--copy > *:last-child {
-    margin-top: 0;
-    width: calc(50% - 1.5rem);
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .rj2019--cta--copy > *:last-child {
-    margin-top: 0;
-    width: calc(33% - 1.5rem);
-  }
-}
-.rj2019--cta--copy h3.rj2019--cta--subheading {
+.rj2019--cta h3.rj2019--cta--subheading {
   color: #FFF;
-  margin-bottom: -0.45rem;
-  font-size: 2.25rem;
-  line-height: 1.3em;
   font-weight: 500;
+  font-size: 3rem;
+  line-height: 1.3em;
+  margin-top: 0.8rem;
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .rj2019--cta--copy h3.rj2019--cta--subheading {
-    font-size: 3.5rem;
-    line-height: 1.2em;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .rj2019--cta--copy h3.rj2019--cta--subheading {
-    font-size: 3rem;
-    line-height: 1.3em;
+  .rj2019--cta h3.rj2019--cta--subheading {
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -614,7 +608,6 @@ a:hover, a:focus, a:active {
 }
 .rj2019--blockquote .rj2019--blockquote--content {
   color: #FFF;
-  font-weight: 500;
   font-size: 1.755rem;
   line-height: 1.3em;
 }
@@ -717,10 +710,9 @@ a:hover, a:focus, a:active {
 }
 .rj2019--hero .rj2019--hero--content {
   padding: 2.4rem 3rem;
-  background-color: #FFF;
+  background-color: #54565a;
   border-bottom: 0.5rem solid #f79433;
-  color: #54565a;
-  font-weight: 500;
+  color: #FFF;
   font-size: 2.25rem;
   line-height: 1.3em;
 }
@@ -750,7 +742,6 @@ a:hover, a:focus, a:active {
 .rj2019--letter--content {
   background-color: #eff0f1;
   padding: 2.4rem 3rem;
-  font-weight: 500;
   text-align: left;
 }
 @media only screen and (min-width: 768px) {
@@ -812,7 +803,6 @@ a:hover, a:focus, a:active {
 .page-slug-join .intro {
   font-size: 3rem;
   line-height: 1.3em;
-  font-weight: 500;
   padding: 2.4rem 3rem;
 }
 

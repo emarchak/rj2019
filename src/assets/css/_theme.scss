@@ -4,6 +4,8 @@ $white: #FFF;
 
 $primary: rgba(247, 148, 51, 1);
 $secondary: rgba(84, 86, 90, 1);
+$secondary--darker: darken($secondary, 10);
+
 $tertiary:  rgba(43, 15, 44, 1);
 $warning: #fcf6e9;
 $grey: lighten($secondary, 15);
@@ -22,8 +24,8 @@ $spacing--vertical: 2.4rem;
 $navbar--height--wide: 75px;
 $navbar--height--small: 60px;;
 
-$font-weight: 300;
-$font-weight--medium: 500;
+$font-weight--light: 300;
+$font-weight: 500;
 $font-weight--heading: 900;
 $icon-font: "Font Awesome 5 Free";
 
@@ -32,11 +34,12 @@ $icon-font: "Font Awesome 5 Free";
 
   @if $style == heading {
     font-weight: $font-weight--heading;
+    letter-spacing: 0;
   }
   @else if $style == body {
     font-weight: $font-weight;
     font-size: 1.5rem;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.0125em;
   }
 }
 

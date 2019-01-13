@@ -1,12 +1,12 @@
 @import "../theme";
 
 .navbar {
-  $navbar--color: $white;
-  $navbar--color--bg: $secondary;
+  $navbar--color: $secondary--darker;
+  $navbar--color--bg: $primary;
   $navbar--color--hover: $navbar--color;
-  $navbar--color--links: $white;
-  $navbar--color--mobile-links: $secondary;
-  $navbar--color--mobile-hover: $grey;
+  $navbar--color--links: $navbar--color;
+  $navbar--color--mobile-links: $navbar--color;
+  $navbar--color--mobile-hover: $navbar--color;
 
   background: $navbar--color--bg;
   box-shadow: $box-shadow--page;

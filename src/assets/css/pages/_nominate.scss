@@ -6,7 +6,6 @@
   &--content {
     background-color: $grey--lightest;
     padding: $spacing--vertical $spacing--horizontal;
-    font-weight: $font-weight--medium;
     text-align: left;
     @include media(medium-up) {
       transform: rotate(-0.5deg);

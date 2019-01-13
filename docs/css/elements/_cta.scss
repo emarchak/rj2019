@@ -12,13 +12,9 @@
     padding-right: $spacing--horizontal;
 
     @include media(wide-up) {
-      padding-left: calc(50vw - #{500px - 15px}) ;
-      padding-right: calc(50vw - #{500px - 15px}) ;
+      padding-left: calc(55vw - #{500px - 15px}) ;
+      padding-right: calc(55vw - #{500px - 15px}) ;
     }
-  }
-
-  &--logo {
-    margin-top: -1px;
   }
 
   &--copy {
@@ -30,43 +26,41 @@
 
     > * {
       margin-bottom: 0;
-
-      &:first-child {
-        margin-top: 0;
-        @include media(medium-only) {
-          width: calc(50% - #{$spacing--horizontal / 2});
-        }
-        @include media(wide-up) {
-          width: calc(66% - #{$spacing--horizontal / 2});
-        }
-      }
-
-      &:last-child {
-        @include media(medium-only) {
-          margin-top: 0;
-          width: calc(50% - #{$spacing--horizontal / 2});
-        }
-        @include media(wide-up) {
-          margin-top: 0;
-          width: calc(33% - #{$spacing--horizontal / 2});
-        }
-      }
-    }
-
-    & h3.rj2019--cta--subheading {
-      color: $white;
-      margin-bottom: -0.45rem;
-      @include heading-size(3);
-      font-weight: $font-weight--medium;
-
-      @include media(medium-only) {
-        font-size: 3.5rem;
-        line-height: 1.2em;
-      }
-      @include media(wide-up) {
-        @include heading-size(2);
-      }
     }
   }
 
+  &--logo {
+    overflow: hidden;
+    margin-top:0;
+    height: calc(121px + #{$spacing--vertical});
+
+    @include media(medium-up) {
+      width: 50%;
+    }
+  }
+
+  &--logo-svg {
+    transform: translateY(calc(#{$spacing--vertical} - 44%));
+  }
+
+  &--subheading {
+    @include media(medium-up) {
+      width: calc(50% - #{$spacing--horizontal / 2});
+    }
+    @include media(wide-up) {
+      width: calc(50% - #{$spacing--horizontal});
+    }
+  }
+
+  & h3.rj2019--cta--subheading {
+    color: $white;
+    font-weight: $font-weight;
+    @include heading-size(2);
+    margin-top: $spacing--vertical / 3;
+
+    @include media(medium-only) {
+      font-size: 2.7rem;
+      margin-bottom: 1rem;
+    }
+  }
 }

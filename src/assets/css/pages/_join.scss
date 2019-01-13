@@ -26,7 +26,6 @@
 
   .intro {
     @include heading-size(2);
-    font-weight: $font-weight--medium;
     padding: $spacing--vertical $spacing--horizontal;
   }
 }
