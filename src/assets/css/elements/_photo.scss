@@ -4,8 +4,8 @@
   &__left,
   &__right,
   & {
-    margin-bottom: $spacing--vertical;
-    margin-top: $spacing--vertical;
+    margin: $spacing--vertical  auto;
+    display: block;
     @include rj2019-border;
     height: auto;
 
@@ -19,9 +19,7 @@
   &__left {
     @include media(medium-up) {
       float: left;
-      margin-top: 0.5rem;
-      margin-right: $spacing--horizontal / 2;
-      margin-bottom: $spacing--vertical / 2;
+      margin: 0.5rem ($spacing--horizontal / 2) ($spacing--vertical / 2) 0;
     }
     @include media(wide-up) {
       max-width: 40%;
@@ -32,9 +30,7 @@
     @include media(medium-up) {
       max-width: 50%;
       float: right;
-      margin-top: 0.5rem;
-      margin-left: $spacing--horizontal / 2;
-      margin-bottom: $spacing--vertical / 2;
+      margin: 0.5rem 0 ($spacing--vertical / 2) ($spacing--horizontal / 2);
     }
 
     @include media(wide-up) {

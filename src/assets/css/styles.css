@@ -668,8 +668,8 @@ a:hover, a:focus, a:active {
 }
 
 .rj2019--photo__left, .rj2019--photo__right, .rj2019--photo {
-  margin-bottom: 2.4rem;
-  margin-top: 2.4rem;
+  margin: 2.4rem auto;
+  display: block;
   border-bottom: 0.5rem solid #f79433;
   height: auto;
 }
@@ -681,9 +681,7 @@ a:hover, a:focus, a:active {
 @media only screen and (min-width: 768px) {
   .rj2019--photo__left {
     float: left;
-    margin-top: 0.5rem;
-    margin-right: 1.5rem;
-    margin-bottom: 1.2rem;
+    margin: 0.5rem 1.5rem 1.2rem 0;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -695,9 +693,7 @@ a:hover, a:focus, a:active {
   .rj2019--photo__right {
     max-width: 50%;
     float: right;
-    margin-top: 0.5rem;
-    margin-left: 1.5rem;
-    margin-bottom: 1.2rem;
+    margin: 0.5rem 0 1.2rem 1.5rem;
   }
 }
 @media only screen and (min-width: 1200px) {
