@@ -387,6 +387,9 @@ a:hover, a:focus, a:active {
   border: none;
   box-shadow: none;
 }
+.navbar .connect-icon {
+  font-size: 1.5rem;
+}
 .navbar-links a {
   color: #3b3d40;
 }
@@ -679,7 +682,7 @@ a:hover, a:focus, a:active {
   .rj2019--photo__left {
     float: left;
     margin-top: 0.5rem;
-    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     margin-bottom: 1.2rem;
   }
 }

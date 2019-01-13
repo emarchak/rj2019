@@ -20,7 +20,7 @@
     @include media(medium-up) {
       float: left;
       margin-top: 0.5rem;
-      margin-left: $spacing--horizontal / 2;
+      margin-right: $spacing--horizontal / 2;
       margin-bottom: $spacing--vertical / 2;
     }
     @include media(wide-up) {
