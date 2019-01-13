@@ -26,6 +26,11 @@ a {
   * {
     @include font;
   }
+
+  p.leader {
+    @include heading-size(4)
+  }
+
   strong {
     font-weight: $font-weight--heading;
   }

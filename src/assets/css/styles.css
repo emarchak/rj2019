@@ -32,6 +32,10 @@ a:hover, a:focus, a:active {
   font-size: 1.5rem;
   letter-spacing: 0.0125em;
 }
+.v2-theme .body p.leader {
+  font-size: 1.755rem;
+  line-height: 1.3em;
+}
 .v2-theme .body strong {
   font-weight: 900;
 }
@@ -751,10 +755,10 @@ a:hover, a:focus, a:active {
   }
 }
 .rj2019--letter--signature {
-  padding-left: 3rem;
-  font-style: italic;
-  font-size: 3rem;
-  line-height: 1.3em;
+  width: 8rem;
+  height: auto;
+  margin-top: 2.4rem;
+  margin-left: calc(25% - 11rem);
 }
 .rj2019--letter--photo {
   background-color: #FFF;

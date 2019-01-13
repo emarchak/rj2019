@@ -14,9 +14,10 @@
   }
 
   &--signature {
-    padding-left: $spacing--horizontal;
-    font-style: italic;
-    @include heading-size(2);
+    width: 8rem;
+    height: auto;
+    margin-top: $spacing--vertical;
+    margin-left: calc(25% - #{8rem + $spacing--horizontal});
   }
 
   &--photo {
