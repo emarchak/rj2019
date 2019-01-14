@@ -14,6 +14,12 @@
     @include heading-size(4);
   }
 
+  & #{&}--content-large {
+    @include heading-size(2);
+    line-height: 1.5;
+    font-weight: $font-weight--light;
+  }
+
   &__right {
     @include media(medium-up) {
       margin-left: 0;

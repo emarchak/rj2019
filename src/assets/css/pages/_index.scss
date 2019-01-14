@@ -10,16 +10,16 @@
   }
 
   @include media(wide-up) {
-    max-height: 48rem;
+    background-color: $grey--lightest;
+    max-height: 58rem;
   }
 
   #{&}--image {
-    @include media(medium-only) {
-      margin-top: -6rem;
-    }
     @include media(wide-up) {
-      margin-top: -13rem;
       width: 100%;
+      max-width: 1600px;
+      margin: -2rem auto 0;
+      display: block;
     }
   }
 
@@ -37,14 +37,14 @@
     @include media(medium-up) {
       width: 33vw;
       position: absolute;
-      left: $spacing--horizontal / 2;
+      right: $spacing--horizontal;
       z-index: 1;
       top: 0;
       box-shadow: $box-shadow--light;
     }
 
     @include media(wide-up) {
-      left: calc(50vw - 480px);
+      right: calc(50vw - 480px);
       width: 30rem;
     }
   }

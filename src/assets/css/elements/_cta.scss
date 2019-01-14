@@ -11,9 +11,14 @@
     padding-left: $spacing--horizontal;
     padding-right: $spacing--horizontal;
 
+    @include media(medium-only) {
+      padding-left: calc(50vw - #{43rem - $spacing--horizontal});
+      padding-right: calc(50vw - #{43rem - $spacing--horizontal});
+    }
+
     @include media(wide-up) {
-      padding-left: calc(55vw - #{500px - 15px}) ;
-      padding-right: calc(55vw - #{500px - 15px}) ;
+      padding-left: calc(55vw - #{50rem - $spacing--horizontal});
+      padding-right: calc(55vw - #{50rem - $spacing--horizontal});
     }
   }
 
@@ -30,37 +35,39 @@
   }
 
   &--logo {
-    overflow: hidden;
     margin-top:0;
-    height: $spacing--vertical + 12.3rem;
+
+    text-align: left;
 
     @include media(medium-up) {
-      width: 50%;
+      height: $spacing--vertical + 12.3rem;
+      width: calc(50% + #{$spacing--horizontal});
+      padding-left: $spacing--horizontal;
     }
   }
 
   &--logo-svg {
-    transform: translateY(calc(#{$spacing--vertical} - 44%));
+    max-height: 100%;
   }
 
   &--subheading {
+    text-align: center;
     @include media(medium-up) {
-      width: calc(50% - #{$spacing--horizontal / 2});
-    }
-    @include media(wide-up) {
-      width: calc(50% - #{$spacing--horizontal});
+      width: calc(50% - #{$spacing--horizontal * 2});
+      text-align: left;
     }
   }
 
   & h3.rj2019--cta--subheading {
     color: $white;
     font-weight: $font-weight;
-    @include heading-size(2);
-    margin-top: $spacing--vertical / 3;
-
-    @include media(medium-only) {
-      font-size: 2.7rem;
-      margin-bottom: 1rem;
+    margin-top: $spacing--vertical;
+    font-size: 3.4rem;
+    line-height: 1.2em;
+    
+    @include media(medium-up) {
+      margin-top: $spacing--vertical / 3;
+      margin-bottom: .6rem;
     }
   }
 }

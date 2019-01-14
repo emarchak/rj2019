@@ -5,14 +5,10 @@ slug: home
 <%- include('partials/hero') %>
 
 <article class="rj2019--textblock">
-  <h1>Ravi Joshi for Toronto—Danforth</h1>
 
-  <img class="rj2019--photo rj2019--photo__right" alt="Ravi being nice"
-       src="https://d3n8a8pro7vhmx.cloudfront.net/ravijoshi/pages/19/attachments/original/1547404766/home--talk--small.jpg?1547404766"
-       srcset="https://d3n8a8pro7vhmx.cloudfront.net/ravijoshi/pages/19/attachments/original/1547404763/home--talk--large.jpg?1547404763 520w,
-                 https://d3n8a8pro7vhmx.cloudfront.net/ravijoshi/pages/19/attachments/original/1547404766/home--talk--small.jpg?1547404766 250w"
-       sizes="(max-width: 767px) 100vw,
-                (min-width: 768px) 250px">
+    <%- include('partials/photos/headshot', {className: "rj2019--photo__right"}) %>
+
+    <h1>Ravi Joshi for Toronto—Danforth</h1>
 
     <p>I’ve spent my life fighting for change in our community and across the country. Now, I’m asking for your support to continue this work as your Federal NDP candidate in Toronto-Danforth.</p>
     <p>I grew up in our community and I know our history of electing dedicated, hard-working, progressive leaders. I will not let you down. I’ll knock on doors, talk to neighbours, and make a compelling case for real progress in Ottawa and a Canada that leaves no one behind. </p>
@@ -21,18 +17,13 @@ slug: home
 </article>
 
   <blockquote class="rj2019--blockquote rj2019--blockquote__left">
-    <p class="rj2019--blockquote--content">Vivamus ac nisl mi. Ut a velit at leo imperdiet commodo sit amet sed dolor. Nullam sagittis fringilla lacus non euismod. Sed eu lectus a ipsum lacinia aliquam at ac lacus. Duis ultrices pretium nibh vitae vestibulum. In et sollicitudin nibh. Curabitur semper metus dui. Sed enim dui, gravida in lacinia eget, sagittis ut neque.</p>
+    <p class="rj2019--blockquote--content rj2019--blockquote--content-large">This is our moment – our chance to make real progress in Ottawa.<br/> Let’s get to work and get the job done.</p>
   </blockquote>
 
 <article class="rj2019--textblock">
   <h2>Ravi has deep roots in Toronto-Danforth.</h2>
 
-    <img class="rj2019--photo__left" alt="Ravi Joshi with three generations of his family, standing on a porch in Riverdale. His parents standing beside each other, and his mother is holding the hand of Ravi's nephew."
-         src="https://d3n8a8pro7vhmx.cloudfront.net/ravijoshi/pages/21/attachments/original/1547348338/why--family--large.jpg?1547348338"
-         srcset="https://d3n8a8pro7vhmx.cloudfront.net/ravijoshi/pages/21/attachments/original/1547348338/why--family--large.jpg?1547348338 720w,
-               https://d3n8a8pro7vhmx.cloudfront.net/ravijoshi/pages/21/attachments/original/1547348337/why--family--small.jpg?1547348337 720w"
-         sizes="(max-width: 767px) 100vw,
-              (min-width: 768px) 500px">
+  <%- include('partials/photos/family', {className: "rj2019--photo__left"}) %>
 
   <p>Ravi grew up on Riverdale Ave, as the youngest of three siblings and became involved in his community as a kid helping his dad deliver donations for Riverdale Share.</p>
 

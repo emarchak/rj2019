@@ -216,29 +216,29 @@ a:hover, a:focus, a:active {
 .v2-theme form > .form {
   padding: 0;
 }
-.v2-theme form .form-group > select,
+.v2-theme form input[type=text] .form-group > select,
 .v2-theme form .form-control {
   border-radius: 0.2rem;
   border: 0.1rem solid #a0a2a7;
 }
-.v2-theme form .form-group > select:focus,
+.v2-theme form input[type=text] .form-group > select:focus,
 .v2-theme form .form-control:focus {
   border-color: #54565a;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
 }
-.v2-theme form .form-group > select ::-webkit-input-placeholder,
+.v2-theme form input[type=text] .form-group > select ::-webkit-input-placeholder,
 .v2-theme form .form-control ::-webkit-input-placeholder {
   color: #797c82 !important;
 }
-.v2-theme form .form-group > select :-moz-placeholder,
+.v2-theme form input[type=text] .form-group > select :-moz-placeholder,
 .v2-theme form .form-control :-moz-placeholder {
   color: #797c82 !important;
 }
-.v2-theme form .form-group > select ::-moz-placeholder,
+.v2-theme form input[type=text] .form-group > select ::-moz-placeholder,
 .v2-theme form .form-control ::-moz-placeholder {
   color: #797c82 !important;
 }
-.v2-theme form .form-group > select :-ms-input-placeholder,
+.v2-theme form input[type=text] .form-group > select :-ms-input-placeholder,
 .v2-theme form .form-control :-ms-input-placeholder {
   color: #797c82 !important;
 }
@@ -556,10 +556,16 @@ a:hover, a:focus, a:active {
   padding-left: 3rem;
   padding-right: 3rem;
 }
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .rj2019--cta--content {
+    padding-left: calc(50vw - 40rem);
+    padding-right: calc(50vw - 40rem);
+  }
+}
 @media only screen and (min-width: 1200px) {
   .rj2019--cta--content {
-    padding-left: calc(55vw - 485px);
-    padding-right: calc(55vw - 485px);
+    padding-left: calc(55vw - 47rem);
+    padding-right: calc(55vw - 47rem);
   }
 }
 @media only screen and (min-width: 768px) {
@@ -573,39 +579,39 @@ a:hover, a:focus, a:active {
   margin-bottom: 0;
 }
 .rj2019--cta--logo {
-  overflow: hidden;
   margin-top: 0;
-  height: 14.7rem;
+  text-align: left;
 }
 @media only screen and (min-width: 768px) {
   .rj2019--cta--logo {
-    width: 50%;
+    height: 14.7rem;
+    width: calc(50% + 3rem);
+    padding-left: 3rem;
   }
 }
 .rj2019--cta--logo-svg {
-  transform: translateY(calc(2.4rem - 44%));
+  max-height: 100%;
+}
+.rj2019--cta--subheading {
+  text-align: center;
 }
 @media only screen and (min-width: 768px) {
   .rj2019--cta--subheading {
-    width: calc(50% - 1.5rem);
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .rj2019--cta--subheading {
-    width: calc(50% - 3rem);
+    width: calc(50% - 6rem);
+    text-align: left;
   }
 }
 .rj2019--cta h3.rj2019--cta--subheading {
   color: #FFF;
   font-weight: 500;
-  font-size: 3rem;
-  line-height: 1.3em;
-  margin-top: 0.8rem;
+  margin-top: 2.4rem;
+  font-size: 3.4rem;
+  line-height: 1.2em;
 }
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
+@media only screen and (min-width: 768px) {
   .rj2019--cta h3.rj2019--cta--subheading {
-    font-size: 2.7rem;
-    margin-bottom: 1rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.6rem;
   }
 }
 
@@ -620,6 +626,12 @@ a:hover, a:focus, a:active {
   color: #FFF;
   font-size: 1.755rem;
   line-height: 1.3em;
+}
+.rj2019--blockquote .rj2019--blockquote--content-large {
+  font-size: 3rem;
+  line-height: 1.3em;
+  line-height: 1.5;
+  font-weight: 300;
 }
 @media only screen and (min-width: 768px) {
   .rj2019--blockquote__right {
@@ -727,18 +739,16 @@ a:hover, a:focus, a:active {
 }
 @media only screen and (min-width: 1200px) {
   .rj2019--hero {
-    max-height: 48rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .rj2019--hero .rj2019--hero--image {
-    margin-top: -6rem;
+    background-color: #eff0f1;
+    max-height: 58rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .rj2019--hero .rj2019--hero--image {
-    margin-top: -13rem;
     width: 100%;
+    max-width: 1600px;
+    margin: -2rem auto 0;
+    display: block;
   }
 }
 .rj2019--hero .rj2019--hero--content {
@@ -756,7 +766,7 @@ a:hover, a:focus, a:active {
   .rj2019--hero .rj2019--hero--content {
     width: 33vw;
     position: absolute;
-    left: 1.5rem;
+    right: 3rem;
     z-index: 1;
     top: 0;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
@@ -764,7 +774,7 @@ a:hover, a:focus, a:active {
 }
 @media only screen and (min-width: 1200px) {
   .rj2019--hero .rj2019--hero--content {
-    left: calc(50vw - 480px);
+    right: calc(50vw - 480px);
     width: 30rem;
   }
 }
