@@ -41,7 +41,7 @@
 
     @include media(medium-up) {
       height: $spacing--vertical + 12.3rem;
-      width: calc(50% + #{$spacing--horizontal});
+      width: calc(50% - #{-$spacing--horizontal} );
       padding-left: $spacing--horizontal;
     }
   }
