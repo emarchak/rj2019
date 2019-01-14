@@ -693,8 +693,12 @@ a:hover, a:focus, a:active {
     margin-top: -6rem;
   }
 }
+.rj2019--photo__left {
+  width: 100%;
+}
 @media only screen and (min-width: 768px) {
   .rj2019--photo__left {
+    width: auto;
     float: left;
     margin: 0.5rem 1.5rem 1.2rem 0;
   }
@@ -704,8 +708,12 @@ a:hover, a:focus, a:active {
     max-width: 40%;
   }
 }
+.rj2019--photo__right {
+  width: 100%;
+}
 @media only screen and (min-width: 768px) {
   .rj2019--photo__right {
+    width: auto;
     max-width: 50%;
     float: right;
     margin: 0.5rem 0 1.2rem 1.5rem;
