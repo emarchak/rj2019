@@ -28,6 +28,7 @@ $font-weight--light: 300;
 $font-weight: 500;
 $font-weight--heading: 900;
 $icon-font: "Font Awesome 5 Free";
+$icon-font--brands: "Font Awesome 5 Brands";
 
 @mixin font($style: body) {
   font-family: 'Raleway', sans-serif;
