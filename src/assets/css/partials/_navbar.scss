@@ -170,5 +170,8 @@
     @include media(small-only) {
       width: 100%;
     }
+    @include media(medium-up) {
+      width: 11rem;
+    }
   }
 }

@@ -206,37 +206,6 @@ a:hover, a:focus, a:active {
   margin: 0;
 }
 
-.modal-modal .close-button {
-  background-color: transparent;
-  border-width: 0;
-  box-shadow: none;
-  top: 1.5rem;
-  right: 1.5rem;
-}
-.modal-modal .modal-content {
-  padding: 4.8rem 6rem;
-}
-.modal-modal .modal-content * {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 1.5rem;
-  letter-spacing: 0.0125em;
-}
-.modal-modal .modal-content .headline-line {
-  font-size: 3rem;
-  line-height: 1.3em;
-  font-weight: 900;
-}
-.modal-modal .modal-content .share-buttons {
-  padding-top: 2.4rem;
-}
-.modal-modal .modal-content .fas {
-  font-family: "Font Awesome 5 Free";
-}
-.modal-modal .modal-content .fab {
-  font-family: "Font Awesome 5 Brands";
-}
-
 .v2-theme form {
   background: #eff0f1;
   border-radius: 0.2rem;
@@ -365,8 +334,6 @@ a:hover, a:focus, a:active {
 
 .misc-block {
   padding-top: 0;
-  padding-left: 0;
-  padding-right: 0;
   background-color: #eff0f1;
 }
 .misc-block-item {
@@ -376,7 +343,7 @@ a:hover, a:focus, a:active {
 }
 @media only screen and (min-width: 768px) {
   .misc-block-item {
-    max-width: 50vw;
+    max-width: 50rem;
   }
 }
 .misc-block-item h3.block-headline {
@@ -416,6 +383,43 @@ a:hover, a:focus, a:active {
     padding-left: calc(50vw - 53rem);
     padding-right: calc(50vw - 53rem);
   }
+}
+
+.modal-modal .close-button {
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.modal-modal .modal-content {
+  padding: 4.8rem 6rem;
+}
+.modal-modal .modal-content * {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.0125em;
+}
+.modal-modal .modal-content .headline-line {
+  font-size: 3rem;
+  line-height: 1.3em;
+  font-weight: 900;
+}
+.modal-modal .modal-content .share-buttons .btn {
+  margin: 2.4rem 1.5rem 0;
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .modal-modal .modal-content .share-buttons .btn {
+    display: inline-block;
+  }
+}
+.modal-modal .modal-content .share-buttons .fas {
+  font-family: "Font Awesome 5 Free";
+}
+.modal-modal .modal-content .share-buttons .fab {
+  font-family: "Font Awesome 5 Brands";
 }
 
 .navbar {
@@ -568,6 +572,11 @@ a:hover, a:focus, a:active {
 @media only screen and (max-width: 767px) {
   .navbar-logo-img {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .navbar-logo-img {
+    width: 11rem;
   }
 }
 

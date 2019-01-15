@@ -173,36 +173,3 @@ a {
     margin: 0;
   }
 }
-
-.modal-modal {
-  .close-button {
-    background-color: transparent;
-    border-width: 0;
-    box-shadow: none;
-    top: 1.5rem;
-    right: 1.5rem;
-  }
-
-  .modal-content {
-    * {
-      @include font;
-    }
-
-    .headline-line{
-      @include heading-size(2);
-      font-weight: $font-weight--heading;
-    }
-
-    .share-buttons {
-      padding-top: $spacing--vertical;
-    }
-
-    .fas {
-      font-family: $icon-font;
-    }
-    .fab {
-      font-family: $icon-font--brands;
-    }
-    padding: ($spacing--vertical * 2) ($spacing--horizontal * 2);
-  }
-}

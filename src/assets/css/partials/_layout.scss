@@ -8,15 +8,13 @@
 
 .misc-block {
   padding-top: 0;
-  padding-left: 0;
-  padding-right: 0;
   background-color: $grey--lightest;
   &-item {
     display: block;
     margin: 0;
     padding: ($spacing--vertical * 2) $spacing--horizontal;
     @include media(medium-up) {
-      max-width: 50vw;
+      max-width: 50rem;
     }
     h3.block-headline {
       color: $black;
@@ -54,5 +52,46 @@
   @include media(wide-up) {
     padding-left: calc(50vw - #{50rem + $spacing--horizontal});
     padding-right: calc(50vw - #{50rem + $spacing--horizontal});
+  }
+}
+
+.modal-modal {
+  .close-button {
+    background-color: transparent;
+    border-width: 0;
+    box-shadow: none;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .modal-content {
+
+    padding: ($spacing--vertical * 2) ($spacing--horizontal * 2);
+    * {
+      @include font;
+    }
+
+    .headline-line{
+      @include heading-size(2);
+      font-weight: $font-weight--heading;
+    }
+
+    .share-buttons {
+      .btn {
+        margin: $spacing--vertical ($spacing--horizontal / 2) 0;
+        display: block;
+
+        @include media(medium-up) {
+          display: inline-block;
+        }
+      }
+      .fas {
+        font-family: $icon-font;
+      }
+      .fab {
+        font-family: $icon-font--brands;
+      }
+    }
+
   }
 }
