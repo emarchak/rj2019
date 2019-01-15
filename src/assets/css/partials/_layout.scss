@@ -35,6 +35,12 @@
   }
 }
 
+.form-grid-left, .form-grid-right {
+  @include media(medium-up) {
+    grid-gap: $spacing--horizontal;
+  }
+}
+
 .main {
   padding-top: $navbar--height--small;
   padding-bottom: 0;

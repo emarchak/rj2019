@@ -363,6 +363,12 @@ a:hover, a:focus, a:active {
   color: #333;
 }
 
+@media only screen and (min-width: 768px) {
+  .form-grid-left, .form-grid-right {
+    grid-gap: 3rem;
+  }
+}
+
 .main {
   padding-top: 60px;
   padding-bottom: 0;
