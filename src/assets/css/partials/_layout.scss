@@ -65,8 +65,11 @@
   }
 
   .modal-content {
-
     padding: ($spacing--vertical * 2) ($spacing--horizontal * 2);
+    border-radius: $border-radius;
+    background-color: $grey--lightest;
+    box-shadow: $box-shadow--light;
+
     * {
       @include font;
     }
