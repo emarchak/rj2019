@@ -391,7 +391,7 @@ a:hover, a:focus, a:active {
   box-shadow: none;
 }
 .navbar .connect-icon {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .navbar-links a {
   color: #3b3d40;
@@ -682,19 +682,17 @@ a:hover, a:focus, a:active {
   bottom: 50%;
 }
 
-.rj2019--photo__left, .rj2019--photo__right, .rj2019--photo {
+.rj2019--photo__left, .rj2019--photo__right, .rj2019--photo__full, .rj2019--photo {
+  width: 100%;
   margin: 2.4rem auto;
   display: block;
   border-bottom: 0.5rem solid #f79433;
   height: auto;
 }
 @media only screen and (min-width: 768px) {
-  .rj2019--textblock--title + .rj2019--photo__left, .rj2019--textblock--title + .rj2019--photo__right, .rj2019--textblock--title + .rj2019--photo {
+  .rj2019--textblock--title + .rj2019--photo__left, .rj2019--textblock--title + .rj2019--photo__right, .rj2019--textblock--title + .rj2019--photo__full, .rj2019--textblock--title + .rj2019--photo {
     margin-top: -6rem;
   }
-}
-.rj2019--photo__left {
-  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .rj2019--photo__left {
@@ -707,9 +705,6 @@ a:hover, a:focus, a:active {
   .rj2019--photo__left {
     max-width: 40%;
   }
-}
-.rj2019--photo__right {
-  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .rj2019--photo__right {
@@ -845,16 +840,16 @@ a:hover, a:focus, a:active {
   padding: 0;
   margin-bottom: 0;
 }
+.page-slug-join .theme-panel.form-grid-form .form-submit-row {
+  padding-top: 2.4rem;
+}
+.page-slug-join .form-grid {
+  padding-bottom: 2.4rem;
+}
 @media only screen and (min-width: 768px) {
   .page-slug-join .form-grid {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    padding-bottom: 4.8rem;
   }
-}
-.page-slug-join .intro {
-  font-size: 3rem;
-  line-height: 1.3em;
-  padding: 2.4rem 3rem;
 }
 
 .flash-share.panel {
@@ -872,6 +867,9 @@ a:hover, a:focus, a:active {
 @media only screen and (max-width: 767px) {
   .flash-share.panel .submit-button {
     margin-top: 2.4rem;
+  }
+  .flash-share.panel .text-right {
+    text-align: inherit;
   }
   .flash-share.panel .flash-close,
 .flash-share.panel .submit-button {

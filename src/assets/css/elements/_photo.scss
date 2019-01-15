@@ -3,7 +3,10 @@
 .rj2019--photo {
   &__left,
   &__right,
+  &__full,
   & {
+
+    width: 100%;
     margin: $spacing--vertical  auto;
     display: block;
     @include rj2019-border;
@@ -17,7 +20,6 @@
   }
 
   &__left {
-    width: 100%;
     @include media(medium-up) {
       width: auto;
       float: left;
@@ -29,7 +31,6 @@
   }
 
   &__right {
-    width: 100%;
     @include media(medium-up) {
       width: auto;
       max-width: 50%;

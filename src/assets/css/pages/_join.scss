@@ -1,7 +1,6 @@
 @import "../theme.scss";
 
 .page-slug-join {
-
   .misc-block {
     display: none;
   }
@@ -15,18 +14,16 @@
       margin-bottom: 0;
     }
 
-  }
-
-  .form-grid {
-    @include media(medium-up) {
-      margin-left: $spacing--horizontal;
-      margin-right: $spacing--horizontal;
+    .form-submit-row {
+      padding-top: $spacing--vertical;
     }
-  }
 
-  .intro {
-    @include heading-size(2);
-    padding: $spacing--vertical $spacing--horizontal;
+  }
+  .form-grid {
+    padding-bottom: $spacing--vertical;
+    @include media(medium-up) {
+      padding-bottom: $spacing--vertical * 2;
+    }
   }
 }
 
@@ -46,6 +43,10 @@
       margin-top: $spacing--vertical;
     }
 
+    .text-right{
+      text-align: inherit;
+    }
+
     .flash-close,
     .submit-button {
       display:inline-block;
@@ -53,7 +54,6 @@
       text-align: center;
     }
   }
-
 
   form > .row:last-child {
     @include media(medium-up) {
