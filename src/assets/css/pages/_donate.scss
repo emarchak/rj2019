@@ -1,0 +1,86 @@
+@import "../theme.scss";
+
+.donation_form {
+  .row-fluid {
+    padding-bottom: $spacing--vertical;
+
+    &.padbottomless {
+      padding-bottom: 0;
+    }
+    + .row-fluid.padbottomless {
+      padding-top: $spacing--vertical;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    h4 {
+      font-weight: $font-weight;
+    }
+
+    label:not(.radio):not(.checkbox) {
+      display: block;
+      font-size: 1.25rem;
+      color: $grey;
+      margin-bottom: 0;
+    }
+
+    label.checkbox {
+      padding-left: 2.25rem;
+      margin-bottom: 0;
+    }
+
+    select,
+    input.text {
+      width: 100%;
+      display: block;
+      line-height: 4rem;
+      padding-left: 1rem;
+    }
+  }
+
+  #donation_billing_address_address1,
+  #donation_billing_address_address2,
+  #donation_billing_address_address3 {
+    margin-bottom: .5rem;
+  }
+
+  .donation-v2 {
+    &-amounts,
+    &-occurence-radio {
+      justify-content: left;
+    }
+
+    &-amounts {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    &-options {
+      padding-bottom: 0;
+      .currency-symbol {
+        display: inline;
+        width: 1em;
+      }
+      #donation_amount_other_input {
+        display:inline;
+        width: calc(100% - 2em);
+      }
+    }
+  }
+
+
+  .submit-container {
+    .donation-v2-amount span {
+      @include heading-size(2);
+    }
+    .donation-v2-amount {
+      padding-bottom: $spacing--vertical;
+    }
+    .submit-button {
+      display: block;
+      width: 100%;
+    }
+  }
+}

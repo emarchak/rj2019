@@ -1,12 +1,14 @@
 @import "../theme";
 
 @mixin input-style {
-  input[type=text]
+  .payment-input,
+  input[type=text],
+  input.text,
   .form-group>select,
   .form-control {
     border-radius: $border-radius;
     border: .1rem solid $grey--light;
-
+    background-color: $white;
     &:focus {
       border-color: $secondary;
       box-shadow: $box-shadow--light;
@@ -129,5 +131,33 @@
     &:hover::after {
       border-color: lighten($black, 10%);
     }
+  }
+
+  .radio-inline {
+    padding-left: 2em;
+
+    > span {
+      min-width: 50%;
+      @include media(medium-only) {
+        min-width: 25%;
+      }
+      @include media(wide-up) {
+        min-width: 20%;
+      }
+    }
+
+    label.radio {
+      padding-left: 0;
+      padding-right: $spacing--horizontal;
+    }
+  }
+
+  .payment-input {
+    position: relative;
+    transform: none;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 0.75rem;
+
   }
 }
