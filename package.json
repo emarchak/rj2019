@@ -5,7 +5,8 @@
   "main": "site.config.js",
   "scripts": {
     "start": "nanogen start -c site.config.dev.js -p 52886",
-    "build": "nanogen build"
+    "build": "nanogen build",
+    "sass-watch": "sass --watch src/assets/css/:src/assets/css/"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "nanogen": "^0.4.2",
+    "node-sass": "^4.11.0",
     "sass": "^1.15.2",
     "yuicompressor": "^2.4.8"
   },
