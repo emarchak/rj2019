@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RJ2019 Template site</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/solid.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/brands.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/fontawesome.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://ravijoshi.nationbuilder.com/themes/1/5c0ded0745de94575ab2e614/0/attachments/15461127851546113728/default/theme.css" type="text/css">
+
+  <!-- _theme-head-after.html -->
+  <link rel="stylesheet" href="http://emarchak.com/rj2019/css/styles.min.css">
+</head>
+<body class="aware-theme v2-theme page-type-basic page-pages-show-basic-wide page-slug- js ">
+  <header class="site-header">
+      <nav class="navbar" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+
+      <button type="button" class="btn navbar-toggle" id="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="navbar-toggle-icon"></span>
+      </button>
+<a href="/" class="navbar-logo">
+  <img src="http://emarchak.com/rj2019/logo/logo--full--dark.svg" alt="RJ2019 Template site" class="navbar-logo-img">
+</a>
+
+
+
+
+
+      <!-- _pn-navbar_buttons.html -->
+
+
+      <!-- /_pn-navbar_buttons.html -->
+
+
+    </div>
+
+
+    <!-- _pn-navbar_menu.html -->
+
+    <div class="navbar-menu">
+      <div class="navbar-menu-inner">
+        <ul class="navbar-links navbar-main">
+
+
+          <li>
+            <a href="/styleguide">Styleguide</a>
+          </li>
+
+
+
+          <li class="active">
+            <a href="/why">Why Ravi?</a>
+          </li>
+
+
+
+          <li>
+            <a href="/join">Join us</a>
+          </li>
+          <li>
+            <a href="/donate">Donate</a>
+          </li>
+
+          <li>
+            <a href="/email">Email Blast</a>
+          </li>
+
+
+          <li class="navbar-icon-item navbar-overflow dropdown invisible">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <span class="sr-only">More</span>
+              <span class="fas fa-fw fa-ellipsis-h"></span>
+            </a>
+            <ul class="dropdown-menu navbar-sublinks navbar-overflow-dropdown role=" menu"="">
+        </ul>
+        </li>
+        </ul>
+
+
+
+        <!-- _pn-connect_main.html -->
+
+        <!-- _pn-connect.html -->
+
+
+
+
+        <ul class="connect-items navbar-links navbar-connect">
+
+
+
+
+          <li class="connect-item navbar-icon-item">
+            <a href="https://www.twitter.com/ravijoshiTO" class="connect-link " target="_blank" rel="nofollow">
+              <span class="sr-only">Twitter</span>
+              <span class="connect-icon fa-fw fab fa-twitter"></span>
+            </a>
+          </li>
+
+
+        </ul>
+
+
+        <!-- /_pn-connect.html -->
+
+
+        <!-- /_pn-connect_main.html -->
+
+
+
+
+        <!-- _pn-navbar_buttons.html -->
+
+
+        <!-- /_pn-navbar_buttons.html -->
+
+      </div>
+    </div>
+
+
+    <!-- /_pn-navbar_menu.html -->
+
+  </div>
+</nav>
+  </header>
+
+  <div id="navbar-overlay" class="navbar-overlay"></div>
+  <div class="top-hero"></div>
+  <main class="body"><div class="body-inner">
+    <div class="main theme-default content-font-size">
+      <div id="content">
+
+    {% if page.headline.size > 0 %}
+    <div id="headline">
+        <h2>{{ page.headline }}</h2>
+    </div>
+    {% endif %}
+
+    {% assign thermo_width = 50 %}
+
+    {% if page.donation_v2.has_amount_goal? %}
+    <div class="clearfix">
+        <div class="progress" style="width: {{ thermo_width }}%;">
+            <div class="bar bar-success" style="width: {{ page.donation_v2.percent_of_amount_goal | times:100 }}%;">
+                {% if page.donations_count < 1 %}
+                <div class="bar-text">JUST STARTED</div>
+                {% else %}
+                <div class="bar-text">{{ page.donations_amount_format }} raised</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="bar-goal">GOAL: {{ page.donation_v2.amount_goal_format }}</div>
+
+    </div>
+
+    {% elsif page.donation_v2.has_donor_goal? %}
+
+    <div class="clearfix">
+        <div class="progress" style="width: {{ thermo_width }}%;">
+            <div class="bar bar-success" style="width: {{ page.donation_v2.percent_of_donor_goal | times:100 }}%;">
+                {% if page.donations_count < 2 %}
+                <div class="bar-text">JUST STARTED</div>
+                {% else %}
+                <div class="bar-text">{{ page.donations_count }} donors</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="bar-goal">{{ page.donation_v2.donor_goal }} donors</div>
+
+    </div>
+
+    {% endif %}
+
+
+    <div class="donate-grid">
+        {% if page.donation_v2.content.size > 0 %}
+            {{ page.donation_v2.content }}
+        {% endif %}
+        <div class="donate-grid--form">
+    {% form_for donation %}
+
+    <div class="form-wrap">
+        <div class="form">
+
+            <div class="form-errors">
+                {% error_messages_for donation %}
+            </div>
+
+            {% if page.donation_v2.has_merchant_account? == false %}
+            <div class="padbottommore">
+                <span class="red"><strong>No payment processor:</strong> This page will not work until you add a payment processor</span>
+            </div>
+            {% elsif page.donation_v2.merchant_account.is_test_mode? %}
+            <div class="padbottommore">
+                <span class="red"><strong>Testing mode:</strong> Transactions will not be processed. Use <u><a href="https://stripe.com/docs/testing#cards" class="red">testing cards</a></u> only.</span>
+            </div>
+            {% endif %}
+
+            <div class="row-fluid">
+                <div class="span12">
+                    {% if request.current_order %}
+                    <div class="row-fluid">
+                        <h4>Your order</h4>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="ticket-list span12">
+                            <ul>
+                                {% for item in request.current_order.items %}
+                                <li>
+                                    {% if item.num_time_periods and item.time_period_type %}
+                                    {{ item.quantity }} {{ item.name }} @ {{ item.amount }} - billed automatically every {{ item.num_time_periods }} {{item.time_period_type }}
+                                    {% else %}
+                                    {{ item.quantity }} {{ item.name }} @ {{ item.amount }}
+                                    {% endif %}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <a class="clear-order" href="{{ page.donation_v2.clear_order_url }}">Clear order</a>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="row-fluid padbottomless">
+                        <h4>1. Amount</h4>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            {% if page.donation_v2.amount_in_cents != 0 %}
+                            <h2 class="single-amount">{{ page.donation_v2.amount_formatted }}</h2>
+                            {% else %}
+                            <div class="radio-inline donation-v2-amounts padbottommore">{{ page.donation_v2.form_amount_options }}</div>
+                            {% endif %}
+                            {% if page.donation_v2.accepts_variable_amounts? or page.donation_v2.donation_frequency == "any" %}
+                            <div class="row-fluid donation-v2-options {% if page.donation_v2.accepts_variable_amounts? == false %}single-amount-any-frequency{% endif %}">
+                                {% if page.donation_v2.accepts_variable_amounts? %}
+                                <div class="span6">
+                                    {{ page.donation_v2.amount_other }}
+                                </div>
+                                {% endif %}
+                                {% if page.donation_v2.donation_frequency == "any" %}
+                                <div class='{% if page.donation_v2.accepts_variable_amounts? == false %}span12{% else %}span6{% endif %}'>
+                                    <div class="donation-v2-occurence-radio radio-inline clearfix">
+                                        {{ page.donation_v2.monthly_recurring_radio_buttons }}
+                                    </div>
+                                </div>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+
+                            {% if page.donation_v2.donation_frequency == "monthly" %}
+                            <div class="row-fluid padtop">
+                                <div class="span12 padbottomless">Paid monthly</div>
+                            </div>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <div class="row-fluid padbottomless">
+                        <h4 class="sub-header">{% if request.current_order %}1{% else %}2{% endif %}. Your information</h4>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12"><label class="input" for="donation_email">Email</label>{% email_field "email", class:"text" %}</div>
+                    </div>
+                    <div class="row-fluid form-row--inline">
+                        <div class="span6"><label class="input" for="donation_first_name">First Name</label>{% text_field "first_name", class:"text" %}</div>
+                        <div class="span6"><label class="input" for="donation_last_name">Last Name</label>{% text_field "last_name", class:"text" %}</div>
+
+                    </div>
+                    <div class="row-fluid">
+
+                        <div class="span12">
+                            <label class="input" for="donation_billing_address_country_code">Country</label>{% collection_select "billing_address.country_code", page.donation_v2.countries, "code", "name", class:"select" %}
+                        </div>
+
+                    </div>
+                    <div class="row-fluid">
+
+                        <div class="span12"><label class="input" for="donation_billing_address_address1">Billing Address</label>
+                            {% text_field "billing_address.address1", class:"text" %}
+                            {% text_field "billing_address.address2", class:"text" %}
+                            {% text_field "billing_address.address3", class:"text not-us-or-canada hide" %}
+                        </div>
+
+                    </div>
+                    <div class="row-fluid form-row--inline">
+                        <div class="span4">
+                            <label class="input" for="donation_billing_address_city">City</label>{% text_field "billing_address.city", class:"text" %}
+                        </div>
+                        <div class="span4 us-or-canada us-only hide">
+                            <label class="input" for="donation_state">State</label>{% collection_select "billing_address.state", page.donation_v2.us_states, "code", "name", class:"select" %}
+                        </div>
+                        <div class="span4 us-or-canada canada-only hide">
+                            <label class="input" for="donation_billing_address_state">State</label>{% text_field "billing_address.state", class:"text" %}
+                        </div>
+                        <div class="span4">
+                            <label class="input" for="donation_billing_address_zip">Postal code</label>{% text_field "billing_address.zip", class:"text" %}
+                        </div>
+
+                    </div>
+                    <div class="row-fluid">
+
+                        <div class="span12">
+                            <label class="input" for="donation_billing_address_phone_number">Phone</label>{% phone_field "billing_address.phone_number", class:"text" %}
+                        </div>
+
+                    </div>
+                    {% unless page.show_consent_form? %}
+                    <div class="row-fluid">
+
+                        <div class="span12">
+                            <label class="checkbox" for="donation_email_opt_in">{% check_box "email_opt_in" %} Send email updates</label>
+                        </div>
+
+                    </div>
+                    {% endunless %}
+                    {% if page.donation_v2.merchant_account.is_employer_and_occupation_required? %}
+                    <div class="row-fluid padbottomless">
+
+                        <div class="span6"><label class="input" for="donation_employer">Employer</label>{% text_field "employer", class:"text", required:"required" %}</div>
+                        <div class="span6"><label class="input" for="donation_occupation">Occupation</label>{% text_field "occupation", class:"text", required:"required" %}
+                        </div>
+
+                    </div>
+                    {% if page.donation_v2.merchant_account.is_employer_address_required? %}
+                    <div class="row-fluid padbottomless">
+
+                        <div class="span12">
+                            <label class="input" for="donation_work_address_country">Employer Country</label>{% collection_select "work_address.country_code", page.donation_v2.countries, "code", "name", class:"select", required:"required" %}
+                        </div>
+
+                    </div>
+                    <div class="row-fluid">
+
+                        <div class="span12"><label class="input" for="donation_work_address_address1">Employer Address</label>
+                            {% text_field "work_address.address1", class:"text", required:"required" %}
+                            {% text_field "work_address.address2", class:"text" %}
+                            {% text_field "work_address.address3", class:"text work-not-us-or-canada hide" %}
+                        </div>
+
+                    </div>
+                    <div class="row-fluid">
+
+                        <div class="span12">
+                            <label class="input" for="donation_work_address_city">Employer City</label>{% text_field "work_address.city", class:"text", required:"required" %}
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6 work-us-or-canada">
+                                <label class="input" for="donation_work_address_state">State</label>{% text_field "work_address.state", class:"text", required:"required" %}
+                            </div>
+                            <div class="span6">
+                                <label class="input" for="donation_work_address_zip">Postal code</label>{% text_field "work_address.zip", class:"text", required:"required" %}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {% elsif page.donation_v2.merchant_account.is_employer_city_required? %}
+                    <div class="row-fluid padbottomless">
+
+                        <div class="span12">
+                            <label class="input" for="donation_work_address_country">Employer Country</label>{% collection_select "work_address.country_code", page.donation_v2.countries, "code", "name", class:"select", required:"required" %}
+                        </div>
+
+                    </div>
+
+                    <div class="row-fluid">
+
+                        <div class="span4">
+                            <label class="input" for="donation_work_address_city">Employer City</label>{% text_field "work_address.city", class:"text", required:"required" %}
+                        </div>
+                        <div class="span5 work-us-or-canada hide">
+                            <label class="input" for="donation_work_address_state">State</label>{% text_field "work_address.state", class:"text", required:"required" %}
+                        </div>
+                        <div class="span3">
+                            <label class="input" for="donation_work_address_zip">Postal code</label>{% text_field "work_address.zip", class:"text", required:"required" %}
+                        </div>
+
+                    </div>
+                    {% endif %}
+
+                    <div class="row-fluid">
+
+                        <div class="span12">
+                            <div class="padtopless padbottomless">Law requires we ask for your employer and occupation. If you don't have an employer or are retired, put N/A, and if you are self-employed put "self-employed" in employer and describe your occupation.</div>
+                        </div>
+
+                    </div>
+
+                    {% endif %}
+
+                    {% if page.donation_v2.merchant_account.is_corporate_contribution_required? %}
+                    <div class="row-fluid padbottomless">
+
+                        <div class="span12 input-checkbox">
+                            <label class="checkbox" for="donation_is_corporate_contribution">{% check_box "is_corporate_contribution", class:"checkbox" %} This is a contribution from a business.</label>
+                        </div>
+
+                    </div>
+                    {% endif %}
+
+                    {% for cf in custom_fields.donation %}
+                    {% assign custom_field = cf[1] %}
+                    {% assign custom_field_id = 'custom_values.' | append: custom_field.slug %}
+
+                    <div class="row-fluid">
+                        <div class="span12">
+                            {% if custom_field.is_text? %}
+                            <label class="input" for="donation_custom_values_{{ custom_field.slug }}_custom">{{ custom_field.name }}</label>
+                            {% text_field custom_field_id, class:"text" %}
+                            {% elsif custom_field.is_number? %}
+                            <label class="input" for="donation_custom_values_{{ custom_field.slug }}_custom">{{ custom_field.name }}</label>
+                            {% number_field custom_field_id, class:"text" %}
+                            {% elsif custom_field.is_boolean? %}
+                            <label class="checkbox" for="donation_custom_values_{{ custom_field.slug }}_custom">{% check_box custom_field_id, class:"checkbox" %} {{ custom_field.name }}</label>
+                            {% elsif custom_field.is_multiple_choice? %}
+                            <label class="input" for="donation_custom_values_{{ custom_field.slug }}_custom">{{ custom_field.name }}</label>
+                            {% collection_select custom_field_id, custom_fields.donation[custom_field.slug].multiple_choice_options, class:"select" %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <div class="row-fluid padbottomless">
+                        {% if page.donation_v2.merchant_account.is_taxable? %}
+
+                        <div class="span12">Contributions are <i>not</i> tax deductible.</div>
+                        {% else %}
+                        <div class="span12">Contributions are tax deductible.</div>
+
+                        {% endif %}
+                    </div>
+                    <div class="row-fluid padbottomless">
+                        <h4 class="sub-header">{% if request.current_order %}2{% else %}3{% endif %}. Payment information</h4>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <label class="input">Credit Card</label>
+                            {% payment_field 'card' %}
+                        </div>
+                    </div>
+                    <div class="row-fluid padtopless">
+                        <div clas="span12 padbottomless">
+                            {% if page.donation_v2.merchant_account.has_contribution_rules? %}
+                            <label for="is_confirmation_text" class="padtopmore"><strong>Contribution rules</strong></label>
+                            {{ page.donation_v2.merchant_account.contribution_rules }}
+                            <label for="donation_is_confirmed" class="checkbox padtopless">{% check_box "is_confirmed", class:"checkbox" %} I confirm that the above statements are true and accurate.</label>
+                            {% endif %}
+                            {% if site.ask_to_publish_to_stream? %}
+                            <label for="donation_is_private" class="checkbox padtopmore">{% check_box "is_private", class:"checkbox" %} Don't publish my donation on the website.</label>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    {% if page.show_consent_form? %}{% include "consent_form" %}{% endif %}
+
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="submit-container">
+                                <div class="donation-v2-amount">
+                                    {% if request.current_order %}
+                                    <span>{{page.donation_v2.ticket_purchase_total}}</span>
+                                    {% else %}
+                                    <span>
+                    {% if page.donation_v2.confirmation_amount %}
+                    <span>{{ page.donation_v2.currency_symbol }}</span><span class="nb_donation_v2_amount">{{ page.donation_v2.confirmation_amount }}</span>
+                    {% else %}
+                    <span class="hidden">{{ page.donation_v2.currency_symbol }}</span><span class="nb_donation_v2_amount">Please select an amount</span>
+                    {% endif %}
+                    {% if page.donation_v2.donation_frequency == "one-time" %}
+                    {% elsif page.donation_v2.donation_frequency == "monthly" %}
+                    <div class="nb_donation_v2_interval" data-placeholder="paid monthly">paid monthly</div>
+                    {% else %}
+                    <div class="nb_donation_v2_interval" data-placeholder="paid monthly">{% if page.donation_v2.interval_monthly? %}paid monthly{% endif %}</div>
+                    {% endif %}
+                  </span>
+                                    {% endif %}
+                                </div>
+                                {% if request.current_order %}
+                                {% submit_tag "Process payment", class:"submit-button btn btn-primary btn-lg" %}
+                                {% else %}
+                                {% submit_tag "Donate now", class:"submit-button btn btn-primary btn-lg" %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    {% endform_for %}
+        </div>
+    </div>
+
+</div>
+<script src="/assets/liquid/theme_donation_v2.js"></script>
+
+    </div>
+    
+<!-- _pn-connect-block.html -->
+
+<div class="block connect-block">
+
+
+  <!-- _pn-connect-block_items.html -->
+
+  <!-- _pn-connect.html -->
+
+
+
+
+  <ul class="connect-items connect-block-items">
+
+
+
+
+    <li class="connect-item connect-block-item">
+      <a href="https://www.twitter.com/ravijoshiTO" class="connect-link connect-block-link" target="_blank" rel="nofollow">
+        <span class="sr-only">Twitter</span>
+        <span class="connect-icon fa-fw fab fa-twitter"></span>
+      </a>
+    </li>
+
+
+  </ul>
+
+
+  <!-- /_pn-connect.html -->
+
+
+  <!-- /_pn-connect-block_items.html -->
+
+</div>
+
+
+<!-- /_pn-connect-block.html -->
+
+
+<!-- /_pn-connect-block_main.html -->
+
+
+<!-- _pn-misc-block.html -->
+
+<div class="block misc-block">
+
+
+  <div class="misc-block-item">
+
+
+    <!-- _pn-misc-block_signup.html -->
+    <h3 class="block-headline headline-line">
+      Sign up for updates
+    </h3>
+
+
+
+    <form id="getupdates_page_new_signup_form" class="ajaxForm signup_form" method="POST" action="/forms/signups" enctype="multipart/form-data"><input name="authenticity_token" type="hidden" value="Wp8IEqz9v0fuRUqp9hrBTCHbD+Ly+Y7VlkF6mboo+Cs="><input name="page_id" type="hidden" value="12"><input name="return_to" type="hidden" value="https://action.ravijoshi.ca/getupdates"><div class="email_address_form" style="display:none;" aria-hidden="true"><p><label for="email_address">Optional email code</label><br><input name="email_address" type="text" class="text" id="email_address" autocomplete="off"></p></div>
+      <div class="form">
+        <div class="row">
+          <div class="col-sm-6">
+            <input required="required" class="text input-lg form-control" id="signup_email" name="signup[email]" placeholder="Email address" type="email" value="">
+          </div>
+          <div class="col-sm-6">
+            <input required="required" class="text input-lg form-control" id="signup_submitted_address" name="signup[submitted_address]" placeholder="Postal code" type="text" value="">
+          </div>
+        </div>
+        <input class="submit-button btn btn-default btn-lg btn-block" type="submit" name="commit" value="Sign Up">
+      </div>
+    </form>
+
+
+
+    <!-- /_pn-misc-block_signup.html -->
+
+
+  </div>
+
+
+  <div class="misc-block-item">
+
+
+    <!-- _pn-misc-block_donate.html -->
+    <h3 class="block-headline headline-line">Make a donation</h3>
+    <div class="misc-block-donate-items">
+
+      <a href="/donate?amount=5" class="btn btn-default btn-lg btn-block">
+        $5
+      </a>
+
+      <a href="/donate?amount=25" class="btn btn-default btn-lg btn-block">
+        $25
+      </a>
+
+      <a href="/donate?amount=50" class="btn btn-default btn-lg btn-block">
+        $50
+      </a>
+
+      <a href="/donate?amount=100" class="btn btn-default btn-lg btn-block">
+        $100
+      </a>
+
+    </div>
+
+    <!-- /_pn-misc-block_donate.html -->
+
+
+  </div>
+
+</div>
+
+<!-- /_pn-misc-block.html -->
+
+
+
+<!-- _pn-contact-block_main.html -->
+
+<!-- _pn-contact-block.html -->
+<div class="block contact-block">
+
+
+
+  <!-- _pn-contact-block_items.html -->
+  <div class="contact-block-items">
+
+    <div class="contact-block-item">
+      <span class="fas fa-envelope"></span>
+      <span class="sr-only">Email:</span>
+      <a href="mailto:info@ravijoshi.ca" target="_blank" rel="nofollow">info@ravijoshi.ca</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <!-- /_pn-contact-block_items.html -->
+
+</div>
+
+<!-- /_pn-contact-block.html -->
+
+
+<!-- /_pn-contact-block_main.html -->
+
+
+<!-- _excerpts_tag.html -->
+
+
+<!-- /_excerpts_tag.html -->
+
+
+
+<!-- /_theme-after-content.html -->
+
+
+<!-- _footer.html -->
+
+
+<footer class="block footer">
+
+  <div class="footer-logos">
+    <a href="http://ravijoshi.nationbuilder.com/admin" class="footer-logo-main">
+
+      <span class="fas fa-fw fa-user-cog"></span>
+
+    </a>
+
+    <a href="https://nationbuilder.com/" class="footer-logo-nb">
+      <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5c0ded0745de94575ab2e614/attachments/original/1544417075/nationbuilder-white.png?1544417075" alt="Created with NationBuilder">
+    </a>
+
+
+    <a href="https://www.progressivenation.ca/" class="footer-logo-pn">
+      <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5c0ded0745de94575ab2e614/attachments/original/1544417079/progressivenation-white.png?1544417079" alt="Built by Progressive Nation">
+    </a>
+
+  </div>
+</footer>
+
+    </div></main>
+
+  
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://ravijoshi.nationbuilder.com/themes/1/5c0ded0745de94575ab2e614/0/attachments/15461127851546115102/mobile/scripts.js"></script>
+</body>
+</html>

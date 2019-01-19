@@ -5,6 +5,7 @@
   input[type=text],
   input.text,
   .form-group>select,
+  select,
   .form-control {
     border-radius: $border-radius;
     border: .1rem solid $grey--light;
@@ -115,6 +116,15 @@
     }
   }
 
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10px' width='15px'%3E%3Ctext x='0' y='10' fill='#797c82'%3E%E2%96%BE%3C/text%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 1.5em 1em;
+    background-position: right center;
+  }
+
   [type="radio"] {
     &,
     &::before,
@@ -157,7 +167,19 @@
     transform: none;
     left: 0;
     right: 0;
+    top: 0;
     padding: 1.5rem 0.75rem;
+  }
 
+  .row-fluid {
+    display: flex;
+
+    > * {
+      flex: 1;
+    }
+
+    > * + * {
+      padding-left: $spacing--horizontal;
+    }
   }
 }

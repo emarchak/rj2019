@@ -7,6 +7,7 @@
     &.padbottomless {
       padding-bottom: 0;
     }
+
     + .row-fluid.padbottomless {
       padding-top: $spacing--vertical;
     }
@@ -19,7 +20,7 @@
       font-weight: $font-weight;
     }
 
-    label:not(.radio):not(.checkbox) {
+    label.input {
       display: block;
       font-size: 1.25rem;
       color: $grey;
@@ -59,12 +60,14 @@
 
     &-options {
       padding-bottom: 0;
+
       .currency-symbol {
         display: inline;
         width: 1em;
       }
+
       #donation_amount_other_input {
-        display:inline;
+        display: inline;
         width: calc(100% - 2em);
       }
     }
@@ -72,15 +75,50 @@
 
 
   .submit-container {
+    max-width: 30em;
+    margin: 0 auto;
+
     .donation-v2-amount span {
       @include heading-size(2);
     }
+
     .donation-v2-amount {
       padding-bottom: $spacing--vertical;
     }
+
     .submit-button {
       display: block;
       width: 100%;
+    }
+  }
+}
+
+.donate-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--content__top {
+    @include media(medium-up) {
+      flex: 0 0 50%;
+    }
+    .rj2019--photo {
+      margin-top: 0;
+    }
+  }
+
+  &--content__bottom {
+    order: 2;
+    padding: $spacing--vertical 0;
+    @include media(medium-up) {
+      padding: 0 0 0 $spacing--horizontal;
+      order: 0;
+      flex: 0 0 50%;
+    }
+  }
+
+  &--form {
+    @include media(medium-up) {
+      flex: 0 0 100%;
     }
   }
 }
