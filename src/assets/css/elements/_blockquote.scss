@@ -21,6 +21,7 @@
   }
 
   &__right {
+    @include rj2019-border(left);
     @include media(medium-up) {
       margin-left: 0;
     }
@@ -37,6 +38,7 @@
   }
 
   &__left {
+    @include rj2019-border(right);
     @include media(medium-up) {
       margin-right: 0;
     }

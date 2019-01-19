@@ -102,6 +102,6 @@ $icon-font--brands: "Font Awesome 5 Brands";
   }
 }
 
-@mixin rj2019-border {
-  border-bottom: 0.5rem solid $primary;
+@mixin rj2019-border($style: bottom) {
+  border-#{$style}: 0.5rem solid $primary;
 }
