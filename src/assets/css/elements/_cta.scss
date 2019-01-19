@@ -37,11 +37,11 @@
   &--logo {
     margin-top: -1px;
     text-align: left;
-
+    padding: 0 $spacing--horizontal;
     @include media(medium-up) {
       height: $spacing--vertical + 12.3rem;
       width: calc(50% - #{-$spacing--horizontal} );
-      padding-left: $spacing--horizontal;
+      pading: 0 0;
     }
   }
 
@@ -63,7 +63,7 @@
     margin-top: $spacing--vertical;
     font-size: 3.4rem;
     line-height: 1.2em;
-    
+
     @include media(medium-up) {
       margin-top: $spacing--vertical / 3;
       margin-bottom: .6rem;

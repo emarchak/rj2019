@@ -39,6 +39,10 @@
   }
 }
 
+.body .body-inner {
+  width: auto;
+}
+
 .main {
   padding-top: $navbar--height--small;
   padding-bottom: 0;
@@ -47,6 +51,7 @@
 
   @include media(medium-up) {
     padding-top: $navbar--height--wide;
+    overflow-x: hidden;
   }
 
   @include media(wide-up) {
