@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0"><!-- So that mobile webkit will display zoomed in -->
+    <meta name="format-detection" content="telephone=no"><!-- disable auto telephone linking in iOS -->
+    <title>NationBuilder</title>
+    <style type="text/css">
+        <%  background_color = '#fff';
+            text_color = '#333';
+            primary_color = '#f79433';
+            secondary_color = '#54565a';
+            padding = 20;
+            padding_default = `padding-left:${padding}px;padding-right:${padding}px;padding-top:${padding}px;margin-bottom:${padding};`;
+            padding_large = `padding-left:${padding}px;padding-right:${padding}px;padding-bottom:${padding}px;`;
+            font_family = 'Helvetica Neue,sans-serif';
+
+            spacer_style = `padding-top:${padding}px;`
+
+            text_style = `font-size:16px;font-family:${font_family};${padding_default}line-height:1.5em;text-align:left;`;
+            footer_style = `font-family:${font_family};${padding_default}line-height:1.5em;text-align:left;`;
+        %>
+        /* Resets: see reset.css for details */
+        body {
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            color: <%= text_color %>;
+            background-color: <%= background_color %>;
+            font-family:<%=font_family%>;
+            margin: 0;
+            padding: 0;
+        }
+
+        table { border-spacing: 0; border-collapse: collapse; border-spacing: 0; }
+        table td { border-collapse: collapse;}
+        p { margin-bottom: 15px; margin-top: 15px; }
+        .body-content img { max-width: 100%; }
+        .logo { width: 100%; height: auto; }
+        .body-content a { color: #1488b9; }
+        @media screen and (max-width:600px) {
+            table[class="container"] {
+                width: 100%!important;
+            }
+        }
+        @media screen and (max-width:480px) {
+            div[class="body-content"] img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body style="margin:0; padding:0;" bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+    <tr>
+        <td align="center" valign="top" bgcolor="#ffffff" style="background-color:#ffffff;">
+
+            <!-- ### 600PX CONTAINER ### -->
+            <table width="600" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color:#ffffff;margin-top:30px;" class="container">
+                <tr>
+                    <td style="text-align:left; font-family:Helvetica Neue,Helvetica,Arial,Calibri,sans-serif;padding-left:15px;padding-right:15px;">
+                        <div style="width: 220px;margin-left:auto;margin-right:auto;">
+                            <a href="{{ settings.site.full_url }}">
+                                <img src="http://d3n8a8pro7vhmx.cloudfront.net/themes/5c3dda0a030559de69b38d61/attachments/original/1547557601/rjlogo2019.png" alt="{{ settings.official_name }}" border="0" width="220" height="auto" style="width:100%; height:auto;" />
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                <td style="<%= text_style %>">
+                    <%- body %></td>
+                </tr>
+                <tr>
+                    <td style="<%= footer_style %>">
+                        <p style="color:#333333;font-size:12px;line-height:1.5;">
+                            {{ settings.official_name }}{% if settings.has_address? %} &middot; {{ settings.address.one_line }} {% endif %}
+                            <br/>This email was sent to <a style="color:#1488b9;" href="{{ recipient.email }}">{{ recipient.email }}</a>.  To stop receiving emails, <a style="color:#1488b9;" href="{{ settings.site.unsubscribe_url }}">click here</a>.
+                            {% if broadcaster.has_twitter? or broadcaster.has_facebook? %}
+                            <br/>You can also keep up with {{ broadcaster.name }}
+                            {% if broadcaster.has_twitter? and broadcaster.has_facebook_page? %}
+                            on <a style="color:#1488b9;" href="{{ broadcaster.twitter_profile_url }}">Twitter</a> or <a style="color:#1488b9;" href="{{ broadcaster.facebook_page_profile_url }}">Facebook</a>.
+                            {% elsif broadcaster.has_twitter? %}
+                            on <a style="color:#1488b9;" href="{{ broadcaster.twitter_profile_url }}">Twitter</a>.
+                            {% elsif broadcaster.has_facebook_page? %}
+                            on <a style="color:#1488b9;" href="{{ broadcaster.facebook_page_profile_url }}">Facebook</a>.
+                            {% endif %}
+                            {% endif %}
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p style="font-size: 12px;font-family:<%=font_family%>,sans-serif;color:#414141;padding:0;line-height:1.6;text-align:center;">Created with <a href="http://nationbuilder.com" style="color:#1488b9">NationBuilder</a>, software for leaders.</p>
+            <!-- ### 600PX CONTAINER ###  -->
+        </td>
+    </tr>
+</table>
+
+</div>
+<!--/100% wrapper-->
+</body>
+</html>

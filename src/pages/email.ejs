@@ -1,0 +1,74 @@
+---
+layout: email
+---
+
+<% background_color = '#fff';
+text_color = '#333';
+primary_color = '#f79433';
+secondary_color = '#54565a';
+padding_vertical = 20;
+padding_horizontal = 15;
+
+padding_default = `padding-left:${padding_horizontal}px;padding-right:${padding_horizontal}px;padding-top:${padding_vertical}px;padding-bottom:${padding_vertical}px;`;
+padding_large = `padding-left:${padding_horizontal}px;padding-right:${padding_horizontal}px;padding-bottom:${padding_vertical}px;`;
+font_family = 'Helvetica Neue,sans-serif';
+font_size = `font-size:16px;`;
+font_size_large = `font-size:20px;`;
+
+spacer_style = `padding-top:${padding_vertical}px;margin-top:0;margin-bottom:0;`
+
+text_style = `${font_size}font-family:${font_family};${padding_default}line-height:1.5em;text-align:left;`;
+footer_style = `${font_size}font-family:${font_family};${padding_default}line-height:1.5em;text-align:left;`;
+
+cta_style = `${font_size}line-height:1.5em;max-width:570px;margin:0 auto;padding:${padding_vertical}px ${padding_horizontal*2}px;border-style:solid;border-width:${padding_vertical*2}px;border-right-width:0;`
+cta_header = `text-transform:uppercase;`
+cta_primary_style = `background-color:${primary_color};color:${text_color};border-color:${text_color};${cta_style}`;
+cta_primary_content = `color:${text_color};padding-top:0;`;
+
+cta_secondary_style = `background-color:${text_color};color:${background_color};border-color:${primary_color};${cta_style}`;
+cta_secondary_content = `color:${background_color};padding-top:0;`;
+
+
+%>
+
+<!-- 100% wrapper -->
+<div style="<%= text_style %>">
+    <p>{{recipient.first_name_or_friend}} --</p>
+    <p>Content space. Add to this line and then delete the previous text.</p>
+</div>
+<p style="<%= spacer_style %>"></p>
+
+<p style="margin-bottom: 0;margin-top:0;"><img style="display: block; margin-left: auto; margin-right: auto; max-width: 600px;" src="https://d3n8a8pro7vhmx.cloudfront.net/ravijoshi/mailings/3/attachments/original/emailblast2.jpg?1547558146" alt="emailblast2.jpg" width="600" height=""></p>
+<div style="<%= cta_primary_style %>">
+  <p style="<%= cta_primary_content %>"><strong style="<%= cta_header %>">Maggi Redmonds</strong><br/><strong>Toronto–Danforth Community Member</strong></p>
+  <p style="<%= cta_primary_content %>">I first met Ravi when I was volunteering with a community group and I continue to be impressed with his dedication and competence. I am confident that as our MP he would stand up for Toronto–Danforth and fight for the important issues we care about. That‘s why I‘m proud to endorse Ravi.</p>
+</div>
+
+<div style="<%= text_style %>">
+    <p>Content space. Add to this line and then delete the previous text.</p>
+</div>
+
+<p style="margin-bottom: 0;margin-top:0;"><img style="display: block; margin-left: auto; margin-right: auto; max-width: 600px;" src="https://d3n8a8pro7vhmx.cloudfront.net/ravijoshi/mailings/3/attachments/original/emailblast2.jpg?1547558146" alt="emailblast2.jpg" width="600" height=""></p>
+<div style="<%= cta_secondary_style %>">
+  <p style="<%= cta_secondary_content %>"><strong style="<%= cta_header %>">Fatima Khan</strong><br/><strong>Toronto–Danforth Youth and Community Organizer</strong></p>
+  <p style="<%= cta_secondary_content %>">When I think about who I want representing our community, I think about someone like Ravi. A strong local organizer who will stand up for what I believe in. I‘m supporting Ravi because he will bring my voice, and the voice of Toronto–Danforth to Ottawa.</p>
+</div>
+<div style="<%= text_style %>">
+    <p>Content space. Add to this line and then delete the previous text.</p>
+</div>
+<p style="<%= spacer_style %>"></p>
+<% button_width = `200px`;
+   button_styles = `padding:${padding_vertical* .5}px ${padding_horizontal * .5}px;font-size:20px;width:${button_width};`;
+   button_text_styles = `color:${text_color};font-family:sans-serif;${font_size_large};font-weight:bold;`;
+%>
+<div class="nb-tmce-btn" style="<%= `width:${button_width}; display: block; margin-left: auto; margin-right: auto;`%>" contenteditable="false"><!--[if mso]
+    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.ravifordanforth.ca/join?utm_source=nb&utm_medium=email&utm_campaign=endorsement1" style="<%=
+    `${button_styles}v-text-anchor:middle;` %>" arcsize="8%" strokecolor="<%= primary_color %>" fillcolor="<%= primary_color %>">
+        <w:anchorlock/>
+        <center style="<%= button_text_styles %>">Yes Ravi, I'm with you!</center>
+    </v:roundrect>
+    <![endif]-->
+    <a style="<%=
+    `${button_styles}${button_text_styles}width:${ button_width };background-color:${primary_color}; border-radius: 3px;display: inline-block; text-align: center; text-decoration: none;-webkit-text-size-adjust:none;mso-hide:all;`
+    %>" href="https://www.ravifordanforth.ca/join?utm_source=nb&utm_medium=email&utm_campaign=endorsement1">Yes Ravi, I'm with you!</a>
+</div>
