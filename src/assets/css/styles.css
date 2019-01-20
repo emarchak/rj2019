@@ -372,7 +372,7 @@ a:hover, a:focus, a:active {
 .v2-theme form select {
   -moz-appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10px' width='15px'><text x='0' y='10' fill='#797c82'>%E2%96%BE</text></svg>");
+  background-image: url("data:image/svg+xml;charset=utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%20height='10px'%20width='15px'><text%20x='0'%20y='10'%20fill='#797c82'>%E2%96%BE</text></svg>");
   background-repeat: no-repeat;
   background-size: 1.5em 1em;
   background-position: right center;
