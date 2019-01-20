@@ -15,31 +15,32 @@
     &:last-of-type {
       padding-bottom: 0;
     }
-
+  }
     h4 {
       font-weight: $font-weight;
     }
 
-    label.input {
-      display: block;
-      font-size: 1.25rem;
-      color: $grey;
-      margin-bottom: 0;
-    }
-
-    label.checkbox {
-      padding-left: 2.25rem;
-      margin-bottom: 0;
-    }
-
-    select,
-    input.text {
-      width: 100%;
-      display: block;
-      line-height: 4rem;
-      padding-left: 1rem;
-    }
+  label.input {
+    display: block;
+    font-size: 1.25rem;
+    color: $grey;
+    margin-bottom: 0;
   }
+
+  label.checkbox {
+    padding-left: 2.25rem;
+    margin-bottom: 0;
+  }
+
+  select,
+  input.text {
+    width: 100%;
+    display: block;
+    height: 4rem;
+    line-height: 4rem;
+    padding-left: 1rem;
+  }
+
 
   #donation_billing_address_address1,
   #donation_billing_address_address2,
@@ -60,19 +61,28 @@
 
     &-options {
       padding-bottom: 0;
-
-      .currency-symbol {
-        display: inline;
-        width: 1em;
-      }
-
-      #donation_amount_other_input {
-        display: inline;
-        width: calc(100% - 2em);
-      }
     }
   }
 
+  .donation-other-input-container {
+    .currency-symbol {
+      position: absolute;
+      left: 0;
+      width: 1.5rem;
+      line-height: 4.5rem;
+      text-align: center;
+    }
+  }
+
+  #donation_amount_other_input {
+    border-color: transparent;
+    background-color: transparent;
+    padding-left: 1.5rem;
+    &:focus {
+      border-color: $secondary;
+      background-color: $white;
+    }
+  }
 
   .submit-container {
     max-width: 30em;
@@ -101,8 +111,11 @@
     @include media(medium-up) {
       flex: 0 0 50%;
     }
-    .rj2019--photo {
-      margin-top: 0;
+  }
+
+  &--content__wide {
+    @include media(medium-up) {
+      flex: 0 0 100%;
     }
   }
 
@@ -110,15 +123,11 @@
     order: 2;
     padding: $spacing--vertical 0;
     @include media(medium-up) {
-      padding: 0 0 0 $spacing--horizontal;
       order: 0;
       flex: 0 0 50%;
-    }
-  }
-
-  &--form {
-    @include media(medium-up) {
-      flex: 0 0 100%;
+      > * {
+        padding-left: $spacing--horizontal;
+      }
     }
   }
 }

@@ -4,7 +4,6 @@
   .payment-input,
   input[type=text],
   input.text,
-  .form-group>select,
   select,
   .form-control {
     border-radius: $border-radius;
@@ -21,9 +20,22 @@
   }
 }
 
+@mixin error-icon {
+  content: "✖";
+  margin-left: 0;
+  font-size: .9em;
+  margin-right: .25em;
+  vertical-align: inherit;
+}
+
 .v2-theme form {
   @include form-style();
-  @include input-style();
+
+  @at-root .v2-theme .theme-primary.theme-panel form,
+  & {
+    @include input-style();
+  }
+
 
   .form-errors {
     ul {
@@ -41,12 +53,16 @@
         margin-top: $spacing--vertical;
       }
     }
+
     ul li::before {
-      content: "✖";
-      margin-left: 0;
-      font-size: .9em;
-      margin-right: .25em;
-      vertical-align: inherit;
+      @include error-icon;
+    }
+  }
+
+  .error-message {
+    color: red;
+    &::before {
+      @include error-icon;
     }
   }
 
@@ -57,7 +73,7 @@
   [type="checkbox"],
   [type="radio"] {
     overflow: hidden;
-    width: 1.05em;
+    width: 1em;
     height: 1em;
     margin-top: 0.2em;
     margin-left: -1.5em;
@@ -119,7 +135,7 @@
   select {
     -moz-appearance: none;
     -webkit-appearance: none;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10px' width='15px'%3E%3Ctext x='0' y='10' fill='#797c82'%3E%E2%96%BE%3C/text%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10px' width='15px'><text x='0' y='10' fill='#797c82'>%E2%96%BE</text></svg>");
     background-repeat: no-repeat;
     background-size: 1.5em 1em;
     background-position: right center;
@@ -158,6 +174,7 @@
 
     label.radio {
       padding-left: 0;
+      margin-right: 0;
       padding-right: $spacing--horizontal;
     }
   }
@@ -179,7 +196,10 @@
     }
 
     > * + * {
-      padding-left: $spacing--horizontal;
+      padding-left: $spacing--horizontal / 2;
+      @include media(medium-up) {
+        padding-left: $spacing--horizontal;
+      }
     }
   }
 }

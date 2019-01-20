@@ -1,0 +1,97 @@
+---
+layout: email
+---
+
+<% background_color = '#fff';
+text_color = '#333';
+primary_color = '#f79433';
+secondary_color = '#54565a';
+padding_vertical = 20;
+padding_horizontal = 15;
+
+padding_default = `padding:${padding_vertical}px ${padding_horizontal}px;`;
+padding_large = `padding-left:${padding_horizontal}px;padding-right:${padding_horizontal}px;padding-bottom:${padding_vertical}px;`;
+font_family = 'Helvetica Neue,sans-serif';
+font_size = `font-size:16px;`;
+font_size_large = `font-size:20px;`;
+
+spacer_style = `padding-top:${padding_vertical}px;margin-top:0;margin-bottom:0;`
+
+text_style = `${font_size}font-family:${font_family};${padding_default}padding-left: 0;line-height:1.5em;text-align:left;`;
+footer_style = `${font_size}font-family:${font_family};${padding_default}line-height:1.5em;text-align:left;`;
+
+receipt_label = `text-transform: uppercase; line-height: 20px; font-size: 12px; display:inline-block; min-width:7em;`;
+receipt_item = `font-weight: bold; font-size: 15px; vertical-align: top; text-align: left;`;
+%>
+
+<p>{{ recipient.first_name_or_friend }} --</p>
+<p style="<%= text_style %>">Thank you for making a {% if donation.is_recurring %}recurring {% endif %}donation. Here is your receipt.</p>
+<table style="<%= `${text_style} border: 1px solid ${secondary_color};` %>" border="0" cellspacing="0" cellpadding="0" width="600">
+    <tbody>
+    <tr>
+        <td align="center" colspan="5" valign="top">
+            <table border="0" cellspacing="0" cellpadding="0" width="568">
+                <tbody>
+                <tr>
+                    <td align="left" style="<%= `${padding_default}valign:top;border-right: 1px solid ${secondary_color};`%>" width="284" valign="top">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td style="<%= receipt_label %>">Donor</td>
+                                <td style="<%= receipt_item %>">{{ donation.name }}</td>
+                            </tr>
+                            <tr><td style="<%= receipt_label %>">Address</td>
+                                <td style="<%= receipt_item %>">{{ donation.billing_address.one_line }}</td>
+                            </tr>
+                            <tr><td style="<%= receipt_label %>">Phone</td>
+                                <td style="<%= receipt_item %>">{{ donation.billing_address.phone }}</td>
+                            </tr>
+                            <tr><td style="<%= receipt_label %>">Email</td>
+                                <td style="<%= receipt_item %>">{{ donation.email }}</td>
+                            </tr>
+                            {% if donation.employer.size &gt; 0 %}
+                            <tr><td style="<%= receipt_label %>">Employer</td>
+                                <td style="<%= receipt_item %>">{{ donation.employer }}</td>
+                            </tr>
+                            {% endif %}
+                            {% if donation.occupation.size &gt; 0 %}
+                            <tr><td style="<%= receipt_label %>">Occupation</td>
+                                <td style="<%= receipt_item %>">{{ donation.occupation }}</td>
+                            </tr>
+                            {% endif %}
+                            </tbody>
+                        </table>
+
+
+
+                    </td>
+                    <td align="left" style="<%= `${padding_default}`%>" width="284" valign="top">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr>
+                                    <td style="<%= receipt_label %>">Amount</td>
+                                    <td style="<%= receipt_item %>font-size: 30px;">{{ donation.amount_format }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="<%= receipt_label %>">Date</td>
+                                    <span style="<%= receipt_item %>">{{ donation.succeeded_at | date_to_string }}</span>
+                                </tr>
+                                <tr>
+                                    <td style="<%= receipt_label %>">Type</td>
+                                    <td style="<%= receipt_item %>">{{ donation.payment_type_name }}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="<%= receipt_item %>">This donation is <strong>{% if donation.merchant_account.is_taxable? == true %}not{% endif %} tax deductible</strong>.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- end of template -->

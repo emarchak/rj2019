@@ -174,4 +174,10 @@
       width: 11rem;
     }
   }
+
+  &-connect {
+    @include media(small-only) {
+      margin-bottom: 4rem;
+    }
+  }
 }

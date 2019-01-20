@@ -216,57 +216,76 @@ a:hover, a:focus, a:active {
 .v2-theme form > .form {
   padding: 0;
 }
-.v2-theme form .payment-input,
+.v2-theme .theme-primary.theme-panel form .payment-input,
+.v2-theme .theme-primary.theme-panel form input[type=text],
+.v2-theme .theme-primary.theme-panel form input.text,
+.v2-theme .theme-primary.theme-panel form select,
+.v2-theme .theme-primary.theme-panel form .form-control, .v2-theme form .payment-input,
 .v2-theme form input[type=text],
 .v2-theme form input.text,
-.v2-theme form .form-group > select,
 .v2-theme form select,
 .v2-theme form .form-control {
   border-radius: 0.2rem;
   border: 0.1rem solid #a0a2a7;
   background-color: #FFF;
 }
-.v2-theme form .payment-input:focus,
+.v2-theme .theme-primary.theme-panel form .payment-input:focus,
+.v2-theme .theme-primary.theme-panel form input[type=text]:focus,
+.v2-theme .theme-primary.theme-panel form input.text:focus,
+.v2-theme .theme-primary.theme-panel form select:focus,
+.v2-theme .theme-primary.theme-panel form .form-control:focus, .v2-theme form .payment-input:focus,
 .v2-theme form input[type=text]:focus,
 .v2-theme form input.text:focus,
-.v2-theme form .form-group > select:focus,
 .v2-theme form select:focus,
 .v2-theme form .form-control:focus {
   border-color: #54565a;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
 }
-.v2-theme form .payment-input ::-webkit-input-placeholder,
+.v2-theme .theme-primary.theme-panel form .payment-input ::-webkit-input-placeholder,
+.v2-theme .theme-primary.theme-panel form input[type=text] ::-webkit-input-placeholder,
+.v2-theme .theme-primary.theme-panel form input.text ::-webkit-input-placeholder,
+.v2-theme .theme-primary.theme-panel form select ::-webkit-input-placeholder,
+.v2-theme .theme-primary.theme-panel form .form-control ::-webkit-input-placeholder, .v2-theme form .payment-input ::-webkit-input-placeholder,
 .v2-theme form input[type=text] ::-webkit-input-placeholder,
 .v2-theme form input.text ::-webkit-input-placeholder,
-.v2-theme form .form-group > select ::-webkit-input-placeholder,
 .v2-theme form select ::-webkit-input-placeholder,
 .v2-theme form .form-control ::-webkit-input-placeholder {
   color: #797c82 !important;
 }
-.v2-theme form .payment-input :-moz-placeholder,
+.v2-theme .theme-primary.theme-panel form .payment-input :-moz-placeholder,
+.v2-theme .theme-primary.theme-panel form input[type=text] :-moz-placeholder,
+.v2-theme .theme-primary.theme-panel form input.text :-moz-placeholder,
+.v2-theme .theme-primary.theme-panel form select :-moz-placeholder,
+.v2-theme .theme-primary.theme-panel form .form-control :-moz-placeholder, .v2-theme form .payment-input :-moz-placeholder,
 .v2-theme form input[type=text] :-moz-placeholder,
 .v2-theme form input.text :-moz-placeholder,
-.v2-theme form .form-group > select :-moz-placeholder,
 .v2-theme form select :-moz-placeholder,
 .v2-theme form .form-control :-moz-placeholder {
   color: #797c82 !important;
 }
-.v2-theme form .payment-input ::-moz-placeholder,
+.v2-theme .theme-primary.theme-panel form .payment-input ::-moz-placeholder,
+.v2-theme .theme-primary.theme-panel form input[type=text] ::-moz-placeholder,
+.v2-theme .theme-primary.theme-panel form input.text ::-moz-placeholder,
+.v2-theme .theme-primary.theme-panel form select ::-moz-placeholder,
+.v2-theme .theme-primary.theme-panel form .form-control ::-moz-placeholder, .v2-theme form .payment-input ::-moz-placeholder,
 .v2-theme form input[type=text] ::-moz-placeholder,
 .v2-theme form input.text ::-moz-placeholder,
-.v2-theme form .form-group > select ::-moz-placeholder,
 .v2-theme form select ::-moz-placeholder,
 .v2-theme form .form-control ::-moz-placeholder {
   color: #797c82 !important;
 }
-.v2-theme form .payment-input :-ms-input-placeholder,
+.v2-theme .theme-primary.theme-panel form .payment-input :-ms-input-placeholder,
+.v2-theme .theme-primary.theme-panel form input[type=text] :-ms-input-placeholder,
+.v2-theme .theme-primary.theme-panel form input.text :-ms-input-placeholder,
+.v2-theme .theme-primary.theme-panel form select :-ms-input-placeholder,
+.v2-theme .theme-primary.theme-panel form .form-control :-ms-input-placeholder, .v2-theme form .payment-input :-ms-input-placeholder,
 .v2-theme form input[type=text] :-ms-input-placeholder,
 .v2-theme form input.text :-ms-input-placeholder,
-.v2-theme form .form-group > select :-ms-input-placeholder,
 .v2-theme form select :-ms-input-placeholder,
 .v2-theme form .form-control :-ms-input-placeholder {
   color: #797c82 !important;
 }
+
 .v2-theme form .form-errors ul {
   margin-bottom: 2.4rem;
   padding: 0;
@@ -287,13 +306,23 @@ a:hover, a:focus, a:active {
   margin-right: 0.25em;
   vertical-align: inherit;
 }
+.v2-theme form .error-message {
+  color: red;
+}
+.v2-theme form .error-message::before {
+  content: "✖";
+  margin-left: 0;
+  font-size: 0.9em;
+  margin-right: 0.25em;
+  vertical-align: inherit;
+}
 .v2-theme form .form-group {
   margin-bottom: 2.4rem;
 }
 .v2-theme form [type=checkbox],
 .v2-theme form [type=radio] {
   overflow: hidden;
-  width: 1.05em;
+  width: 1em;
   height: 1em;
   margin-top: 0.2em;
   margin-left: -1.5em;
@@ -343,7 +372,7 @@ a:hover, a:focus, a:active {
 .v2-theme form select {
   -moz-appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10px' width='15px'%3E%3Ctext x='0' y='10' fill='#797c82'%3E%E2%96%BE%3C/text%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10px' width='15px'><text x='0' y='10' fill='#797c82'>%E2%96%BE</text></svg>");
   background-repeat: no-repeat;
   background-size: 1.5em 1em;
   background-position: right center;
@@ -376,6 +405,7 @@ a:hover, a:focus, a:active {
 }
 .v2-theme form .radio-inline label.radio {
   padding-left: 0;
+  margin-right: 0;
   padding-right: 3rem;
 }
 .v2-theme form .payment-input {
@@ -393,7 +423,12 @@ a:hover, a:focus, a:active {
   flex: 1;
 }
 .v2-theme form .row-fluid > * + * {
-  padding-left: 3rem;
+  padding-left: 1.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .v2-theme form .row-fluid > * + * {
+    padding-left: 3rem;
+  }
 }
 
 .top-hero,
@@ -655,6 +690,11 @@ a:hover, a:focus, a:active {
 @media only screen and (min-width: 768px) {
   .navbar-logo-img {
     width: 11rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar-connect {
+    margin-bottom: 4rem;
   }
 }
 
@@ -1036,23 +1076,24 @@ a:hover, a:focus, a:active {
 .donation_form .row-fluid:last-of-type {
   padding-bottom: 0;
 }
-.donation_form .row-fluid h4 {
+.donation_form h4 {
   font-weight: 500;
 }
-.donation_form .row-fluid label.input {
+.donation_form label.input {
   display: block;
   font-size: 1.25rem;
   color: #797c82;
   margin-bottom: 0;
 }
-.donation_form .row-fluid label.checkbox {
+.donation_form label.checkbox {
   padding-left: 2.25rem;
   margin-bottom: 0;
 }
-.donation_form .row-fluid select,
-.donation_form .row-fluid input.text {
+.donation_form select,
+.donation_form input.text {
   width: 100%;
   display: block;
+  height: 4rem;
   line-height: 4rem;
   padding-left: 1rem;
 }
@@ -1071,13 +1112,21 @@ a:hover, a:focus, a:active {
 .donation_form .donation-v2-options {
   padding-bottom: 0;
 }
-.donation_form .donation-v2-options .currency-symbol {
-  display: inline;
-  width: 1em;
+.donation_form .donation-other-input-container .currency-symbol {
+  position: absolute;
+  left: 0;
+  width: 1.5rem;
+  line-height: 4.5rem;
+  text-align: center;
 }
-.donation_form .donation-v2-options #donation_amount_other_input {
-  display: inline;
-  width: calc(100% - 2em);
+.donation_form #donation_amount_other_input {
+  border-color: transparent;
+  background-color: transparent;
+  padding-left: 1.5rem;
+}
+.donation_form #donation_amount_other_input:focus {
+  border-color: #54565a;
+  background-color: #FFF;
 }
 .donation_form .submit-container {
   max-width: 30em;
@@ -1104,8 +1153,10 @@ a:hover, a:focus, a:active {
     flex: 0 0 50%;
   }
 }
-.donate-grid--content__top .rj2019--photo {
-  margin-top: 0;
+@media only screen and (min-width: 768px) {
+  .donate-grid--content__wide {
+    flex: 0 0 100%;
+  }
 }
 .donate-grid--content__bottom {
   order: 2;
@@ -1113,14 +1164,11 @@ a:hover, a:focus, a:active {
 }
 @media only screen and (min-width: 768px) {
   .donate-grid--content__bottom {
-    padding: 0 0 0 3rem;
     order: 0;
     flex: 0 0 50%;
   }
-}
-@media only screen and (min-width: 768px) {
-  .donate-grid--form {
-    flex: 0 0 100%;
+  .donate-grid--content__bottom > * {
+    padding-left: 3rem;
   }
 }
 
