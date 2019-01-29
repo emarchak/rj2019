@@ -18,10 +18,10 @@ body {
   background: #FFF;
 }
 
-a {
+.panel-heading a:not(.btn), .panel-heading a, .well a:not(.btn), .well a, .theme-primary a:not(.btn), .theme-primary a, a:not(.btn), a {
   color: #333;
 }
-a:hover, a:focus, a:active {
+.panel-heading a:not(.btn):hover, .panel-heading a:not(.btn):focus, .panel-heading a:not(.btn):active, .panel-heading a:hover, .panel-heading a:focus, .panel-heading a:active, .well a:not(.btn):hover, .well a:not(.btn):focus, .well a:not(.btn):active, .well a:hover, .well a:focus, .well a:active, .theme-primary a:not(.btn):hover, .theme-primary a:not(.btn):focus, .theme-primary a:not(.btn):active, .theme-primary a:hover, .theme-primary a:focus, .theme-primary a:active, a:not(.btn):hover, a:not(.btn):focus, a:not(.btn):active, a:hover, a:focus, a:active {
   outline: none;
   color: #f79433;
 }
@@ -225,9 +225,12 @@ a:hover, a:focus, a:active {
 .v2-theme form input.text,
 .v2-theme form select,
 .v2-theme form .form-control {
+  font-size: 1.6rem;
   border-radius: 0.2rem;
   border: 0.1rem solid #a0a2a7;
   background-color: #FFF;
+  height: 5rem;
+  line-height: 5rem;
 }
 .v2-theme .theme-primary.theme-panel form .payment-input:focus,
 .v2-theme .theme-primary.theme-panel form input[type=text]:focus,

@@ -6,9 +6,13 @@
   input.text,
   select,
   .form-control {
+    font-size: 1.6rem;
     border-radius: $border-radius;
     border: .1rem solid $grey--light;
     background-color: $white;
+    height: 5rem;
+    line-height: 5rem;
+
     &:focus {
       border-color: $secondary;
       box-shadow: $box-shadow--light;

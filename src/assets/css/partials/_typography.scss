@@ -12,13 +12,22 @@ body {
 }
 
 a {
-  color: $black;
+  .panel-heading &,
+  .well &,
+  .theme-primary &,
+  & {
 
-  &:hover,
-  &:focus,
-  &:active {
-    outline: none;
-    color: $primary;
+    &:not(.btn),
+    & {
+      color: $black;
+
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none;
+        color: $primary;
+      }
+    }
   }
 }
 
