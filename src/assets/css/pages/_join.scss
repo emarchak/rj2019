@@ -19,14 +19,16 @@
       display: block;
       [class^="col-"], [class*=" col-"] {
         width: 100%;
+        float: none !important;
       }
 
       #signup_first_name_container {
-        width: calc(50% - #{$spacing--horizontal / 4});
+        width: calc(50% - #{$spacing--horizontal / 2});
+        display: inline-block;
       }
       #signup_last_name_container {
-        width: calc(50% - -#{$spacing--horizontal / 4});
-        padding-left: $spacing--horizontal / 2;
+        width: calc(50% - -#{$spacing--horizontal / 3});
+        display: inline-block;
       }
     }
 

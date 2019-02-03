@@ -1028,13 +1028,15 @@ body {
 }
 .page-slug-join .theme-panel.form-grid-form-content .row [class^=col-], .page-slug-join .theme-panel.form-grid-form-content .row [class*=" col-"] {
   width: 100%;
+  float: none !important;
 }
 .page-slug-join .theme-panel.form-grid-form-content .row #signup_first_name_container {
-  width: calc(50% - 0.75rem);
+  width: calc(50% - 1.5rem);
+  display: inline-block;
 }
 .page-slug-join .theme-panel.form-grid-form-content .row #signup_last_name_container {
-  width: calc(50% - -0.75rem);
-  padding-left: 1.5rem;
+  width: calc(50% - -1rem);
+  display: inline-block;
 }
 .page-slug-join .theme-panel.form-grid-form-content .form-group-checkbox.checkbox {
   padding-left: 1.5em;
