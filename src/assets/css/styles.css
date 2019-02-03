@@ -999,7 +999,7 @@ body {
 .page-slug-join .misc-block {
   display: none;
 }
-.page-slug-join .theme-panel.form-grid-form {
+.page-slug-join .theme-panel.form-grid-form-content {
   background: #eff0f1;
   border-radius: 0.2rem;
   padding: 2.4rem 3rem;
@@ -1007,14 +1007,33 @@ body {
   color: #333;
   box-shadow: none;
 }
-.page-slug-join .theme-panel.form-grid-form > .form {
+.page-slug-join .theme-panel.form-grid-form-content > .form {
   padding: 0;
 }
-.page-slug-join .theme-panel.form-grid-form > * {
+.page-slug-join .theme-panel.form-grid-form-content > * {
   padding: 0;
   margin-bottom: 0;
 }
-.page-slug-join .theme-panel.form-grid-form .form-submit-row {
+.page-slug-join .theme-panel.form-grid-form-content .row {
+  display: block;
+}
+.page-slug-join .theme-panel.form-grid-form-content .row [class^=col-], .page-slug-join .theme-panel.form-grid-form-content .row [class*=" col-"] {
+  width: 100%;
+}
+.page-slug-join .theme-panel.form-grid-form-content .row #signup_first_name_container {
+  width: calc(-1.5rem + 50%);
+}
+.page-slug-join .theme-panel.form-grid-form-content .row #signup_last_name_container {
+  width: calc(1.5rem + 50%);
+  padding-left: 3rem;
+}
+.page-slug-join .theme-panel.form-grid-form-content .form-group-checkbox.checkbox {
+  padding-left: 1.5em;
+}
+.page-slug-join .theme-panel.form-grid-form-content .form-group-checkbox.checkbox span {
+  padding-left: 0.2em;
+}
+.page-slug-join .theme-panel.form-grid-form-content .form-submit-row {
   padding-top: 2.4rem;
 }
 .page-slug-join .form-grid {
