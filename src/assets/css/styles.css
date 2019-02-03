@@ -1021,10 +1021,10 @@ body {
   width: 100%;
 }
 .page-slug-join .theme-panel.form-grid-form-content .row #signup_first_name_container {
-  width: calc(-1.5rem + 50%);
+  width: calc(50% - 1.5rem);
 }
 .page-slug-join .theme-panel.form-grid-form-content .row #signup_last_name_container {
-  width: calc(1.5rem + 50%);
+  width: calc(50% - -1.5rem);
   padding-left: 3rem;
 }
 .page-slug-join .theme-panel.form-grid-form-content .form-group-checkbox.checkbox {
