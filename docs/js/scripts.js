@@ -19,21 +19,22 @@ function rj2019(node) {
   }
 
   function trackFormSubmissions() {
-    Object.keys(formEvents).forEach((formId) => {
+    Object.keys(formEvents).forEach(function(formId) {
       const form = node.getElementById(formId);
       if (!form) {
         return;
       }
 
-      form.addEventListener('submit', (evt) => {
+      form.addEventListener('submit', function(evt) {
         evt.preventDefault();
         setTimeout(submitForm(evt.target), 500);
         ga('send', {
           hitType: 'event',
+          eventCategory: formEvents[formId],
           eventAction: 'submit',
           eventLabel: formEvents[formId],
           eventValue: getFormValue(evt.target),
-          hitCallback: () => { submitForm(evt.form); },
+          hitCallback: submitForm(evt.form),
         });
       });
     });
@@ -42,6 +43,6 @@ function rj2019(node) {
   trackFormSubmissions();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   rj2019(document);
 });

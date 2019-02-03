@@ -1005,10 +1005,19 @@ body {
   padding: 2.4rem 3rem;
   margin: 2.4rem auto;
   color: #333;
+  margin-left: -30px;
+  margin-right: -30px;
   box-shadow: none;
 }
 .page-slug-join .theme-panel.form-grid-form-content > .form {
   padding: 0;
+}
+@media only screen and (min-width: 768px) {
+  .page-slug-join .theme-panel.form-grid-form-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem;
+  }
 }
 .page-slug-join .theme-panel.form-grid-form-content > * {
   padding: 0;
@@ -1021,11 +1030,11 @@ body {
   width: 100%;
 }
 .page-slug-join .theme-panel.form-grid-form-content .row #signup_first_name_container {
-  width: calc(50% - 1.5rem);
+  width: calc(50% - 0.75rem);
 }
 .page-slug-join .theme-panel.form-grid-form-content .row #signup_last_name_container {
-  width: calc(50% - -1.5rem);
-  padding-left: 3rem;
+  width: calc(50% - -0.75rem);
+  padding-left: 1.5rem;
 }
 .page-slug-join .theme-panel.form-grid-form-content .form-group-checkbox.checkbox {
   padding-left: 1.5em;
@@ -1084,6 +1093,18 @@ body {
 .flash-share.panel form > .row:last-child .submit-button {
   margin-right: -5rem;
   min-width: 10rem;
+}
+
+form.donation_form {
+  margin-left: -30px;
+  margin-right: -30px;
+}
+@media only screen and (min-width: 768px) {
+  form.donation_form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem;
+  }
 }
 
 .donation_form .row-fluid {

@@ -1,6 +1,10 @@
 @import "../theme.scss";
 
 .donation_form {
+  @at-root form#{&} {
+    @include form-full-width();
+  }
+
   .row-fluid {
     padding-bottom: $spacing--vertical;
 
@@ -40,7 +44,6 @@
     line-height: 4rem;
     padding-left: 1rem;
   }
-
 
   #donation_billing_address_address1,
   #donation_billing_address_address2,

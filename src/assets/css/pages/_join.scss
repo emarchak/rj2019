@@ -7,6 +7,7 @@
 
   .theme-panel.form-grid-form-content {
     @include form-style();
+    @include form-full-width();
     box-shadow: none;
 
     > * {
@@ -21,11 +22,11 @@
       }
 
       #signup_first_name_container {
-        width: calc(50% - #{$spacing--horizontal / 2});
+        width: calc(50% - #{$spacing--horizontal / 4});
       }
       #signup_last_name_container {
-        width: calc(50% - -#{$spacing--horizontal / 2});
-        padding-left: $spacing--horizontal;
+        width: calc(50% - -#{$spacing--horizontal / 4});
+        padding-left: $spacing--horizontal / 2;
       }
     }
 
