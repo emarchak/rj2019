@@ -103,6 +103,12 @@ a {
   }
 }
 
+.panel-heading,
+.well,
+.theme-primary {
+  background-color: transparent;
+}
+
 .btn {
   .navbar-buttons &.btn-default,
   &.btn-default,

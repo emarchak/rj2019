@@ -33,9 +33,15 @@
   }
 }
 
-.form-grid-left, .form-grid-right {
-  @include media(medium-up) {
-    grid-gap: $spacing--horizontal;
+.form-grid {
+  #{&}-left, #{&}-right {
+    @include media(medium-up) {
+      grid-gap: $spacing--horizontal;
+    }
+  }
+
+  &-form-content {
+    @include form-style();
   }
 }
 

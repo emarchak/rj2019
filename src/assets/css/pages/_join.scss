@@ -6,7 +6,6 @@
   }
 
   .theme-panel.form-grid-form-content {
-    @include form-style();
     @include form-full-width();
     box-shadow: none;
 

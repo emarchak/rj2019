@@ -126,6 +126,12 @@ body {
   direction: rtl;
 }
 
+.panel-heading,
+.well,
+.theme-primary {
+  background-color: transparent;
+}
+
 .navbar-buttons .btn.btn-default, .btn.btn-default, .btn.btn-primary, .btn.submit-button {
   border-radius: 0.2rem;
   border-width: 1px;
