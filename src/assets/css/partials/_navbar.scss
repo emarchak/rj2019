@@ -17,6 +17,14 @@
     border: none;
     box-shadow: none;
   }
+  &-header-space {
+    //reset
+    display: none;
+  }
+
+  &-logos {
+    flex-grow: 1;
+  }
 
   .connect-icon {
     font-size: 2rem;
