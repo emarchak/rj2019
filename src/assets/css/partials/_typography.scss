@@ -56,6 +56,12 @@ a {
     }
   }
 
+  h1 , .h1 {
+    @include media(xsmall-only) {
+      @include heading-size(2);
+    }
+  }
+
   a {
     &,
     &:hover,
@@ -66,40 +72,44 @@ a {
   }
 
   ul {
-    list-style: none
-  }
+    list-style: none;
 
-  ul li::before {
-    content: "◼";
-    color: $primary;
-    display: inline-block;
-    font-size: 0.6em;
-    width: 1.5rem;
-    margin-left: -1rem;
-    vertical-align: .2rem;
+    li + li {
+      margin-top: $spacing--vertical;
+    }
+
+    li::before {
+      content: "◼";
+      color: $primary;
+      display: inline-block;
+      font-size: 0.6em;
+      width: 1.5rem;
+      margin-left: -1rem;
+      vertical-align: .2rem;
+    }
   }
 
   ol {
     list-style: none;
     counter-reset: li;
-  }
 
-  ol li {
-    counter-increment: li;
-  }
+    li {
+      counter-increment: li;
+    }
 
-  ol li::before {
-    content: counter(li);
-    color: $primary;
-    display: inline-block;
-    font-weight: 100;
-    font-size: $spacing--vertical;
-    width: 1.5rem;
-    vertical-align: -0.4rem;
-    margin-left: -1.5rem;
-    margin-right: 1rem;
-    text-align: right;
-    direction: rtl;
+    li::before {
+      content: counter(li);
+      color: $primary;
+      display: inline-block;
+      font-weight: 100;
+      font-size: $spacing--vertical;
+      width: 1.5rem;
+      vertical-align: -0.4rem;
+      margin-left: -1.5rem;
+      margin-right: 1rem;
+      text-align: right;
+      direction: rtl;
+    }
   }
 }
 

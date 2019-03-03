@@ -170,13 +170,14 @@
 
   &-logo {
     @include media(small-only) {
-      width: calc(100% - 112px)
+      width: calc(100vw - 66px);
     }
   }
 
   &-logo-img {
     @include media(small-only) {
       width: 100%;
+      max-width: 100% !important;
     }
     @include media(medium-up) {
       width: 11rem;

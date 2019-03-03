@@ -42,6 +42,11 @@
 
   &-form-content {
     @include form-style();
+    box-shadow: 0 0 0 transparent !important;
+    > form {
+      padding: 0 0;
+      margin-bottom: 0;
+    }
   }
 }
 

@@ -7,7 +7,7 @@
   padding-bottom: $spacing--vertical;
   border-left: 0;
   margin: $spacing--vertical  #{-$spacing--horizontal};
-
+  position: relative;
 
   & #{&}--content {
     color: $white;
@@ -56,7 +56,6 @@
 
 
   & #{&}--citation {
-    font-style: italic;
     color: $white;
     padding-left: $spacing--horizontal + 2rem;
     position: relative;
@@ -71,5 +70,13 @@
       left: $spacing--horizontal;
       bottom: 50%;
     }
+  }
+
+  &--image {
+    margin: -$spacing--vertical  -$spacing--horizontal;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 }

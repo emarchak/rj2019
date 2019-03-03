@@ -11,15 +11,18 @@
             text_color = '#333';
             primary_color = '#f79433';
             secondary_color = '#54565a';
+            tertiary_color = '#eff0f1';
+            padding_vertical = 20;
+            padding_horizontal = 15;
             padding = 20;
-            padding_default = `padding-left:${padding}px;padding-right:${padding}px;padding-top:${padding}px;margin-bottom:${padding};`;
-            padding_large = `padding-left:${padding}px;padding-right:${padding}px;padding-bottom:${padding}px;`;
+            padding_default = `padding:${padding_vertical}px 0;margin-bottom:${padding_vertical};`;
+            padding_large = `padding-left:${padding_horizontal}px;padding-right:${padding_horizontal}px;padding-bottom:${padding_vertical}px;`;
             font_family = 'Helvetica Neue,sans-serif';
 
-            spacer_style = `padding-top:${padding}px;`
+            spacer_style = `padding-top:${padding_vertical}px;`
 
-            text_style = `font-size:16px;font-family:${font_family};${padding_default}line-height:1.5em;text-align:left;`;
-            footer_style = `font-family:${font_family};${padding_default}line-height:1.5em;text-align:left;`;
+            body_style = `font-size:16px;font-family:${font_family};${padding_default}line-height:1.5em;text-align:left;`;
+            footer_style = `font-family:${font_family};padding:${padding_vertical}px ${padding_horizontal}px;margin-bottom:${padding_vertical}px;line-height:1.5em;text-align:left;`;
         %>
         /* Resets: see reset.css for details */
         body {
@@ -36,7 +39,6 @@
         table td { border-collapse: collapse;}
         p { margin-bottom: 15px; margin-top: 15px; }
         .body-content img { max-width: 100%; }
-        .logo { width: 100%; height: auto; }
         .body-content a { color: #1488b9; }
         @media screen and (max-width:600px) {
             table[class="container"] {
@@ -57,7 +59,7 @@
         <td align="center" valign="top" bgcolor="#ffffff" style="background-color:#ffffff;">
 
             <!-- ### 600PX CONTAINER ### -->
-            <table width="600" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color:#ffffff;margin-top:30px;" class="container">
+            <table cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color:#ffffff;margin-top:30px;max-width:600px;" class="container">
                 <tr>
                     <td style="text-align:left; font-family:Helvetica Neue,Helvetica,Arial,Calibri,sans-serif;padding-left:15px;padding-right:15px;">
                         <div style="width: 220px;margin-left:auto;margin-right:auto;">
@@ -68,7 +70,7 @@
                     </td>
                 </tr>
                 <tr>
-                <td style="<%= text_style %>">
+                <td style="<%= body_style %>">
                     <%- body %></td>
                 </tr>
                 <tr>
