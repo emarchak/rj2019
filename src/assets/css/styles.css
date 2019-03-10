@@ -964,7 +964,7 @@ body {
     max-height: 58rem;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .rj2019--hero .rj2019--hero--image {
     width: 100%;
     max-width: 1600px;

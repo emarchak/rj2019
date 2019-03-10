@@ -1,0 +1,43 @@
+---
+layout: email
+---
+
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+    <tr>
+        <td style="<%= body_style %>">
+
+
+<div style="<%= text_style %>">
+    <p>Dear {{recipient.first_name_or_friend}},</p>
+    <p>I&rsquo;m writing from the Ravi Joshi Campaign for the Toronto Danforth Federal NDP Nomination. As I&rsquo;m sure you know, the Toronto-Danforth NDP will soon be selecting it&rsquo;s candidate for the 2019 Federal Election, and Ravi is seeking the nomination. </p>
+    <p>Your neighbour Gerry is hosting a &lsquo;<a style="<%= link_style %>" href="https://www.ravifordanforth.ca/ravi_joshi_meet_and_greet_97_withrow_ave">meet and greet</a>&rsquo; to introduce Ravi to progressives in the neighbourhood. It&rsquo;s an opportunity to get to know Ravi and talk to him about the issues that matter to you.</p>
+    <p>Since it&rsquo;s right around the corner, we thought you might want to attend.</p>
+</div>
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+            <td style="<%= callout_container_style %>">
+                <p style="<%= callout_text_style %>">Monday, March 11th</p>
+                <p style="<%= callout_text_style %>">97 Withrow</p>
+                <p style="<%= callout_text_style %>">Hosted by Gerry Brown</p>
+            </td>
+        </tr>
+    </table>
+<div style="<%= text_style %>">
+    <p>If you plan on attending <a style="<%= link_style %>" href="https://www.ravifordanforth.ca/ravi_joshi_meet_and_greet_97_withrow_ave">please RSVP here</a>.</p>
+    <p>It&rsquo;s a great opportunity to meet the candidate and hear Ravi&rsquo;s plan to make real progress in Ottawa. We hope you can make it.</p>
+    <p>All the best,</p>
+    <p>Max Pacheco</p>
+</div>
+<p style="<%= spacer_style %>"></p>
+
+        </td>
+    </tr>
+    <tr>
+        <td style="<%= padding_default %>">
+            <%- include('partials/email/button', {
+              href: "https://www.ravifordanforth.ca/join", text: "Yes Ravi,<br/> I'm with you!"
+            }) %>
+        </td>
+    </tr>
+
+</table>

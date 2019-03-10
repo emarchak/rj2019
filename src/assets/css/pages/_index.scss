@@ -15,7 +15,7 @@
   }
 
   #{&}--image {
-    @include media(wide-up) {
+    @include media(medium-up) {
       width: 100%;
       max-width: 1600px;
       margin: -2rem auto 0;

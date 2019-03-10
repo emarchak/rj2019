@@ -1,104 +1,312 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
+<%// Taken from https://tedgoas.github.io/Cerberus/ %><!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="initial-scale=1.0"><!-- So that mobile webkit will display zoomed in -->
-    <meta name="format-detection" content="telephone=no"><!-- disable auto telephone linking in iOS -->
-    <title>NationBuilder</title>
-    <style type="text/css">
-        <%  background_color = '#fff';
-            text_color = '#333';
-            primary_color = '#f79433';
-            secondary_color = '#54565a';
-            tertiary_color = '#eff0f1';
-            padding_vertical = 20;
-            padding_horizontal = 15;
-            padding = 20;
-            padding_default = `padding:${padding_vertical}px 0;margin-bottom:${padding_vertical};`;
-            padding_large = `padding-left:${padding_horizontal}px;padding-right:${padding_horizontal}px;padding-bottom:${padding_vertical}px;`;
-            font_family = 'Helvetica Neue,sans-serif';
+    <meta charset="utf-8"> <% //utf-8 works for most cases %>
+    <meta name="viewport" content="width=device-width"> <% //Forcing initial-scale shouldn't be necessary %>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <% // Use the latest (edge) version of IE rendering engine %>
+    <meta name="x-apple-disable-message-reformatting">  <% // Disable auto-scale in iOS 10 Mail entirely %>
+    <meta name="format-detection" content="telephone=no"><% // disable auto telephone linking in iOS %>
+    <title></title> <% //The title tag shows in email notifications, like Android 4.4. %>
 
-            spacer_style = `padding-top:${padding_vertical}px;`
+    <% // Web Font / @font-face : BEGIN -->
+      // NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. %>
 
-            body_style = `font-size:16px;font-family:${font_family};${padding_default}line-height:1.5em;text-align:left;`;
-            footer_style = `font-family:${font_family};padding:${padding_vertical}px ${padding_horizontal}px;margin-bottom:${padding_vertical}px;line-height:1.5em;text-align:left;`;
-        %>
-        /* Resets: see reset.css for details */
-        body {
-            -webkit-text-size-adjust: none;
-            -ms-text-size-adjust: none;
-            color: <%= text_color %>;
-            background-color: <%= background_color %>;
-            font-family:<%=font_family%>;
-            margin: 0;
-            padding: 0;
-        }
-
-        table { border-spacing: 0; border-collapse: collapse; border-spacing: 0; }
-        table td { border-collapse: collapse;}
-        p { margin-bottom: 15px; margin-top: 15px; }
-        .body-content img { max-width: 100%; }
-        .body-content a { color: #1488b9; }
-        @media screen and (max-width:600px) {
-            table[class="container"] {
-                width: 100%!important;
-            }
-        }
-        @media screen and (max-width:480px) {
-            div[class="body-content"] img {
-                width: 100%;
-            }
+    <% // Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. %>
+    <!--[if mso]>
+    <style>
+        * {
+            font-family: sans-serif !important;
         }
     </style>
+    <![endif]-->
+
+    <% //  All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ %>
+    <!--[if !mso]><!-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <!--<![endif]-->
+
+    <% // Web Font / @font-face : END %>
+
+    <% // CSS Reset : BEGIN %>
+    <style>
+
+        <% // Remove spaces around the email design added by some email clients. %>
+        <% // Beware: It can remove the padding / margin and add a background color to the compose a reply window. %>
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        <% //Stops email clients resizing small text. %>
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        <% // Centers email on Android 4.4 %>
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        <% // Stops Outlook from adding extra spacing to tables. %>
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        <% // Fixes webkit padding issue. %>
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+
+        <% // Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. %>
+        a {
+            text-decoration: none;
+        }
+
+        <% // Uses a better rendering method when resizing images in IE. %>
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        <% // A work-around for email clients meddling in triggered links. %>
+        a[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links a,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        <% // Prevents Gmail from changing the text color in conversation threads. %>
+        .im {
+            color: inherit !important;
+        }
+
+        <% // Prevents Gmail from displaying a download button on large, non-linked images. %>
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+            display: none !important;
+        }
+
+        <% // Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  %>
+        <% // Create one of these media queries for each additional viewport size you'd like to fix %>
+
+        <%// iPhone 4, 4S, 5, 5S, 5C, and 5SE */%>
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u ~ div .email-container {
+                min-width: 320px !important;
+            }
+        }
+        <%// iPhone 6, 6S, 7, 8, and X */%>
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u ~ div .email-container {
+                min-width: 375px !important;
+            }
+        }
+        <%//* iPhone 6+, 7+, and 8+ */%>
+        @media only screen and (min-device-width: 414px) {
+            u ~ div .email-container {
+                min-width: 414px !important;
+            }
+        }
+
+    </style>
+
+    <% //Makes background images in 72ppi Outlook render at correct size. %>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+    <% //CSS Reset : END %>
+    <%- include('partials/email/styles') %>
+
+    <% // Progressive Enhancements : BEGIN %>
+    <style>
+
+        <% // What it does: Hover styles for buttons %>
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td-primary:hover,
+        .button-a-primary:hover {
+            background: <%= primary_color_hover %> !important;
+        }
+
+        <% // Media Queries %>
+        @media screen and (max-width: 600px) {
+
+            .email-container {
+                width: 100% !important;
+                margin: auto !important;
+            }
+
+        <% // What it does: Forces table cells into full-width rows. %>
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+                padding: 0 0 !important;
+            }
+        <% // And center justify these ones. %>
+            .stack-column-center {
+                text-align: center !important;
+            }
+        <% // And center justify these ones. %>
+            .stack-column-image {
+                min-height: 250px !important;
+            }
+        <% // What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. %>
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+
+        <% // What it does: Adjust typography on small screens to improve readability %>
+            .email-container p {
+                font-size: 17px !important;
+            }
+        }
+
+    </style>
+    <% // Progressive Enhancements : END %>
 </head>
-<body style="margin:0; padding:0;" bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: <%= background_color %>;">
+<center style="width: 100%; background-color: <%= background_color %>;">
+    <!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: <%= background_color %>;">
+        <tr>
+            <td>
+    <![endif]-->
 
-<table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-    <tr>
-        <td align="center" valign="top" bgcolor="#ffffff" style="background-color:#ffffff;">
+    <% // Logo Section : BEGIN %>
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: <%= primary_color %>;">
+        <tr>
+            <td>
+                <div align="center" style="max-width: <%= max_width %>px; margin: auto;" class="email-container">
+                    <!--[if mso]>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="<%= max_width %>" align="center">
+                        <tr>
+                            <td>
+                    <![endif]-->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td style="padding: 20px; text-align: center;">
+                                <a href="{{ settings.site.full_url }}">
+                                    <img src="https://assets.nationbuilder.com/themes/5bdc51414764e8a0052988b4/attachments/original/1552241893/logo--full--dark.png" alt="{{ settings.official_name }}" border="0" width="<%= logo_width %>" height="auto" style="width:<%= logo_width %>px; height:auto;" />
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--[if mso]>
+                    </td>
+                    </tr>
+                    </table>
+                    <![endif]-->
+                </div>
+            </td>
+        </tr>
+    </table>
+    <% // Logo Section : END %>
 
-            <!-- ### 600PX CONTAINER ### -->
-            <table cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color:#ffffff;margin-top:30px;max-width:600px;" class="container">
-                <tr>
-                    <td style="text-align:left; font-family:Helvetica Neue,Helvetica,Arial,Calibri,sans-serif;padding-left:15px;padding-right:15px;">
-                        <div style="width: 220px;margin-left:auto;margin-right:auto;">
-                            <a href="{{ settings.site.full_url }}">
-                                <img src="http://d3n8a8pro7vhmx.cloudfront.net/themes/5c3dda0a030559de69b38d61/attachments/original/1547557601/rjlogo2019.png" alt="{{ settings.official_name }}" border="0" width="220" height="auto" style="width:100%; height:auto;" />
-                            </a>
-                        </div>
+    <% //  Email Body : BEGIN %>
+    <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="<%= max_width %>" style="margin: auto;" class="email-container">
+
+        <%// Hero Image, Flush : BEGIN %>
+        <tr>
+            <td>
+                <img src="https://assets.nationbuilder.com/ravijoshi/mailings/13/attachments/original/talkvest--small.jpg" width="<%= max_width %>" height="" alt="alt_text" border="0" style="width: 100%; max-width: <%= max_width %>px; height: auto; margin: auto; display: block;" class="g-img">
+            </td>
+        </tr>
+        <% // Hero Image, Flush : END %>
+        <% //  1 Column Text + Button : BEGIN %>
+        <tr>
+            <td style="background-color: #ffffff;">
+                <!-- BODY BEGIN -->
+                <%- body %>
+                <!-- BODY END -->
+            </td>
+        </tr>
+        <% // 1 Column Text + Button : END %>
+    </table>
+
+    <% // Email Body : END %>
+
+    <% // Footer Section : BEGIN %>
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="<%= `background-color:${secondary_color}` %>;">
+        <tr>
+            <td>
+                <div align="center" style="max-width: <%= max_width %>px; margin: auto;" class="email-container">
+                    <!--[if mso]>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="<%= max_width %>" align="center">
+                        <tr>
+                            <td>
+                    <![endif]-->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td style="<%= `${padding_default}text-align: center;`%>">
+                                <p style="<%= footer_style %>">
+                                    <a style="color:<%= background_color %>;text-decoration: underline;" href="mailto:campaign@ravifordanforth.ca">campaign@ravifordanforth.ca</a><br/>
+                                    {% if broadcaster.has_twitter? %}
+                                    <a style="color:<%= background_color %>;text-decoration: underline;" href="{{ broadcaster.twitter_profile_url }}">Twitter @RaviForDanforth</a><br/>
+                                    {% endif %}
+                                    {% if broadcaster.has_facebook_page? %}
+                                    <a style="color:<%= background_color %>;text-decoration: underline;" href="{{ broadcaster.facebook_page_profile_url }}">Facebook @RaviForDanforth</a><br/>
+                                    {% endif %}
+                                    <a style="color:<%= background_color %>;text-decoration: underline;" href="https://instagram.com">Instagram @RaviForDanforth</a><br/>
+                                    <a style="color:<%= background_color %>;text-decoration: underline;" href="https://www.ravifordanforth.ca">RaviForDanforth.ca</a><br/>
+                                </p>
+                                <p style="<%= footer_style %>">
+                                    <br/>This email was sent to <a style="color:<%= background_color %>;" href="mailto:{{ recipient.email }}">{{ recipient.email }}</a> | <a style="color:<%= background_color %>;text-decoration: underline;" href="{{ settings.site.unsubscribe_url }}">Unsubscribe</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--[if mso]>
                     </td>
-                </tr>
-                <tr>
-                <td style="<%= body_style %>">
-                    <%- body %></td>
-                </tr>
-                <tr>
-                    <td style="<%= footer_style %>">
-                        <p style="color:#333333;font-size:12px;line-height:1.5;">
-                            {{ settings.official_name }}{% if settings.has_address? %} &middot; {{ settings.address.one_line }} {% endif %}
-                            <br/>This email was sent to <a style="color:#1488b9;" href="{{ recipient.email }}">{{ recipient.email }}</a>.  To stop receiving emails, <a style="color:#1488b9;" href="{{ settings.site.unsubscribe_url }}">click here</a>.
-                            {% if broadcaster.has_twitter? or broadcaster.has_facebook? %}
-                            <br/>You can also keep up with {{ broadcaster.name }}
-                            {% if broadcaster.has_twitter? and broadcaster.has_facebook_page? %}
-                            on <a style="color:#1488b9;" href="{{ broadcaster.twitter_profile_url }}">Twitter</a> or <a style="color:#1488b9;" href="{{ broadcaster.facebook_page_profile_url }}">Facebook</a>.
-                            {% elsif broadcaster.has_twitter? %}
-                            on <a style="color:#1488b9;" href="{{ broadcaster.twitter_profile_url }}">Twitter</a>.
-                            {% elsif broadcaster.has_facebook_page? %}
-                            on <a style="color:#1488b9;" href="{{ broadcaster.facebook_page_profile_url }}">Facebook</a>.
-                            {% endif %}
-                            {% endif %}
-                        </p>
-                    </td>
-                </tr>
-            </table>
-            <p style="font-size: 12px;font-family:<%=font_family%>,sans-serif;color:#414141;padding:0;line-height:1.6;text-align:center;">Created with <a href="http://nationbuilder.com" style="color:#1488b9">NationBuilder</a>, software for leaders.</p>
-            <!-- ### 600PX CONTAINER ###  -->
-        </td>
+                    </tr>
+                    </table>
+                    <![endif]-->
+                </div>
+            </td>
+        </tr>
+    </table>
+    <% // Footer Section : END %>
+    <!--[if mso | IE]>
+    </td>
     </tr>
-</table>
-
-</div>
-<!--/100% wrapper-->
+    </table>
+    <![endif]-->
+</center>
 </body>
 </html>
