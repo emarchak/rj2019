@@ -253,79 +253,49 @@
             <td style="background-color: #ffffff;">
                 <!-- BODY BEGIN -->
                 
-
-
-<p>{{ recipient.first_name_or_friend }} --</p>
-<p style="font-size:16px;font-family:Helvetica Neue,sans-serif;padding:20px 15px;padding-left: 0;line-height:1.5em;text-align:left;">Thank you for making a {% if donation.is_recurring %}recurring {% endif %}donation. Here is your receipt.</p>
-<table style="font-size:16px;font-family:Helvetica Neue,sans-serif;padding:20px 15px;padding-left: 0;line-height:1.5em;text-align:left; border: 1px solid #54565a;" border="0" cellspacing="0" cellpadding="0" width="600">
-    <tbody>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
     <tr>
-        <td align="center" colspan="5" valign="top">
-            <table border="0" cellspacing="0" cellpadding="0" width="568">
-                <tbody>
-                <tr>
-                    <td align="left" style="padding:20px 15px;valign:top;border-right: 1px solid #54565a;" width="284" valign="top">
-                        <table border="0" cellspacing="0" cellpadding="0">
-                            <tbody>
-                            <tr>
-                                <td style="text-transform: uppercase; line-height: 20px; font-size: 12px; display:inline-block; min-width:7em;">Donor</td>
-                                <td style="font-weight: bold; font-size: 15px; vertical-align: top; text-align: left;">{{ donation.name }}</td>
-                            </tr>
-                            <tr><td style="text-transform: uppercase; line-height: 20px; font-size: 12px; display:inline-block; min-width:7em;">Address</td>
-                                <td style="font-weight: bold; font-size: 15px; vertical-align: top; text-align: left;">{{ donation.billing_address.one_line }}</td>
-                            </tr>
-                            <tr><td style="text-transform: uppercase; line-height: 20px; font-size: 12px; display:inline-block; min-width:7em;">Phone</td>
-                                <td style="font-weight: bold; font-size: 15px; vertical-align: top; text-align: left;">{{ donation.billing_address.phone }}</td>
-                            </tr>
-                            <tr><td style="text-transform: uppercase; line-height: 20px; font-size: 12px; display:inline-block; min-width:7em;">Email</td>
-                                <td style="font-weight: bold; font-size: 15px; vertical-align: top; text-align: left;">{{ donation.email }}</td>
-                            </tr>
-                            {% if donation.employer.size &gt; 0 %}
-                            <tr><td style="text-transform: uppercase; line-height: 20px; font-size: 12px; display:inline-block; min-width:7em;">Employer</td>
-                                <td style="font-weight: bold; font-size: 15px; vertical-align: top; text-align: left;">{{ donation.employer }}</td>
-                            </tr>
-                            {% endif %}
-                            {% if donation.occupation.size &gt; 0 %}
-                            <tr><td style="text-transform: uppercase; line-height: 20px; font-size: 12px; display:inline-block; min-width:7em;">Occupation</td>
-                                <td style="font-weight: bold; font-size: 15px; vertical-align: top; text-align: left;">{{ donation.occupation }}</td>
-                            </tr>
-                            {% endif %}
-                            </tbody>
-                        </table>
+        <td style="font-size:16px;color:#333;font-family:Roboto,Helvetica Neue,sans-serif;line-height:1.5em;text-align:left;">
 
 
+<div style="font-size:16px;color:#333;font-family:Roboto,Helvetica Neue,sans-serif;padding:10px 15px;;padding-bottom: 0;line-height:1.5em;text-align:left;">
+    <p>Dear {{recipient.first_name_or_friend}},</p>
+    <p>I&rsquo;m writing from the Ravi Joshi Campaign for the Toronto Danforth Federal NDP Nomination. As I&rsquo;m sure you know, the Toronto-Danforth NDP will soon be selecting it&rsquo;s candidate for the 2019 Federal Election, and Ravi is seeking the nomination. </p>
+    <p>Your neighbour Gerry is hosting a &lsquo;<a style="font-size:16px;color:#f79433;font-family:Roboto,Helvetica Neue,sans-serif;text-decoration:underline;font-weight:bold;" href="https://www.ravifordanforth.ca/ravi_joshi_meet_and_greet_97_withrow_ave">meet and greet</a>&rsquo; to introduce Ravi to progressives in the neighbourhood. It&rsquo;s an opportunity to get to know Ravi and talk to him about the issues that matter to you.</p>
+    <p>Since it&rsquo;s right around the corner, we thought you might want to attend.</p>
+</div>
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+            <td style="padding:20px 20%;background-color:#eff0f1;">
+                <p style="font-size:18px;line-height:1.75em;font-family:Roboto,Helvetica Neue,sans-serif;color:#555;margin: 0 0;font-style:italic;text-align:left;">Monday, March 11th</p>
+                <p style="font-size:18px;line-height:1.75em;font-family:Roboto,Helvetica Neue,sans-serif;color:#555;margin: 0 0;font-style:italic;text-align:left;">97 Withrow</p>
+                <p style="font-size:18px;line-height:1.75em;font-family:Roboto,Helvetica Neue,sans-serif;color:#555;margin: 0 0;font-style:italic;text-align:left;">Hosted by Gerry Brown</p>
+            </td>
+        </tr>
+    </table>
+<div style="font-size:16px;color:#333;font-family:Roboto,Helvetica Neue,sans-serif;padding:10px 15px;;padding-bottom: 0;line-height:1.5em;text-align:left;">
+    <p>If you plan on attending <a style="font-size:16px;color:#f79433;font-family:Roboto,Helvetica Neue,sans-serif;text-decoration:underline;font-weight:bold;" href="https://www.ravifordanforth.ca/ravi_joshi_meet_and_greet_97_withrow_ave">please RSVP here</a>.</p>
+    <p>It&rsquo;s a great opportunity to meet the candidate and hear Ravi&rsquo;s plan to make real progress in Ottawa. We hope you can make it.</p>
+    <p>All the best,</p>
+    <p>Max Pacheco</p>
+</div>
+<p style="padding-top:20px;margin-top:0;margin-bottom:0;"></p>
 
-                    </td>
-                    <td align="left" style="padding:20px 15px;" width="284" valign="top">
-                        <table border="0" cellspacing="0" cellpadding="0">
-                            <tbody>
-                              <tr>
-                                    <td style="text-transform: uppercase; line-height: 20px; font-size: 12px; display:inline-block; min-width:7em;">Amount</td>
-                                    <td style="font-weight: bold; font-size: 15px; vertical-align: top; text-align: left;font-size: 30px;">{{ donation.amount_format }}</td>
-                                </tr>
-                                <tr>
-                                    <td style="text-transform: uppercase; line-height: 20px; font-size: 12px; display:inline-block; min-width:7em;">Date</td>
-                                    <span style="font-weight: bold; font-size: 15px; vertical-align: top; text-align: left;">{{ donation.succeeded_at | date_to_string }}</span>
-                                </tr>
-                                <tr>
-                                    <td style="text-transform: uppercase; line-height: 20px; font-size: 12px; display:inline-block; min-width:7em;">Type</td>
-                                    <td style="font-weight: bold; font-size: 15px; vertical-align: top; text-align: left;">{{ donation.payment_type_name }}</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" style="font-weight: bold; font-size: 15px; vertical-align: top; text-align: left;">This donation is <strong>{% if donation.merchant_account.is_taxable? == true %}not{% endif %} tax deductible</strong>.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
         </td>
     </tr>
-    </tbody>
+    <tr>
+        <td style="padding:10px 15px;">
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+    <tr>
+        <td  align="center" class="button-td button-td-primary" style="border-radius: 4px; background: #f79433;">
+            <a class="button-a button-a-primary" href="https://www.ravifordanforth.ca/join" style="min-width: 200px;background:#f79433;border: 1px solid #f79433;font-family:Roboto,Helvetica Neue,sans-serif;font-size:20px;line-height:1.5em;font-weight:bold;text-decoration: none;padding:10px;color:#333;display: block; border-radius: 4px;text-align: center; ">Yes Ravi,<br/> I'm with you!</a>
+        </td>
+    </tr>
 </table>
+        </td>
+    </tr>
 
-<!-- end of template -->
+</table>
                 <!-- BODY END -->
             </td>
         </tr>
