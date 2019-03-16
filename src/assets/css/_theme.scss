@@ -45,8 +45,8 @@ $icon-font--brands: "Font Awesome 5 Brands";
 }
 
 @mixin heading-size($level: 6) {
-  font-size: nth((5rem, 3rem, 2.25rem, 1.755rem, 1.68rem, 1.245rem), $level);
-  line-height: 1.3em;
+  font-size: nth((3rem, 2.25rem, 1.755rem, 1.68rem, 1.245rem, 1rem), $level);
+  line-height: 1.2em;
 }
 
 @mixin media($media) {

@@ -53,6 +53,7 @@ a {
       color: $primary;
       @include font(heading);
       @include heading-size($i);
+      margin-bottom: 1em;
     }
   }
 

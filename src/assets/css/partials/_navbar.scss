@@ -170,7 +170,8 @@
 
   &-logo {
     @include media(small-only) {
-      width: calc(100vw - 66px);
+      width: calc(100vw - 92px);
+      margin-left: 0;
     }
   }
 
