@@ -116,8 +116,13 @@ a {
 
 .panel-heading,
 .well,
-.theme-primary {
+.theme-primary,
+.quote, {
   background-color: transparent;
+}
+
+code, .theme-default-secondary {
+  background-color: $grey--lightest;
 }
 
 .btn {

@@ -1,0 +1,20 @@
+@import "../theme.scss";
+
+.page-type-event {
+  .form-grid-form-content {
+    @include form-full-width();
+  }
+
+  .form-grid {
+    padding-bottom: $spacing--vertical
+  }
+  .event_rsvp_form {
+    .row {
+      display: block;
+
+      [class^="col-"], [class*=" col-"] {
+        width: 100%;
+      }
+    }
+  }
+}
