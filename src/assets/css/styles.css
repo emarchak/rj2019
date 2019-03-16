@@ -1289,6 +1289,12 @@ form.donation_form {
 
 .page-type-event .top-hero {
   display: block;
+  margin-top: 60px;
+}
+@media only screen and (min-width: 768px) {
+  .page-type-event .top-hero {
+    margin-top: 75px;
+  }
 }
 .page-type-event .top-hero .navbar-placeholder {
   display: none;
@@ -1298,16 +1304,15 @@ form.donation_form {
 }
 .page-type-event .headline-block {
   text-align: left;
-  padding: 4.8rem 3rem;
+  padding: 2.4rem 3rem;
   min-height: 0;
-  margin-top: 60px;
   margin: 0 auto;
   max-width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .page-type-event .headline-block {
     width: 1200px;
-    margin-top: 75px;
+    padding: 4.8rem 3rem;
   }
 }
 .page-type-event .headline-block h1 {
@@ -1346,6 +1351,9 @@ form.donation_form {
 }
 .page-type-event .event_rsvp_form .row [class^=col-], .page-type-event .event_rsvp_form .row [class*=" col-"] {
   width: 100%;
+}
+.page-type-event .event-details {
+  padding: 2.4rem 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

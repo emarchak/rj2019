@@ -3,6 +3,11 @@
 .page-type-event {
   .top-hero {
     display: block;
+    margin-top: $navbar--height--small;
+
+    @include media(medium-up) {
+      margin-top: $navbar--height--wide;
+    }
 
     .navbar-placeholder {
       display: none;
@@ -15,15 +20,14 @@
 
   .headline-block {
     text-align: left;
-    padding: 2*$spacing--vertical $spacing--horizontal;
+    padding: $spacing--vertical $spacing--horizontal;
     min-height: 0;
-    margin-top: $navbar--height--small;
     margin: 0 auto;
     max-width: 100%;
 
     @include media(medium-up) {
       width: $break-large;
-      margin-top: $navbar--height--wide;
+      padding: 2*$spacing--vertical $spacing--horizontal;
     }
 
     h1 {
@@ -48,6 +52,7 @@
   .form-grid {
     padding-bottom: $spacing--vertical
   }
+
   .event_rsvp_form {
     .row {
       display: block;
@@ -56,5 +61,9 @@
         width: 100%;
       }
     }
+  }
+
+  .event-details {
+    padding: $spacing--vertical $spacing--horizontal;
   }
 }
