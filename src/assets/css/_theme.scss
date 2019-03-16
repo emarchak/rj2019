@@ -30,6 +30,10 @@ $font-weight--heading: 900;
 $icon-font: "Font Awesome 5 Free";
 $icon-font--brands: "Font Awesome 5 Brands";
 
+$break-xsmall: 300px;
+$break-small: 767px;
+$break-large: 1200px;
+
 @mixin font($style: body) {
   font-family: 'Raleway', sans-serif;
 
@@ -50,10 +54,6 @@ $icon-font--brands: "Font Awesome 5 Brands";
 }
 
 @mixin media($media) {
-  $break-xsmall: 300px;
-  $break-small: 767px;
-  $break-large: 1200px;
-
 
   @if $media == xsmall-only {
     @media only screen and (max-width: $break-xsmall) { @content; }

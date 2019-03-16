@@ -1,6 +1,46 @@
 @import "../theme.scss";
 
 .page-type-event {
+  .top-hero {
+    display: block;
+
+    .navbar-placeholder {
+      display: none;
+    }
+
+    + div {
+      padding-top: 0;
+    }
+  }
+
+  .headline-block {
+    text-align: left;
+    padding: 2*$spacing--vertical $spacing--horizontal;
+    min-height: 0;
+    margin-top: $navbar--height--small;
+    margin: 0 auto;
+    max-width: 100%;
+
+    @include media(medium-up) {
+      width: $break-large;
+      margin-top: $navbar--height--wide;
+    }
+
+    h1 {
+      color: $primary;
+      @include font(heading);
+      @include heading-size(1);
+
+      @include media(xsmall-only) {
+        @include heading-size(2);
+      }
+    }
+  }
+
+  .main.theme-default {
+    padding-top: 0;
+  }
+
   .form-grid-form-content {
     @include form-full-width();
   }

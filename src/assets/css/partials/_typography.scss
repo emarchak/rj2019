@@ -57,7 +57,7 @@ a {
     }
   }
 
-  h1 , .h1 {
+  h1, .h1 {
     @include media(xsmall-only) {
       @include heading-size(2);
     }
@@ -117,12 +117,25 @@ a {
 .panel-heading,
 .well,
 .theme-primary,
-.quote, {
+.quote,
+.headline-block {
   background-color: transparent;
 }
 
-code, .theme-default-secondary {
+code,
+.theme-default-secondary {
   background-color: $grey--lightest;
+}
+
+.main .carousel-inner,
+.main .block,
+.block .carousel-inner,
+.block .block,
+.main .breakout,
+.block .breakout {
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .btn {
