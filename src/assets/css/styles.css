@@ -782,15 +782,19 @@ code,
 .rj2019--cta--content {
   padding-left: 3rem;
   padding-right: 3rem;
+  margin: 0 auto;
+  max-width: 48rem;
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   .rj2019--cta--content {
+    max-width: 100vw;
     padding-left: calc(50vw - 40rem);
     padding-right: calc(50vw - 40rem);
   }
 }
 @media only screen and (min-width: 1200px) {
   .rj2019--cta--content {
+    max-width: 100vw;
     padding-left: calc(55vw - 47rem);
     padding-right: calc(55vw - 47rem);
   }
@@ -808,13 +812,13 @@ code,
 .rj2019--cta--logo {
   margin-top: -1px;
   text-align: left;
-  padding: 0 3rem;
+  padding: 0 0;
+  margin-bottom: 0 !important;
 }
 @media only screen and (min-width: 768px) {
   .rj2019--cta--logo {
     height: 14.7rem;
     width: calc(50% - -3rem );
-    pading: 0 0;
   }
 }
 .rj2019--cta--logo-svg {
@@ -832,14 +836,15 @@ code,
 .rj2019--cta h3.rj2019--cta--subheading {
   color: #FFF;
   font-weight: 500;
-  margin-top: 2.4rem;
-  font-size: 3.4rem;
+  margin-top: 1.2rem;
+  font-size: 2rem;
   line-height: 1.2em;
 }
 @media only screen and (min-width: 768px) {
   .rj2019--cta h3.rj2019--cta--subheading {
     margin-top: 0.8rem;
     margin-bottom: 0.6rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -855,6 +860,8 @@ code,
   color: #FFF;
   font-size: 1.68rem;
   line-height: 1.2em;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 .rj2019--blockquote .rj2019--blockquote--content-large {
   font-size: 2.25rem;

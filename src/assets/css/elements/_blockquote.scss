@@ -12,6 +12,8 @@
   & #{&}--content {
     color: $white;
     @include heading-size(4);
+    padding-left: $spacing--horizontal;
+    padding-right: $spacing--horizontal;
   }
 
   & #{&}--content-large {
@@ -49,7 +51,7 @@
     .rj2019--blockquote--content,
     .rj2019--blockquote--citation {
       @include media(wide-up) {
-        margin-left: calc(50vw - #{50rem + $spacing--horizontal});
+        margin-left: calc(50vw - #{50rem + ($spacing--horizontal)});
       }
     }
   }
