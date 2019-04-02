@@ -32,7 +32,6 @@
     }
 
     .form-group-checkbox.checkbox {
-      padding-left: 1.5em;
       span {
         padding-left: 0.2em;
       }
@@ -95,5 +94,34 @@
       margin-right: -5rem;
       min-width: 10rem;
     }
+  }
+}
+
+.page-slug-join .theme-panel.form-grid-form-content {
+
+  .checkbox[data-parent-checkbox] {
+    position: relative;
+    &::after {
+      font-family: $icon-font;
+      content: "\f078";
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .checkbox[data-parent-checkbox-state="checked"] {
+    &::after {
+      font-family: $icon-font;
+      content: "\f077";
+    }
+  }
+
+  .checkbox[data-child-checkbox] {
+    padding-left: 2em;
+  }
+
+  .checkbox[data-child-checkbox-state="hidden"] {
+    display: none;
   }
 }

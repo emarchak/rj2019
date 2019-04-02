@@ -1126,9 +1126,6 @@ code,
   width: calc(50% - -1rem);
   display: inline-block;
 }
-.page-slug-join .theme-panel.form-grid-form-content .form-group-checkbox.checkbox {
-  padding-left: 1.5em;
-}
 .page-slug-join .theme-panel.form-grid-form-content .form-group-checkbox.checkbox span {
   padding-left: 0.2em;
 }
@@ -1183,6 +1180,27 @@ code,
 .flash-share.panel form > .row:last-child .submit-button {
   margin-right: -5rem;
   min-width: 10rem;
+}
+
+.page-slug-join .theme-panel.form-grid-form-content .checkbox[data-parent-checkbox] {
+  position: relative;
+}
+.page-slug-join .theme-panel.form-grid-form-content .checkbox[data-parent-checkbox]::after {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.page-slug-join .theme-panel.form-grid-form-content .checkbox[data-parent-checkbox-state=checked]::after {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+}
+.page-slug-join .theme-panel.form-grid-form-content .checkbox[data-child-checkbox] {
+  padding-left: 2em;
+}
+.page-slug-join .theme-panel.form-grid-form-content .checkbox[data-child-checkbox-state=hidden] {
+  display: none;
 }
 
 form.donation_form {

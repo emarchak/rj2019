@@ -124,7 +124,7 @@ slug: join
             <div class="padbottommore"><small>If you're not Erin M111222333, <a href="/logout?page_id=23">click here to signup</a>.</small></div>
 
 
-            <form id="join_page_new_signup_form" class="ajaxForm signup_form" method="POST" action="/forms/signups" enctype="multipart/form-data"><input name="authenticity_token" type="hidden" value="tdV/LnyFi5FKLfK7qd/C6MRxnD2IybTDlWDuRRQsM2s="><input name="page_id" type="hidden" value="23"><input name="return_to" type="hidden" value="https://www.ravifordanforth.ca/join"><div class="email_address_form" style="display:none;" aria-hidden="true"><p><label for="email_address">Optional email code</label><br><input name="email_address" type="text" class="text" id="email_address" autocomplete="off"></p></div>
+            <form id="join_page_new_signup_form" class="ajaxForm signup_form" method="POST" action="/forms/signups" enctype="multipart/form-data"><input name="authenticity_token" type="hidden" value="9i1HULJ02OMliN1+7Dy9eZd9aOA/pEI/9riNIlvsBRU="><input name="page_id" type="hidden" value="23"><input name="return_to" type="hidden" value="https://www.ravifordanforth.ca/join"><div class="email_address_form" style="display:none;" aria-hidden="true"><p><label for="email_address">Optional email code</label><br><input name="email_address" type="text" class="text" id="email_address" autocomplete="off"></p></div>
 
                 <div class="form-errors"></div>
 
@@ -189,7 +189,12 @@ slug: join
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <label for="signup_submitted_address">Address (Street, City, Province, Postal code) </label>
+                            <label for="signup_submitted_address">
+
+                                Address (Street, City, Province, Postal code)
+
+
+                            </label>
                             <input class="text form-control" autocomplete="street-address" id="signup_submitted_address" name="signup[submitted_address]" type="text" value="m6g 2s5">
                         </div>
                     </div>
@@ -217,11 +222,26 @@ slug: join
 
 
                 <div class="checkbox">
+                    <label for="checkbox_8" class="checkbox"> <input type="checkbox" name="signup[labeled_tags][]" value="8" id="checkbox_8"> I can attend the Toronto-Danforth NDP Riding Association AGM on Sun, April 7 and vote for Ravi!  </label>
+                </div>
+
+
+
+                <div class="checkbox">
+                    <label for="checkbox_7" class="checkbox"> <input type="checkbox" name="signup[labeled_tags][]" value="7" id="checkbox_7"> I want to help with the campaign. </label>
+                </div>
+
+
+
+                <div class="checkbox">
                     <label for="checkbox_6" class="checkbox"> <input type="checkbox" name="signup[labeled_tags][]" value="6" id="checkbox_6"> I want to publicly endorse Ravi Joshi.  </label>
                 </div>
 
 
 
+                <div class="checkbox">
+                    <label for="checkbox_9" class="checkbox"> <input type="checkbox" name="signup[labeled_tags][]" value="6" id="checkbox_9"> Some other check  </label>
+                </div>
                 <!-- /_labeled_tags.html -->
 
 
