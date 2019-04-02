@@ -1,3 +1,22 @@
+function initPolyfills() {
+  if (!Element.prototype.matches) {
+    Element.prototype.matches = Element.prototype.msMatchesSelector ||
+      Element.prototype.webkitMatchesSelector;
+  }
+
+  if (!Element.prototype.closest) {
+    Element.prototype.closest = function(s) {
+      var el = this;
+
+      do {
+        if (el.matches(s)) return el;
+        el = el.parentElement || el.parentNode;
+      } while (el !== null && el.nodeType === 1);
+      return null;
+    };
+  }
+}
+
 function rj2019(node) {
   let formSubmited = false;
   const formEvents = {
@@ -40,9 +59,58 @@ function rj2019(node) {
     });
   }
 
+  function nestedCheckboxes() {
+    var parentCheckbox = document.getElementById('checkbox_7');
+    var parentWrapper = parentCheckbox.closest('div.checkbox');
+    var childCheckboxes = ['checkbox_6', 'checkbox_9', 'checkbox_10', 'checkbox_11', 'checkbox_12', 'checkbox_13'];
+
+    if (parentCheckbox === null || parentWrapper == null) {
+      return;
+    }
+
+    function hideChildren() {
+      childCheckboxes.forEach(function(id) {
+        var checkbox = document.getElementById(id);
+        if (checkbox !== null) {
+          var childWrapper = checkbox.closest('div.checkbox');
+          childWrapper.setAttribute('data-child-checkbox', '');
+          childWrapper.setAttribute('data-child-checkbox-state', 'hidden');
+          checkbox.checked = false;
+        }
+      });
+    }
+
+    function showChildren() {
+      childCheckboxes.forEach(function(id) {
+        var checkbox = document.getElementById(id);
+        if (checkbox !== null) {
+          var childWrapper = checkbox.closest('div.checkbox');
+          childWrapper.setAttribute('data-child-checkbox', '');
+          childWrapper.setAttribute('data-child-checkbox-state', 'visible');
+        }
+      });
+    }
+
+    parentWrapper.setAttribute('data-parent-checkbox', '');
+    parentWrapper.setAttribute('data-parent-checkbox-state', 'unchecked');
+    hideChildren();
+
+    parentCheckbox.addEventListener('change', function() {
+      if(this.checked) {
+        parentWrapper.setAttribute('data-parent-checkbox-state', 'checked');
+        showChildren();
+      } else {
+        parentWrapper.setAttribute('data-parent-checkbox-state', 'unchecked');
+        hideChildren();
+      }
+    });
+  };
+
   trackFormSubmissions();
+  nestedCheckboxes();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  initPolyfills();
   rj2019(document);
 });
