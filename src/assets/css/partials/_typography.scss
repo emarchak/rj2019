@@ -70,6 +70,15 @@ a {
     &:active {
       text-decoration: underline;
     }
+
+    &.external-link::after {
+      font-family: $icon-font;
+      content: "\f35d";
+      font-size: 0.8em;
+      padding: .4em;
+      top: -.1em;
+      position: relative;
+    }
   }
 
   ul {
