@@ -40,7 +40,7 @@ body {
   font-weight: 900;
 }
 .v2-theme .body .fas {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Pro";
 }
 .v2-theme .body h1, .v2-theme .body .h1 {
   color: #f79433;
@@ -104,6 +104,14 @@ body {
 }
 .v2-theme .body a, .v2-theme .body a:hover, .v2-theme .body a:focus, .v2-theme .body a:active {
   text-decoration: underline;
+}
+.v2-theme .body a.external-link::after {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  font-size: 0.8em;
+  padding: 0.4em;
+  top: -0.1em;
+  position: relative;
 }
 .v2-theme .body ul {
   list-style: none;
@@ -375,7 +383,7 @@ code,
   right: 0;
   left: 0;
   border: 1px solid transparent;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Pro";
 }
 .v2-theme form [type=checkbox]:focus,
 .v2-theme form [type=radio]:focus {
@@ -584,7 +592,7 @@ code,
   }
 }
 .modal-modal .modal-content .share-buttons .fas {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Pro";
 }
 .modal-modal .modal-content .share-buttons .fab {
   font-family: "Font Awesome 5 Brands";
@@ -860,10 +868,9 @@ code,
   color: #FFF;
   font-size: 1.68rem;
   line-height: 1.2em;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding: 0 3rem;
 }
-.rj2019--blockquote .rj2019--blockquote--content-large {
+.rj2019--blockquote .rj2019--blockquote--content__large {
   font-size: 2.25rem;
   line-height: 1.2em;
   line-height: 1.5;
@@ -885,6 +892,8 @@ code,
 @media only screen and (min-width: 1200px) {
   .rj2019--blockquote__right .rj2019--blockquote--content,
 .rj2019--blockquote__right .rj2019--blockquote--citation {
+    padding-right: 0;
+    padding-left: 3rem;
     margin-right: calc(50vw - 53rem);
   }
 }
@@ -904,6 +913,8 @@ code,
 @media only screen and (min-width: 1200px) {
   .rj2019--blockquote__left .rj2019--blockquote--content,
 .rj2019--blockquote__left .rj2019--blockquote--citation {
+    padding-left: 0;
+    padding-right: 3rem;
     margin-left: calc(50vw - 53rem);
   }
 }
