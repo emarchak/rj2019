@@ -12,6 +12,14 @@
       max-width: 66%;
     }
   }
+  &--content__formal {
+    padding: $spacing--vertical $spacing--horizontal;
+    text-align: left;
+    @include media(medium-up) {
+      max-width: 66%;
+    }
+  }
+
 
   &--signature {
     width: 8rem;

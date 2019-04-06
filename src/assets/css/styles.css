@@ -480,7 +480,7 @@ code,
 
 .breadcrumbs,
 .top-hero,
-.misc-block .misc-block-item:last-child,
+.misc-block,
 .connect-block {
   display: none;
 }
@@ -1063,6 +1063,15 @@ code,
 @media only screen and (min-width: 768px) {
   .rj2019--letter--content {
     transform: rotate(-0.5deg);
+    max-width: 66%;
+  }
+}
+.rj2019--letter--content__formal {
+  padding: 2.4rem 3rem;
+  text-align: left;
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--letter--content__formal {
     max-width: 66%;
   }
 }
