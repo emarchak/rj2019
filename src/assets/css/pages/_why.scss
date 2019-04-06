@@ -2,6 +2,11 @@
 
 .rj2019--letter {
   position: relative;
+  margin: $spacing--vertical auto;
+
+  @include media(medium-up) {
+    width: 80%;
+  }
 
   &--content {
     background-color: $grey--lightest;
@@ -13,9 +18,10 @@
     }
   }
   &--content__formal {
-    padding: $spacing--vertical $spacing--horizontal;
+    padding: ($spacing--vertical * 2) 0;
     text-align: left;
     @include media(medium-up) {
+      padding: ($spacing--vertical * 2)  $spacing--horizontal;
       max-width: 66%;
     }
   }
@@ -44,6 +50,24 @@
       left: 66%;
       top: 7rem;
       transform: rotate(3deg);
+    }
+  }
+
+  &--photo__formal {
+    background-color: $white;
+    border: 1rem solid $grey--light;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+
+    @include media(medium-up) {
+      width: 30%;
+      position: absolute;
+      z-index: 1;
+      left: 66%;
+      top: ($spacing--vertical * 2);
+
     }
   }
 }

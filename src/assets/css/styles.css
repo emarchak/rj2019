@@ -1054,6 +1054,12 @@ code,
 
 .rj2019--letter {
   position: relative;
+  margin: 2.4rem auto;
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--letter {
+    width: 80%;
+  }
 }
 .rj2019--letter--content {
   background-color: #eff0f1;
@@ -1067,11 +1073,12 @@ code,
   }
 }
 .rj2019--letter--content__formal {
-  padding: 2.4rem 3rem;
+  padding: 4.8rem 0;
   text-align: left;
 }
 @media only screen and (min-width: 768px) {
   .rj2019--letter--content__formal {
+    padding: 4.8rem 3rem;
     max-width: 66%;
   }
 }
@@ -1098,6 +1105,23 @@ code,
     left: 66%;
     top: 7rem;
     transform: rotate(3deg);
+  }
+}
+.rj2019--letter--photo__formal {
+  background-color: #FFF;
+  border: 1rem solid #a0a2a7;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .rj2019--letter--photo__formal {
+    width: 30%;
+    position: absolute;
+    z-index: 1;
+    left: 66%;
+    top: 4.8rem;
   }
 }
 
